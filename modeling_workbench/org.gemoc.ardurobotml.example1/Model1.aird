@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ardurobotml="http://org.gemoc/ardurobotml" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="_wY6JULOzEeWBBck9jqN4gQ" selectedViews="_xqJHsLOzEeWBBck9jqN4gQ _xwiqoLOzEeWBBck9jqN4gQ" version="8.1.1">
+  <models xmi:type="ardurobotml:TimedSystem" href="Model1.ardurobotml#/"/>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_xqJHsLOzEeWBBck9jqN4gQ" initialized="true">
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_xumw8LOzEeWBBck9jqN4gQ" name="MySystem">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_xu5r4LOzEeWBBck9jqN4gQ" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_xu5r4bOzEeWBBck9jqN4gQ" type="Sirius" element="_xumw8LOzEeWBBck9jqN4gQ" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_xvDc4LOzEeWBBck9jqN4gQ" type="2002" element="_xumw8bOzEeWBBck9jqN4gQ">
+            <children xmi:type="notation:Node" xmi:id="_xvWX0LOzEeWBBck9jqN4gQ" type="5006"/>
+            <children xmi:type="notation:Node" xmi:id="_xvWX0bOzEeWBBck9jqN4gQ" type="7001">
+              <children xmi:type="notation:Node" xmi:id="_xvWX1LOzEeWBBck9jqN4gQ" type="3008" element="_xumw97OzEeWBBck9jqN4gQ">
+                <children xmi:type="notation:Node" xmi:id="_xvWX17OzEeWBBck9jqN4gQ" type="5005"/>
+                <children xmi:type="notation:Node" xmi:id="_xvWX2LOzEeWBBck9jqN4gQ" type="7002">
+                  <children xmi:type="notation:Node" xmi:id="_xvWX27OzEeWBBck9jqN4gQ" type="3007" element="_xumw_bOzEeWBBck9jqN4gQ">
+                    <children xmi:type="notation:Node" xmi:id="_xvgI0LOzEeWBBck9jqN4gQ" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_xvgI0bOzEeWBBck9jqN4gQ" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_xvpSwLOzEeWBBck9jqN4gQ" type="3002" element="_xumw_rOzEeWBBck9jqN4gQ">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_xvpSwbOzEeWBBck9jqN4gQ" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xvpSwrOzEeWBBck9jqN4gQ"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_xvWX3LOzEeWBBck9jqN4gQ" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xvWX3bOzEeWBBck9jqN4gQ" x="110" y="30" width="150" height="150"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_xvgI0rOzEeWBBck9jqN4gQ" type="3007" element="_xumxArOzEeWBBck9jqN4gQ">
+                    <children xmi:type="notation:Node" xmi:id="_xvgI1bOzEeWBBck9jqN4gQ" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_xvgI1rOzEeWBBck9jqN4gQ" y="5"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="_xvpSw7OzEeWBBck9jqN4gQ" type="3002" element="_xumxA7OzEeWBBck9jqN4gQ">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_xvpSxLOzEeWBBck9jqN4gQ" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xvpSxbOzEeWBBck9jqN4gQ"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_xvgI07OzEeWBBck9jqN4gQ" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xvgI1LOzEeWBBck9jqN4gQ" x="125" y="208" width="120" height="120"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_xvgI17OzEeWBBck9jqN4gQ" type="3007" element="_xumxB7OzEeWBBck9jqN4gQ">
+                    <children xmi:type="notation:Node" xmi:id="_xvgI2rOzEeWBBck9jqN4gQ" type="5003">
+                      <layoutConstraint xmi:type="notation:Location" xmi:id="_xvgI27OzEeWBBck9jqN4gQ" y="-21"/>
+                    </children>
+                    <children xmi:type="notation:Node" xmi:id="__M8lYLOzEeWBBck9jqN4gQ" type="3005" element="__My0ZbOzEeWBBck9jqN4gQ">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="__M8lYbOzEeWBBck9jqN4gQ" fontName="Segoe UI"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="__M8lYrOzEeWBBck9jqN4gQ"/>
+                    </children>
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_xvgI2LOzEeWBBck9jqN4gQ" fontName="Segoe UI" fontHeight="8" bold="true"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xvgI2bOzEeWBBck9jqN4gQ" x="30" y="30" width="50" height="45"/>
+                  </children>
+                  <styles xmi:type="notation:SortingStyle" xmi:id="_xvWX2bOzEeWBBck9jqN4gQ"/>
+                  <styles xmi:type="notation:FilteringStyle" xmi:id="_xvWX2rOzEeWBBck9jqN4gQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_xvWX1bOzEeWBBck9jqN4gQ" fontColor="1345869" fontName="Segoe UI" fontHeight="8" bold="true"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xvWX1rOzEeWBBck9jqN4gQ" x="30" y="29"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_xvWX0rOzEeWBBck9jqN4gQ"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_xvWX07OzEeWBBck9jqN4gQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_xvDc4bOzEeWBBck9jqN4gQ" fontColor="7490599" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xvDc4rOzEeWBBck9jqN4gQ"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_xu5r4rOzEeWBBck9jqN4gQ"/>
+          <edges xmi:type="notation:Edge" xmi:id="_xv8NsLOzEeWBBck9jqN4gQ" type="4001" element="_xumxC7OzEeWBBck9jqN4gQ" source="_xvWX27OzEeWBBck9jqN4gQ" target="_xvgI0rOzEeWBBck9jqN4gQ">
+            <children xmi:type="notation:Node" xmi:id="_xv8NtLOzEeWBBck9jqN4gQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xv8NtbOzEeWBBck9jqN4gQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xv8NtrOzEeWBBck9jqN4gQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xv8Nt7OzEeWBBck9jqN4gQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xv8NuLOzEeWBBck9jqN4gQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xv8NubOzEeWBBck9jqN4gQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_xv8NsbOzEeWBBck9jqN4gQ"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_xv8NsrOzEeWBBck9jqN4gQ" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xv8Ns7OzEeWBBck9jqN4gQ" points="[0, 0, 0, -60]$[0, 60, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xwF-sLOzEeWBBck9jqN4gQ" id="(0.5,1.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xwF-sbOzEeWBBck9jqN4gQ" id="(0.5,0.0)"/>
+          </edges>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_-TDwALOzEeWBBck9jqN4gQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_-TDwAbOzEeWBBck9jqN4gQ">
+          <computedStyleDescriptions xmi:type="style:WorkspaceImageDescription" xmi:id="__My0Y7OzEeWBBck9jqN4gQ" labelFormat="bold" showIcon="false" labelExpression="localClock:0" sizeComputationExpression="5" resizeKind="NSEW" roundedCorner="true" workspacePath="/org.gemoc.sample.tfsm.design/icons/clock_local_small.gif">
+            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </computedStyleDescriptions>
+          <cache xmi:type="diagram:DiagramElementMapping2ModelElement" xmi:id="__My0YLOzEeWBBck9jqN4gQ">
+            <key xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subContainerMappings[name='TFSM']/@subNodeMappings[name='Clocks']"/>
+            <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="__My0YbOzEeWBBck9jqN4gQ">
+              <key xmi:type="ardurobotml:FSMClock" href="Model1.ardurobotml#//@tfsms.0/@localClock"/>
+              <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="__My0YrOzEeWBBck9jqN4gQ" key="_xumxB7OzEeWBBck9jqN4gQ">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="__My0ZLOzEeWBBck9jqN4gQ" value="__My0Y7OzEeWBBck9jqN4gQ">
+                  <key xmi:type="ardurobotml:TFSM" href="Model1.ardurobotml#//@tfsms.0"/>
+                </value>
+              </value>
+            </value>
+          </cache>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_xumw8bOzEeWBBck9jqN4gQ" name="MySystem">
+        <target xmi:type="ardurobotml:TimedSystem" href="Model1.ardurobotml#/"/>
+        <semanticElements xmi:type="ardurobotml:TimedSystem" href="Model1.ardurobotml#/"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_xumw8rOzEeWBBck9jqN4gQ" labelFormat="bold" showIcon="false">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xumw87OzEeWBBck9jqN4gQ" red="39" green="76" blue="114"/>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_xumw9LOzEeWBBck9jqN4gQ" red="252" green="233" blue="79"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_xumw9bOzEeWBBck9jqN4gQ" red="255" green="255" blue="255"/>
+          <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_xumw9rOzEeWBBck9jqN4gQ" red="254" green="255" blue="224"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_xumw97OzEeWBBck9jqN4gQ" name="Go_safely_to_destination">
+          <target xmi:type="ardurobotml:TFSM" href="Model1.ardurobotml#//@tfsms.0"/>
+          <semanticElements xmi:type="ardurobotml:TFSM" href="Model1.ardurobotml#//@tfsms.0"/>
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_xumw-LOzEeWBBck9jqN4gQ" labelFormat="bold" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xumw-bOzEeWBBck9jqN4gQ" red="77" green="137" blue="20"/>
+            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subContainerMappings[name='TFSM']/@style"/>
+            <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_xumw-rOzEeWBBck9jqN4gQ" red="138" green="226" blue="52"/>
+            <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_xumw-7OzEeWBBck9jqN4gQ" red="255" green="255" blue="255"/>
+            <foregroundColor xmi:type="viewpoint:RGBValues" xmi:id="_xumw_LOzEeWBBck9jqN4gQ" red="204" green="242" blue="166"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subContainerMappings[name='TFSM']"/>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_xumw_bOzEeWBBck9jqN4gQ" name="S1_Initialize" outgoingEdges="_xumxC7OzEeWBBck9jqN4gQ" width="15" height="15" resizeKind="NSEW">
+            <target xmi:type="ardurobotml:State" href="Model1.ardurobotml#//@tfsms.0/@ownedRegions.0/@ownedStates.0"/>
+            <semanticElements xmi:type="ardurobotml:State" href="Model1.ardurobotml#//@tfsms.0/@ownedRegions.0/@ownedStates.0"/>
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="_xumw_rOzEeWBBck9jqN4gQ" showIcon="false" borderSize="3" borderSizeComputationExpression="3" labelPosition="node">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xumw_7OzEeWBBck9jqN4gQ" red="39" green="76" blue="114"/>
+              <description xmi:type="style:DotDescription" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@nodeMappings[name='State']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_xumxALOzEeWBBck9jqN4gQ" red="39" green="76" blue="114"/>
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_xumxAbOzEeWBBck9jqN4gQ" red="255" green="255" blue="255"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subContainerMappings[name='TFSM']/@subNodeMappings[name='States']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_xumxArOzEeWBBck9jqN4gQ" name="S2_Execute" incomingEdges="_xumxC7OzEeWBBck9jqN4gQ" width="12" height="12" resizeKind="NSEW">
+            <target xmi:type="ardurobotml:State" href="Model1.ardurobotml#//@tfsms.0/@ownedRegions.0/@ownedStates.1"/>
+            <semanticElements xmi:type="ardurobotml:State" href="Model1.ardurobotml#//@tfsms.0/@ownedRegions.0/@ownedStates.1"/>
+            <ownedStyle xmi:type="diagram:Dot" xmi:id="_xumxA7OzEeWBBck9jqN4gQ" showIcon="false" borderSize="3" borderSizeComputationExpression="3" labelPosition="node">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xumxBLOzEeWBBck9jqN4gQ" red="39" green="76" blue="114"/>
+              <description xmi:type="style:DotDescription" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@nodeMappings[name='State']/@style"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_xumxBbOzEeWBBck9jqN4gQ" red="39" green="76" blue="114"/>
+              <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_xumxBrOzEeWBBck9jqN4gQ" red="255" green="255" blue="255"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subContainerMappings[name='TFSM']/@subNodeMappings[name='States']"/>
+          </ownedDiagramElements>
+          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_xumxB7OzEeWBBck9jqN4gQ" name="localClock:0" width="5" height="5" resizeKind="NSEW">
+            <target xmi:type="ardurobotml:FSMClock" href="Model1.ardurobotml#//@tfsms.0/@localClock"/>
+            <semanticElements xmi:type="ardurobotml:FSMClock" href="Model1.ardurobotml#//@tfsms.0/@localClock"/>
+            <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="__My0ZbOzEeWBBck9jqN4gQ" labelFormat="bold" showIcon="false" description="__My0Y7OzEeWBBck9jqN4gQ" workspacePath="/org.gemoc.sample.tfsm.design/icons/clock_local_small.gif">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__My0ZrOzEeWBBck9jqN4gQ"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__My0Z7OzEeWBBck9jqN4gQ"/>
+            </ownedStyle>
+            <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subContainerMappings[name='TFSM']/@subNodeMappings[name='Clocks']"/>
+          </ownedDiagramElements>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xumxC7OzEeWBBck9jqN4gQ" name="if org.gemoc.ardurobotml.impl.AllActionFinishedConditionImpl@1dadc2e&#xA; / &#xA;" sourceNode="_xumw_bOzEeWBBck9jqN4gQ" targetNode="_xumxArOzEeWBBck9jqN4gQ">
+        <target xmi:type="ardurobotml:Transition" href="Model1.ardurobotml#//@tfsms.0/@ownedTransitions.0"/>
+        <semanticElements xmi:type="ardurobotml:Transition" href="Model1.ardurobotml#//@tfsms.0/@ownedTransitions.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xumxDLOzEeWBBck9jqN4gQ" targetArrow="InputFillClosedArrow" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@edgeMappings[name='EventTransition']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_xumxDbOzEeWBBck9jqN4gQ" red="136" green="136" blue="136"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_xumxDrOzEeWBBck9jqN4gQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xumxD7OzEeWBBck9jqN4gQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMappingImport" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@edgeMappingImports[name='Transitions']"/>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_xumxELOzEeWBBck9jqN4gQ"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@additionalLayers[name='Debug']"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@additionalLayers[name='Animation']"/>
+      <target xmi:type="ardurobotml:TimedSystem" href="Model1.ardurobotml#/"/>
+    </ownedRepresentations>
+    <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_xwPvsLOzEeWBBck9jqN4gQ" name="Go_safely_to_destination">
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_xwPvxbOzEeWBBck9jqN4gQ" source="GMF_DIAGRAMS">
+        <data xmi:type="notation:Diagram" xmi:id="_xwPvxrOzEeWBBck9jqN4gQ" type="Sirius" element="_xwPvsLOzEeWBBck9jqN4gQ" measurementUnit="Pixel">
+          <children xmi:type="notation:Node" xmi:id="_xwPvyLOzEeWBBck9jqN4gQ" type="2001" element="_xwPvsbOzEeWBBck9jqN4gQ">
+            <children xmi:type="notation:Node" xmi:id="_xwPvy7OzEeWBBck9jqN4gQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_xwPvzLOzEeWBBck9jqN4gQ" y="-21"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__5uy4LOzEeWBBck9jqN4gQ" type="3005" element="__5SG97OzEeWBBck9jqN4gQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__5uy4bOzEeWBBck9jqN4gQ" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__5uy4rOzEeWBBck9jqN4gQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_xwPvybOzEeWBBck9jqN4gQ" fontName="Segoe UI" fontHeight="8" bold="true"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwPvyrOzEeWBBck9jqN4gQ" width="50" height="45"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_xwPvzbOzEeWBBck9jqN4gQ" type="2001" element="_xwPvtbOzEeWBBck9jqN4gQ">
+            <children xmi:type="notation:Node" xmi:id="_xwPv0LOzEeWBBck9jqN4gQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_xwPv0bOzEeWBBck9jqN4gQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xwY5qLOzEeWBBck9jqN4gQ" type="3002" element="_xwPvtrOzEeWBBck9jqN4gQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_xwY5qbOzEeWBBck9jqN4gQ" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwY5qrOzEeWBBck9jqN4gQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_xwPvzrOzEeWBBck9jqN4gQ" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwPvz7OzEeWBBck9jqN4gQ" x="80" width="150" height="150"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_xwY5oLOzEeWBBck9jqN4gQ" type="2001" element="_xwPvurOzEeWBBck9jqN4gQ">
+            <children xmi:type="notation:Node" xmi:id="_xwY5o7OzEeWBBck9jqN4gQ" type="5002">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_xwY5pLOzEeWBBck9jqN4gQ" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xwY5q7OzEeWBBck9jqN4gQ" type="3002" element="_xwPvu7OzEeWBBck9jqN4gQ">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_xwY5rLOzEeWBBck9jqN4gQ" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwY5rbOzEeWBBck9jqN4gQ"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_xwY5obOzEeWBBck9jqN4gQ" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwY5orOzEeWBBck9jqN4gQ" x="100" y="250" width="120" height="120"/>
+          </children>
+          <styles xmi:type="notation:DiagramStyle" xmi:id="_xwPvx7OzEeWBBck9jqN4gQ"/>
+          <edges xmi:type="notation:Edge" xmi:id="_xwY5rrOzEeWBBck9jqN4gQ" type="4001" element="_xwPvv7OzEeWBBck9jqN4gQ" source="_xwPvzbOzEeWBBck9jqN4gQ" target="_xwY5oLOzEeWBBck9jqN4gQ">
+            <children xmi:type="notation:Node" xmi:id="_xwY5srOzEeWBBck9jqN4gQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwY5s7OzEeWBBck9jqN4gQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xwY5tLOzEeWBBck9jqN4gQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwY5tbOzEeWBBck9jqN4gQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xwY5trOzEeWBBck9jqN4gQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwY5t7OzEeWBBck9jqN4gQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_xwY5r7OzEeWBBck9jqN4gQ"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_xwY5sLOzEeWBBck9jqN4gQ" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xwY5sbOzEeWBBck9jqN4gQ" points="[0, 0, -5, -100]$[5, 100, 0, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xwY5uLOzEeWBBck9jqN4gQ" id="(0.5,1.0)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xwY5ubOzEeWBBck9jqN4gQ" id="(0.5,0.0)"/>
+          </edges>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="__5SG8LOzEeWBBck9jqN4gQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+        <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="__5SG8bOzEeWBBck9jqN4gQ">
+          <computedStyleDescriptions xmi:type="style:WorkspaceImageDescription" xmi:id="__5SG9bOzEeWBBck9jqN4gQ" labelFormat="bold" showIcon="false" labelExpression="localClock:0" sizeComputationExpression="5" resizeKind="NSEW" roundedCorner="true" workspacePath="/org.gemoc.sample.tfsm.design/icons/clock_local_small.gif">
+            <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </computedStyleDescriptions>
+          <cache xmi:type="diagram:DiagramElementMapping2ModelElement" xmi:id="__5SG8rOzEeWBBck9jqN4gQ">
+            <key xmi:type="description_1:NodeMapping" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@nodeMappings[name='Local%20Clock']"/>
+            <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="__5SG87OzEeWBBck9jqN4gQ">
+              <key xmi:type="ardurobotml:FSMClock" href="Model1.ardurobotml#//@tfsms.0/@localClock"/>
+              <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="__5SG9LOzEeWBBck9jqN4gQ" key="_xwPvsbOzEeWBBck9jqN4gQ">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="__5SG9rOzEeWBBck9jqN4gQ" value="__5SG9bOzEeWBBck9jqN4gQ">
+                  <key xmi:type="ardurobotml:TFSM" href="Model1.ardurobotml#//@tfsms.0"/>
+                </value>
+              </value>
+            </value>
+          </cache>
+        </data>
+      </ownedAnnotationEntries>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_xwPvsbOzEeWBBck9jqN4gQ" name="localClock:0" width="5" height="5" resizeKind="NSEW">
+        <target xmi:type="ardurobotml:FSMClock" href="Model1.ardurobotml#//@tfsms.0/@localClock"/>
+        <semanticElements xmi:type="ardurobotml:FSMClock" href="Model1.ardurobotml#//@tfsms.0/@localClock"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="__5SG97OzEeWBBck9jqN4gQ" labelFormat="bold" showIcon="false" description="__5SG9bOzEeWBBck9jqN4gQ" workspacePath="/org.gemoc.sample.tfsm.design/icons/clock_local_small.gif">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__5SG-LOzEeWBBck9jqN4gQ"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__5SG-bOzEeWBBck9jqN4gQ"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@nodeMappings[name='Local%20Clock']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_xwPvtbOzEeWBBck9jqN4gQ" name="S1_Initialize" outgoingEdges="_xwPvv7OzEeWBBck9jqN4gQ" width="15" height="15" resizeKind="NSEW">
+        <target xmi:type="ardurobotml:State" href="Model1.ardurobotml#//@tfsms.0/@ownedRegions.0/@ownedStates.0"/>
+        <semanticElements xmi:type="ardurobotml:State" href="Model1.ardurobotml#//@tfsms.0/@ownedRegions.0/@ownedStates.0"/>
+        <ownedStyle xmi:type="diagram:Dot" xmi:id="_xwPvtrOzEeWBBck9jqN4gQ" showIcon="false" borderSize="3" borderSizeComputationExpression="3" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xwPvt7OzEeWBBck9jqN4gQ" red="39" green="76" blue="114"/>
+          <description xmi:type="style:DotDescription" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@nodeMappings[name='State']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_xwPvuLOzEeWBBck9jqN4gQ" red="39" green="76" blue="114"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_xwPvubOzEeWBBck9jqN4gQ" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@nodeMappings[name='State']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_xwPvurOzEeWBBck9jqN4gQ" name="S2_Execute" incomingEdges="_xwPvv7OzEeWBBck9jqN4gQ" width="12" height="12" resizeKind="NSEW">
+        <target xmi:type="ardurobotml:State" href="Model1.ardurobotml#//@tfsms.0/@ownedRegions.0/@ownedStates.1"/>
+        <semanticElements xmi:type="ardurobotml:State" href="Model1.ardurobotml#//@tfsms.0/@ownedRegions.0/@ownedStates.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Dot" xmi:id="_xwPvu7OzEeWBBck9jqN4gQ" showIcon="false" borderSize="3" borderSizeComputationExpression="3" labelPosition="node">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xwPvvLOzEeWBBck9jqN4gQ" red="39" green="76" blue="114"/>
+          <description xmi:type="style:DotDescription" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@nodeMappings[name='State']/@style"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_xwPvvbOzEeWBBck9jqN4gQ" red="39" green="76" blue="114"/>
+          <backgroundColor xmi:type="viewpoint:RGBValues" xmi:id="_xwPvvrOzEeWBBck9jqN4gQ" red="255" green="255" blue="255"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@nodeMappings[name='State']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xwPvv7OzEeWBBck9jqN4gQ" name="if org.gemoc.ardurobotml.impl.AllActionFinishedConditionImpl@1dadc2e&#xA; / &#xA;" sourceNode="_xwPvtbOzEeWBBck9jqN4gQ" targetNode="_xwPvurOzEeWBBck9jqN4gQ">
+        <target xmi:type="ardurobotml:Transition" href="Model1.ardurobotml#//@tfsms.0/@ownedTransitions.0"/>
+        <semanticElements xmi:type="ardurobotml:Transition" href="Model1.ardurobotml#//@tfsms.0/@ownedTransitions.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xwPvwLOzEeWBBck9jqN4gQ" targetArrow="InputFillClosedArrow" size="2">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@edgeMappings[name='EventTransition']/@style"/>
+          <strokeColor xmi:type="viewpoint:RGBValues" xmi:id="_xwPvwbOzEeWBBck9jqN4gQ" red="136" green="136" blue="136"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_xwPvwrOzEeWBBck9jqN4gQ" showIcon="false">
+            <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_xwPvw7OzEeWBBck9jqN4gQ"/>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@edgeMappings[name='EventTransition']"/>
+      </ownedDiagramElements>
+      <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']"/>
+      <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_xwPvxLOzEeWBBck9jqN4gQ"/>
+      <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@additionalLayers[name='Debug']"/>
+      <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@additionalLayers[name='Animation']"/>
+      <target xmi:type="ardurobotml:TFSM" href="Model1.ardurobotml#//@tfsms.0"/>
+    </ownedRepresentations>
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']"/>
+  </ownedViews>
+  <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_xwiqoLOzEeWBBck9jqN4gQ" initialized="true">
+    <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']"/>
+  </ownedViews>
+</viewpoint:DAnalysis>

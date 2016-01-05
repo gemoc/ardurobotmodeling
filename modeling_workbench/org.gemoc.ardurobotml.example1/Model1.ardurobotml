@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ardurobotml:TimedSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ardurobotml="http://org.gemoc/ardurobotml" name="MySystem">
+  <tfsms name="Go_safely_to_destination" initialState="//@tfsms.0/@ownedRegions.0/@ownedStates.0" ownedStates="//@tfsms.0/@ownedRegions.0/@ownedStates.0 //@tfsms.0/@ownedRegions.0/@ownedStates.1">
+    <ownedRegions>
+      <ownedStates name="S1_Initialize" outgoingTransitions="//@tfsms.0/@ownedTransitions.0" owningFSM="//@tfsms.0">
+        <actions xsi:type="ardurobotml:StopAction" name="stop1"/>
+      </ownedStates>
+      <ownedStates name="S2_Execute" incomingTransitions="//@tfsms.0/@ownedTransitions.0" owningFSM="//@tfsms.0">
+        <actions xsi:type="ardurobotml:StopAction" name="stop2"/>
+      </ownedStates>
+    </ownedRegions>
+    <localClock name="localClock"/>
+    <ownedTransitions name="from_S1_to_S2" source="//@tfsms.0/@ownedRegions.0/@ownedStates.0" target="//@tfsms.0/@ownedRegions.0/@ownedStates.1">
+      <ownedGuard xsi:type="ardurobotml:EvaluateGuard" name="g1">
+        <condition xsi:type="ardurobotml:AllActionFinishedCondition"/>
+      </ownedGuard>
+    </ownedTransitions>
+  </tfsms>
+</ardurobotml:TimedSystem>
