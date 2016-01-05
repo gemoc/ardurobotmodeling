@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.gemoc.ardurobotml.design
+Bundle-SymbolicName: org.gemoc.ardurobotml.design;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: org.gemoc.ardurobotml.design.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.sirius,
+ org.eclipse.sirius.common.acceleo.mtl,
+ org.gemoc.gemoc_language_workbench.extensions.sirius,
+ org.gemoc.ardurobotml.model;bundle-version="0.1.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.gemoc.ardurobotml.design,
+ org.gemoc.ardurobotml.design.services

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ArduRobotML MOC Lib
+Bundle-SymbolicName: org.gemoc.ardurobotml.mocc
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.gemoc.ardurobotml.mocc.Activator
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Library
+Bundle-SymbolicName: org.mavlink.library
+Bundle-Version: 1.0.0.qualifier
+Export-Package: org.mavlink,
+ org.mavlink.io,
+ org.mavlink.messages,
+ org.mavlink.messages.ardupilotmega
+Require-Bundle: org.mavlink.util;bundle-version="1.0.0"

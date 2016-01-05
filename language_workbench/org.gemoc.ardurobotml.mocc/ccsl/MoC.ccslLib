@@ -1,0 +1,162 @@
+/*
+ * TFSM Model of Computation helper
+ * @author: Julien Deantoni
+ * date : Sun September 30 2012
+ */
+Library extraExpressions{ 
+
+	imports{ 
+		import "platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/kernel.ccslLib" as kernel;
+		import "platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/CCSL.ccslLib" as CCSLLib;
+	}
+	
+	
+	
+	
+	RelationLibrary robotmL_relations
+	{
+		
+		RelationDeclaration TransitionRule(
+											evaluateGuard: 	clock, 
+											resTrue: 		clock, 
+											resFalse: 		clock) 
+		RelationDefinition TransitionRuleDef[TransitionRule]
+		{
+      		Expression ResEvalGuard = Union(
+      										Clock1->resTrue, 
+      										Clock2->resFalse)
+
+      		Relation EitherFalseOrTrue[Exclusion(
+      										Clock2->resTrue, 
+      										Clock1->resFalse)
+      										
+      		Relation evalCausesResult[Alternates(
+      										AlternatesLeftClock->evaluateGuard, 
+      										AlternatesRightClock->ResEvalGuard)
+    	}
+				
+		
+		RelationDeclaration TemporalTransition(
+											TemporalTransition_MakeFireable:	clock, 
+											TemporalTransition_RefClock:		clock, 
+											TemporalTransition_Reset:			clock, 
+											TemporalTransition_delay:			int, 
+											TemporalTransition_Fire:			clock) 
+		RelationDefinition TemporalTransitionDef[TemporalTransition]
+		{
+      		Sequence TemporalTransition_delaySequence = IntegerVariableRef[TemporalTransition_delay]
+      		Expression TemporalTransition_doItOnce = Defer(
+      													BaseClock->TemporalTransition_MakeFireable, 
+      													DelayClock->TemporalTransition_RefClock, 
+      													DelayPatternExpression->TemporalTransition_delaySequence)
+      													
+      		Expression TemporalTransition_doIt = RecursiveConcatenation(RecursiveConcatenation_dyingExpr->TemporalTransition_doItOnce)
+      		
+      		Expression TemporalTransition_ResOnce = UpTo(
+      													ClockToFollow->TemporalTransition_doItOnce, 
+      													KillerCLock->TemporalTransition_Reset)
+      													
+      		Relation TemporalTransition_DeathPropagation[Coincides(
+      													Clock2->TemporalTransition_ResOnce, 
+      													Clock1->TemporalTransition_doItOnce)
+      													
+      		Expression TemporalTransition_Res = RecursiveConcatenation(RecursiveConcatenation_dyingExpr->TemporalTransition_ResOnce)
+
+      		Relation TemporalTransition_ResExported[Coincides(
+      													Clock2->TemporalTransition_Fire, 
+      													Clock1->TemporalTransition_Res)
+    	}
+			
+   		
+   		RelationDeclaration EventTransition(EventTransition_MakeFireable:clock, EventTransition_Trigger:clock, EventTransition_Reset:clock, EventTransition_Fire:clock)    	
+		RelationDefinition EventTransitionDef[EventTransition]
+		{
+      		Expression EventTransition_doItOnce = Sample(
+      												SampledClock->EventTransition_MakeFireable, 
+      												SamplingClock->EventTransition_Trigger)
+
+      		Expression EventTransition_doIt = RecursiveConcatenation(RecursiveConcatenation_dyingExpr->EventTransition_doItOnce)
+
+      		Expression EventTransition_ResOnce = UpTo(ClockToFollow->EventTransition_doItOnce, KillerCLock->EventTransition_Reset)
+
+      		Relation EventTransition_DeathPropagation[Coincides(
+      												Clock2->EventTransition_ResOnce, 
+      												Clock1->EventTransition_doItOnce)
+
+      		Expression EventTransition_Res = RecursiveConcatenation(RecursiveConcatenation_dyingExpr->EventTransition_ResOnce)
+
+      		Relation EventTransition_ResExported[Coincides(
+      												Clock2->EventTransition_Fire, 
+      												Clock1->EventTransition_Res)
+    	}
+				
+				
+		RelationDeclaration FSMEventRendezVous(ClockA:clock, ClockB:clock) 
+		RelationDefinition FSMEventRendezVousDef[FSMEventRendezVous]
+		{
+      		Relation RendezVous[Coincides(
+      								Clock2->ClockA, 
+      								Clock1->ClockB)
+    	}
+		
+		
+		RelationDeclaration FSMEventSendReceive(ClockA:clock, ClockB:clock)
+		RelationDefinition FSMEventSendReceiveDef[FSMEventSendReceive]
+		{
+      		Relation EventSendReceive[Precedes(
+      									LeftClock->ClockA, 
+      									RightClock->ClockB)
+    	}
+
+	}
+
+
+	ExpressionLibrary usefullTFSMExpressions
+	{
+
+		ExpressionDeclaration RecursiveConcatenation(RecursiveConcatenation_dyingExpr:clock):clock
+		ExpressionDefinition RecursiveConcatenationDef [RecursiveConcatenation]
+		{
+			root = RecursiveConcatenation_concat
+			Expression RecursiveConcatenation_tmp = Union(
+														Clock1-> RecursiveConcatenation_dyingExpr,
+														Clock2-> RecursiveConcatenation_dyingExpr)
+			Expression RecursiveConcatenation_concat = Concatenation(
+														LeftClock -> RecursiveConcatenation_tmp, 
+						 								RightClock-> RecursiveConcatenation_concat )
+  		}
+
+	
+		ExpressionDeclaration FirstOf(FirstOf_clock : clock) : clock
+		ExpressionDefinition FirstOfDef[FirstOf]{
+			root = FirstOf_res
+			Sequence FirstOf_first = 1(0)
+			Expression FirstOf_res = FilterBy(
+											FilterByClock -> FirstOf_clock, 
+											FilterBySeq -> FirstOf_first)
+		}
+
+
+		ExpressionDeclaration LastOf(LastOf_clock : clock) : clock
+		ExpressionDefinition LastOfDef[LastOf]{
+			root = LastOf_res
+			Sequence LastOf_last = (1)
+			Expression LastOf_res = FilterBy(
+											FilterByClock -> LastOf_clock, 
+											FilterBySeq -> LastOf_last)
+		}
+		
+
+		ExpressionDeclaration ZeroOccurrence(ZeroOccurrence_clock : clock) : clock
+		ExpressionDefinition ZeroOccurrenceDef[ZeroOccurrence]{
+			root = ZeroOccurrence_res
+			Sequence AlwaysZero = (0)
+			Expression ZeroOccurrence_res = FilterBy(
+													FilterByClock -> ZeroOccurrence_clock, 
+													FilterBySeq -> AlwaysZero)
+		}
+
+	}
+	
+
+}

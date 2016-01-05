@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Communication
+Bundle-SymbolicName: org.gemoc.ardurobotml.communication
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.gemoc.ardurobotml.communication.Activator
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/RXTXcomm.jar,
+ .
+Export-Package: gnu.io,
+ org.gemoc.ardurobotml.communication,
+ org.gemoc.ardurobotml.communication.serial

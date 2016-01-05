@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.gemoc.ardurobotml.model/src" modelPluginID="org.gemoc.ardurobotml.model"
+    modelName="Ardurobotml" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Ardurobotml.ecore</foreignModel>
+  <genPackages prefix="Ardurobotml" basePackage="org.gemoc" disposableProviderFactory="true"
+      ecorePackage="Ardurobotml.ecore#/">
+    <genClasses ecoreClass="Ardurobotml.ecore#//TimedSystem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//TimedSystem/tfsms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//TimedSystem/globalClocks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//TimedSystem/globalEvents"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardurobotml.ecore#//TFSM">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//TFSM/initialState"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//TFSM/localEvents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//TFSM/localClock"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//TFSM/ownedTransitions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//TFSM/currentState"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//TFSM/ownedStates"/>
+      <genOperations ecoreOperation="Ardurobotml.ecore#//TFSM/initialize"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardurobotml.ecore#//State">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//State/outgoingTransitions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//State/incomingTransitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//State/actions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//State/owningFSM"/>
+      <genOperations ecoreOperation="Ardurobotml.ecore#//State/onEnter"/>
+      <genOperations ecoreOperation="Ardurobotml.ecore#//State/onLeave"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardurobotml.ecore#//Transition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//Transition/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//Transition/target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//Transition/ownedGuard"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//Transition/generatedEvents"/>
+      <genOperations ecoreOperation="Ardurobotml.ecore#//Transition/fire"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardurobotml.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardurobotml.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Ardurobotml.ecore#//Guard"/>
+    <genClasses ecoreClass="Ardurobotml.ecore#//TemporalGuard">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//TemporalGuard/onClock"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardurobotml.ecore#//TemporalGuard/afterDuration"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardurobotml.ecore#//EventGuard">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//EventGuard/triggeringEvent"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardurobotml.ecore#//FSMEvent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//FSMEvent/sollicitingTransitions"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardurobotml.ecore#//FSMClock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardurobotml.ecore#//FSMClock/value"/>
+      <genOperations ecoreOperation="Ardurobotml.ecore#//FSMClock/ticks"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardurobotml.ecore#//EvaluateGuard">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//EvaluateGuard/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardurobotml.ecore#//Region">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//Region/ownedStates"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute Ardurobotml.ecore#//Region/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Ardurobotml.ecore#//RegionContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//RegionContainer/ownedRegions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Ardurobotml.ecore#//Condition"/>
+    <genClasses ecoreClass="Ardurobotml.ecore#//StopAction"/>
+    <genClasses ecoreClass="Ardurobotml.ecore#//MoveForwardAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardurobotml.ecore#//MoveForwardAction/duration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardurobotml.ecore#//MoveForwardAction/startTick"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Ardurobotml.ecore#//Action">
+      <genOperations ecoreOperation="Ardurobotml.ecore#//Action/begin"/>
+      <genOperations ecoreOperation="Ardurobotml.ecore#//Action/end"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardurobotml.ecore#//EmergencyStopAction">
+      <genOperations ecoreOperation="Ardurobotml.ecore#//EmergencyStopAction/begin"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardurobotml.ecore#//AllActionFinishedCondition"/>
+    <genClasses ecoreClass="Ardurobotml.ecore#//SystemPropertyCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ardurobotml.ecore#//SystemPropertyCondition/expectedAttributeValue"/>
+    </genClasses>
+    <genClasses ecoreClass="Ardurobotml.ecore#//ActionSequence">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ardurobotml.ecore#//ActionSequence/actions"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

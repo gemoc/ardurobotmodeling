@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="ArduRobotML"
+         name="ArduRobotML"
+         point="org.gemoc.gemoc_language_workbench.engine_addon_group">
+      <AddonGroup
+            Name="ArduRobotML"
+            id="org.gemoc.ardurobotml.simulation.ArduRobotMLAddonGroup">
+      </AddonGroup>
+   </extension>
+   <extension
+         point="org.gemoc.gemoc_language_workbench.engine_addon">
+      <Addon
+            AddonGroupId="org.gemoc.ardurobotml.simulation.ArduRobotMLAddonGroup"
+            Class="org.gemoc.ardurobotml.simulationfacade.addons.DefineSimulationFacade"
+            Default="false"
+            Name="ArduRobotML SimulationFacade"
+            ShortDescription="Use a simulation Facade with the ArduRobotML Language"
+            id="org.gemoc.ardurobotml.simulation.addons.DefineSimulationFacade">
+      </Addon>
+   </extension>
+
+</plugin>
