@@ -1,14 +1,15 @@
 package org.gemoc.ardurobotml.simulationfacade.addons;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.gemoc.ardurobotml.k3dsa.RobotFacadeRegistry;
 import org.gemoc.ardurobotml.simulationfacade.ArduRoverSimulationFacade;
-import org.gemoc.execution.engine.trace.gemoc_execution_trace.LogicalStep;
-import org.gemoc.execution.engine.trace.gemoc_execution_trace.MSEOccurrence;
-import org.gemoc.gemoc_language_workbench.api.core.EngineStatus.RunStatus;
-import org.gemoc.gemoc_language_workbench.api.core.IBasicExecutionEngine;
-import org.gemoc.gemoc_language_workbench.api.engine_addon.IEngineAddon;
+import org.gemoc.executionframework.engine.mse.LogicalStep;
+import org.gemoc.executionframework.engine.mse.MSEOccurrence;
+import org.gemoc.xdsmlframework.api.core.EngineStatus.RunStatus;
+import org.gemoc.xdsmlframework.api.core.IBasicExecutionEngine;
+import org.gemoc.xdsmlframework.api.engine_addon.IEngineAddon;
 
 public class DefineSimulationFacade implements IEngineAddon {
 
@@ -95,6 +96,13 @@ public class DefineSimulationFacade implements IEngineAddon {
 			Collection<LogicalStep> arg1) {
 		// TODO Auto-generated method stub
 		
+	}
+
+
+	@Override
+	public List<String> validate(List<IEngineAddon> arg0) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

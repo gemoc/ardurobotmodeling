@@ -1,0 +1,18 @@
+package org.gemoc.ardurobotml.concurrent.xdsml
+
+language ArdurobotMLConcurrent {
+	syntax "platform:/resource/org.gemoc.ardurobotml.model/model/Ardurobotml.ecore"
+	
+	with org.gemoc.ardurobotml.k3dsa.TransitionAspect
+	with org.gemoc.ardurobotml.k3dsa.StateAspect
+	with org.gemoc.ardurobotml.k3dsa.ActionAspect
+	with org.gemoc.ardurobotml.k3dsa.TFSMAspect
+	with org.gemoc.ardurobotml.k3dsa.EmergencyStopActionAspect
+	with org.gemoc.ardurobotml.k3dsa.StopActionAspect
+	with org.gemoc.ardurobotml.k3dsa.FSMClockAspect
+	with org.gemoc.ardurobotml.k3dsa.MoveForwardActionAspect
+
+	ecl "/org.gemoc.ardurobotml.dse/ecl/ardurobotml.ecl"
+	
+	exactType ArdurobotMLConcurrentMT
+}

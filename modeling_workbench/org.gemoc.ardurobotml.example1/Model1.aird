@@ -149,7 +149,7 @@
           </ownedDiagramElements>
         </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xumxC7OzEeWBBck9jqN4gQ" name="if org.gemoc.ardurobotml.impl.AllActionFinishedConditionImpl@1dadc2e&#xA; / &#xA;" sourceNode="_xumw_bOzEeWBBck9jqN4gQ" targetNode="_xumxArOzEeWBBck9jqN4gQ">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xumxC7OzEeWBBck9jqN4gQ" name="if org.gemoc.ardurobotml.impl.AllActionFinishedConditionImpl@74be26&#xA; / &#xA;" sourceNode="_xumw_bOzEeWBBck9jqN4gQ" targetNode="_xumxArOzEeWBBck9jqN4gQ">
         <target xmi:type="ardurobotml:Transition" href="Model1.ardurobotml#//@tfsms.0/@ownedTransitions.0"/>
         <semanticElements xmi:type="ardurobotml:Transition" href="Model1.ardurobotml#//@tfsms.0/@ownedTransitions.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xumxDLOzEeWBBck9jqN4gQ" targetArrow="InputFillClosedArrow" size="2">
@@ -276,7 +276,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@nodeMappings[name='State']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xwPvv7OzEeWBBck9jqN4gQ" name="if org.gemoc.ardurobotml.impl.AllActionFinishedConditionImpl@1dadc2e&#xA; / &#xA;" sourceNode="_xwPvtbOzEeWBBck9jqN4gQ" targetNode="_xwPvurOzEeWBBck9jqN4gQ">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xwPvv7OzEeWBBck9jqN4gQ" name="if org.gemoc.ardurobotml.impl.AllActionFinishedConditionImpl@74be26&#xA; / &#xA;" sourceNode="_xwPvtbOzEeWBBck9jqN4gQ" targetNode="_xwPvurOzEeWBBck9jqN4gQ">
         <target xmi:type="ardurobotml:Transition" href="Model1.ardurobotml#//@tfsms.0/@ownedTransitions.0"/>
         <semanticElements xmi:type="ardurobotml:Transition" href="Model1.ardurobotml#//@tfsms.0/@ownedTransitions.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xwPvwLOzEeWBBck9jqN4gQ" targetArrow="InputFillClosedArrow" size="2">

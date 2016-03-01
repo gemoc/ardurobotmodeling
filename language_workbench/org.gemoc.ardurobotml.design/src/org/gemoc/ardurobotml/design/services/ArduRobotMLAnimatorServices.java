@@ -3,7 +3,8 @@ package org.gemoc.ardurobotml.design.services;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.gemoc.gemoc_language_workbench.extensions.sirius.services.AbstractGemocAnimatorServices;
+import org.gemoc.executionframework.extensions.sirius.services.AbstractGemocAnimatorServices;
+
 
 public class ArduRobotMLAnimatorServices extends AbstractGemocAnimatorServices {
 

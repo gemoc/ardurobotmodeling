@@ -8,8 +8,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.slf4j.api,
  org.gemoc.ardurobotml.k3dsa,
  org.gemoc.ardurobotml.model,
- org.gemoc.gemoc_language_workbench.api,
- org.gemoc.execution.engine;bundle-version="0.1.0"
+ org.gemoc.xdsmlframework.api;bundle-version="0.1.0",
+ org.gemoc.executionframework.engine;bundle-version="0.1.0",
+ org.gemoc.executionframework.engine.mse.model
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.gemoc.ardurobotml.simulationfacade,

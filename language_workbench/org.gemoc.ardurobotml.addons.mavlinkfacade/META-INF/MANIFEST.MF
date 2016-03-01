@@ -5,14 +5,15 @@ Bundle-SymbolicName: org.gemoc.ardurobotml.addons.mavlinkfacade;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.gemoc.ardurobtml.mavlinkfacade.Activator
 Require-Bundle: org.eclipse.core.runtime,
- org.gemoc.gemoc_language_workbench.api,
  org.gemoc.ardurobotml.k3dsa,
  org.gemoc.ardurobotml.communication;bundle-version="1.0.0",
- org.gemoc.execution.engine;bundle-version="0.1.0",
  org.mavlink.library;bundle-version="1.0.0",
  org.mavlink.util;bundle-version="1.0.0",
  org.gemoc.ardurobotml.model,
- org.slf4j.api
+ org.slf4j.api,
+ org.gemoc.xdsmlframework.api;bundle-version="0.1.0",
+ org.gemoc.executionframework.engine;bundle-version="0.1.0",
+ org.gemoc.executionframework.engine.mse.model
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.gemoc.ardurobtml.mavlinkfacade,
