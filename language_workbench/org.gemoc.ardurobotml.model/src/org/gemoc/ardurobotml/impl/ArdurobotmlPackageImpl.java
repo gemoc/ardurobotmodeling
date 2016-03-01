@@ -1057,6 +1057,11 @@ public class ArdurobotmlPackageImpl extends EPackageImpl implements ArdurobotmlP
 		   new String[] {
 		   });	
 		addAnnotation
+		  (getTFSM_CurrentState(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
 		  (getState__OnEnter(), 
 		   source, 
 		   new String[] {
