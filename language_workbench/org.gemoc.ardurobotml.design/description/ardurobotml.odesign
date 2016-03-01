@@ -8,20 +8,20 @@
         <edgeMappingImports name="Transitions" importedMapping="//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@edgeMappings[name='EventTransition']"/>
         <containerMappings name="TimedSystem" labelDirectEdit="//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@toolSections.1/@ownedTools[name='editName']" semanticCandidatesExpression="[self/]" domainClass="TimedSystem">
           <subNodeMappings name="GlobalClock" labelDirectEdit="//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@toolSections.1/@ownedTools[name='editName']" semanticCandidatesExpression="[self.globalClocks/]" domainClass="FSMClock">
-            <style xsi:type="style:WorkspaceImageDescription" labelFormat="bold" showIcon="false" resizeKind="NSEW" roundedCorner="true" workspacePath="/org.gemoc.sample.tfsm.design/icons/clock_global_small.gif">
+            <style xsi:type="style:WorkspaceImageDescription" labelFormat="bold" showIcon="false" resizeKind="NSEW" roundedCorner="true" workspacePath="/org.gemoc.ardurobotml.design/icons/clock_global_small.gif">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </subNodeMappings>
           <subNodeMappings name="Event" labelDirectEdit="//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@toolSections.1/@ownedTools[name='editName']" semanticCandidatesExpression="[self.globalEvents/]" domainClass="FSMEvent">
-            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelFormat="bold" showIcon="false" iconPath="event_small.png" sizeComputationExpression="-1" roundedCorner="true" workspacePath="/org.gemoc.sample.tfsm.design/icons/event_small.gif">
+            <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelFormat="bold" showIcon="false" iconPath="event_small.png" sizeComputationExpression="-1" roundedCorner="true" workspacePath="/org.gemoc.ardurobotml.design/icons/event_small.gif">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>
           </subNodeMappings>
           <subContainerMappings name="TFSM" labelDirectEdit="//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@toolSections.1/@ownedTools[name='editName']" semanticCandidatesExpression="[self.tfsms/]" doubleClickDescription="//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@toolSections.0/@ownedTools[name='Open%20TFSM']" domainClass="TFSM">
             <subNodeMappings name="FSMEvent" semanticCandidatesExpression="[self.localEvents/]" domainClass="FSMEvent">
-              <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelFormat="bold" showIcon="false" iconPath="event_small.png" sizeComputationExpression="-1" roundedCorner="true" workspacePath="/org.gemoc.sample.tfsm.design/icons/event_small.gif">
+              <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelFormat="bold" showIcon="false" iconPath="event_small.png" sizeComputationExpression="-1" roundedCorner="true" workspacePath="/org.gemoc.ardurobotml.design/icons/event_small.gif">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
@@ -130,13 +130,13 @@
       <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Default">
         <nodeMappings name="LocalEvents" labelDirectEdit="//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@toolSections.1/@ownedTools[name='editName']" semanticCandidatesExpression="[self.localEvents/]" domainClass="FSMEvent">
-          <style xsi:type="style:WorkspaceImageDescription" labelFormat="bold" showIcon="false" iconPath="event_small.png" sizeComputationExpression="-1" roundedCorner="true" workspacePath="/org.gemoc.sample.tfsm.design/icons/event_small.gif">
+          <style xsi:type="style:WorkspaceImageDescription" labelFormat="bold" showIcon="false" iconPath="event_small.png" sizeComputationExpression="-1" roundedCorner="true" workspacePath="/org.gemoc.ardurobotml.design/icons/event_small.gif">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="Local Clock" labelDirectEdit="//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@toolSections.1/@ownedTools[name='editName']" semanticCandidatesExpression="[self.localClock/]" domainClass="FSMClock">
-          <style xsi:type="style:WorkspaceImageDescription" labelFormat="bold" showIcon="false" sizeComputationExpression="5" resizeKind="NSEW" roundedCorner="true" workspacePath="/org.gemoc.sample.tfsm.design/icons/clock_local_small.gif">
+          <style xsi:type="style:WorkspaceImageDescription" labelFormat="bold" showIcon="false" sizeComputationExpression="5" resizeKind="NSEW" roundedCorner="true" workspacePath="/org.gemoc.ardurobotml.design/icons/clock_local_small.gif">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </style>
