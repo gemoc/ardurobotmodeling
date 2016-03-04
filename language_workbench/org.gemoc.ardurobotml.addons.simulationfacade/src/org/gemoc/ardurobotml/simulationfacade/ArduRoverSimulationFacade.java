@@ -19,6 +19,7 @@ public class ArduRoverSimulationFacade implements IRobotFacade
 
 	@Override
 	public void initialize(TFSM fsm) {
+		System.out.println("Initializing SimulationFacade for TFSM "+fsm.getName());
 //		_fsm = fsm;
 //		for (State s : fsm.getOwnedStates())
 //		{
