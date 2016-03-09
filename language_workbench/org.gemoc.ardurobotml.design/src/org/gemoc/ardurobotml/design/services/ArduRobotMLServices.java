@@ -43,7 +43,7 @@ public class ArduRobotMLServices {
 					.getOnClock().getName());
 		} else if (transition.getOwnedGuard() instanceof EvaluateGuard) {
 			res.append("if ");
-			res.append(getLabel(((EvaluateGuard) transition.getOwnedGuard())
+			res.append(getEditLabel(((EvaluateGuard) transition.getOwnedGuard())
 					.getCondition()));
 		}
 		res.append("\n / \n");
@@ -69,8 +69,10 @@ public class ArduRobotMLServices {
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 		return adapterFactory;
 	}
-	
-	protected String getLabel(EObject o){
+	/**
+	 * get the label as computed by the model.edit plugin or reflectively by EMF 
+	 */	
+	public String getEditLabel(EObject o){
 		final IItemLabelProvider provider = (IItemLabelProvider)ADAPTER_FACTORY.adapt(o,
 				IItemLabelProvider.class);
 		return provider.getText(o);
