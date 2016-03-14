@@ -1,0 +1,238 @@
+[comment encoding = UTF-8 /]
+
+[module generate('http://fr.inria.aoste.timemodel.ccslmodel.clockexpressionandrelation', 
+	'http://www.eclipse.org/emf/2002/Ecore', 
+	'http://org.gemoc.moccml/1.0', 
+	'http://fr.inria.aoste.timemodel',
+	'http://org.gemoc.moccml.fsmmodel/1.0',
+	'http://www.eclipse.org/xtend', 
+	'http://www.eclipse.org/xtend/RichString', 
+	'http://www.eclipse.org/xtext/xbase/Xbase',
+	'http://org.gemoc/ardurobotml') ]
+[template public generate(aTimedSystem : TimedSystem)]
+[comment @main/]
+[file (aTimedSystem.name+'_FiacreProcess.fcr', false, 'UTF-8')]
+// *********************** Type Declaration ******************************/
+const NUMBER_TimedSystems : int is [aTimedSystem.eAllContents(TimedSystem)->size()/]
+const NUMBER_TFSMs : int is [aTimedSystem.eAllContents(TFSM)->size()/]
+const NUMBER_States : int is [aTimedSystem.eAllContents(State)->size()/]
+const NUMBER_Transitions : int is [aTimedSystem.eAllContents(Transition)->size()/]
+const NUMBER_Guards : int is [aTimedSystem.eAllContents(Guard)->size()/]
+const NUMBER_TemporalGuards : int is [aTimedSystem.eAllContents(TemporalGuard)->size()/]
+const NUMBER_EventGuards : int is [aTimedSystem.eAllContents(EventGuard)->size()/]
+const NUMBER_FSMEvents : int is [aTimedSystem.eAllContents(FSMEvent)->size()/]
+const NUMBER_FSMClocks : int is [aTimedSystem.eAllContents(FSMClock)->size()/]
+const NUMBER_EvaluateGuards : int is [aTimedSystem.eAllContents(EvaluateGuard)->size()/]
+const NUMBER_Regions : int is [aTimedSystem.eAllContents(Region)->size()/]
+const NUMBER_RegionContainers : int is [aTimedSystem.eAllContents(RegionContainer)->size()/]
+const NUMBER_Conditions : int is [aTimedSystem.eAllContents(Condition)->size()/]
+const NUMBER_StopActions : int is [aTimedSystem.eAllContents(StopAction)->size()/]
+const NUMBER_MoveForwardActions : int is [aTimedSystem.eAllContents(MoveForwardAction)->size()/]
+const NUMBER_Actions : int is [aTimedSystem.eAllContents(Action)->size()/]
+const NUMBER_EmergencyStopActions : int is [aTimedSystem.eAllContents(EmergencyStopAction)->size()/]
+const NUMBER_AllActionFinishedConditions : int is [aTimedSystem.eAllContents(AllActionFinishedCondition)->size()/]
+const NUMBER_SystemPropertyConditions : int is [aTimedSystem.eAllContents(SystemPropertyCondition)->size()/]
+const NUMBER_ActionSequences : int is [aTimedSystem.eAllContents(ActionSequence)->size()/]
+
+type TFSM_tfsmsArray is array [TimedSystem.eContents(TFSM)->size()/] of int
+type FSMClock_globalClocksArray is array [TimedSystem.eContents(FSMClock)->size()/] of int
+type FSMEvent_globalEventsArray is array [TimedSystem.eContents(FSMEvent)->size()/] of int
+type FSMEvent_localEventsArray is array [TFSM.eContents(FSMEvent)->size()/] of int
+type Transition_ownedTransitionsArray is array [TFSM.eContents(Transition)->size()/] of int
+type State_ownedStatesArray is array [TFSM.eContents(State)->size()/] of int
+type Transition_outgoingTransitionsArray is array [State.eContents(Transition)->size()/] of int
+type Transition_incomingTransitionsArray is array [State.eContents(Transition)->size()/] of int
+type Action_actionsArray is array [State.eContents(Action)->size()/] of int
+type FSMEvent_generatedEventsArray is array [Transition.eContents(FSMEvent)->size()/] of int
+type Transition_sollicitingTransitionsArray is array [FSMEvent.eContents(Transition)->size()/] of int
+type State_ownedStatesArray is array [Region.eContents(State)->size()/] of int
+type Region_ownedRegionsArray is array [RegionContainer.eContents(Region)->size()/] of int
+type Action_actionsArray is array [ActionSequence.eContents(Action)->size()/] of int
+
+
+/*********************************************************************
+Defining the Functions for : FSMClock
+**********************************************************************/
+/*********************************************************************
+Defining the Functions for : TFSM
+**********************************************************************/
+/*********************************************************************
+Defining the Functions for : Action
+**********************************************************************/
+/*********************************************************************
+Defining the Functions for : State
+**********************************************************************/
+/*********************************************************************
+Defining the Functions for : Transition
+**********************************************************************/
+/*********************************************************************
+Defining the Functions for : FSMEvent
+**********************************************************************/
+/************************* FSMClock Process Instances***************************/
+[for (element : FSMClock| aTimedSystem.eAllContents(FSMClock))]
+process p[element.name/] ['['/][element.name/]_tickClock:in none[']'/](&global : SystemDataRoot, id : read int) is
+	states s0
+	var _self:FSMClock
+    from s0  [element.name/]_tickClock; global:=FSMClock_ticks( global , global.refToElement_id) ;  to s0
+[/for]
+/************************* TFSM Process Instances***************************/
+[for (element : TFSM| aTimedSystem.eAllContents(TFSM))]
+process p[element.name/] ['['/][element.name/]_initializeEvent:in none[']'/](&global : SystemDataRoot, id : read int) is
+	states s0
+	var _self:TFSM
+    from s0  [element.name/]_initializeEvent; global:=TFSM_initialize( global , global.refToElement_id) ;  to s0
+[/for]
+/************************* Action Process Instances***************************/
+[for (element : Action| aTimedSystem.eAllContents(Action))]
+process p[element.name/] ['['/][element.name/]_beginClock:in none,[element.name/]_endClock:in none[']'/](&global : SystemDataRoot, id : read int) is
+	states s0
+	var _self:Action
+    from s0  [element.name/]_beginClock; global:=Action_begin( global , global.refToElement_id) ;  to s0
+    from s0  [element.name/]_endClock; global:=Action_end( global , global.refToElement_id) ;  to s0
+[/for]
+/************************* State Process Instances***************************/
+[for (element : State| aTimedSystem.eAllContents(State))]
+process p[element.name/] ['['/][element.name/]_enteringClock:in none,[element.name/]_leavingClock:in none[']'/](&global : SystemDataRoot, id : read int) is
+	states s0
+	var _self:State
+    from s0  [element.name/]_enteringClock; global:=State_onEnter( global , global.refToElement_id) ;  to s0
+    from s0  [element.name/]_leavingClock; global:=State_onLeave( global , global.refToElement_id) ;  to s0
+[/for]
+/************************* Transition Process Instances***************************/
+[for (element : Transition| aTimedSystem.eAllContents(Transition))]
+process p[element.name/] ['['/][element.name/]_fireClock:in none[']'/](&global : SystemDataRoot, id : read int) is
+	states s0
+	var _self:Transition
+    from s0  [element.name/]_fireClock; global:=Transition_fire( global , global.refToElement_id) ;  to s0
+[/for]
+process pUnConstrainedSemantics['['/][for (element : FSMClock| aTimedSystem.eAllContents(FSMClock))]
+[element.name/]_tickClock:out none,[/for][for (element : TFSM| aTimedSystem.eAllContents(TFSM))]
+[element.name/]_initializeEvent:out none,[/for][for (element : Action| aTimedSystem.eAllContents(Action))]
+[element.name/]_beginClock:out none,[element.name/]_endClock:out none,[/for][for (element : State| aTimedSystem.eAllContents(State))]
+[element.name/]_enteringClock:out none,[element.name/]_leavingClock:out none,[/for][for (element : Transition| aTimedSystem.eAllContents(Transition))]
+[element.name/]_fireClock:out none,[/for][for (element : FSMEvent| aTimedSystem.eAllContents(FSMEvent))]
+[element.name/]_happenedClock:out none,[/for][']'/] is
+	states s0
+[for (element : FSMClock| aTimedSystem.eAllContents(FSMClock))]
+    from s0  [element.name/]_tickClock;  to s0
+
+[/for]
+[for (element : TFSM| aTimedSystem.eAllContents(TFSM))]
+    from s0  [element.name/]_initializeEvent;  to s0
+
+[/for]
+[for (element : Action| aTimedSystem.eAllContents(Action))]
+    from s0  [element.name/]_beginClock;  to s0
+    from s0  [element.name/]_endClock;  to s0
+
+[/for]
+[for (element : State| aTimedSystem.eAllContents(State))]
+    from s0  [element.name/]_enteringClock;  to s0
+    from s0  [element.name/]_leavingClock;  to s0
+
+[/for]
+[for (element : Transition| aTimedSystem.eAllContents(Transition))]
+    from s0  [element.name/]_fireClock;  to s0
+
+[/for]
+[for (element : FSMEvent| aTimedSystem.eAllContents(FSMEvent))]
+    from s0  [element.name/]_happenedClock;  to s0
+
+[/for]
+
+[file ('pUnConstrainedSemantics.fcr', false, 'UTF-8')]
+process pUnConstrainedSemantics['['/][for (element : FSMClock| aTimedSystem.eAllContents(FSMClock))]
+[element.name/]_tickClock:out none,[/for][for (element : TFSM| aTimedSystem.eAllContents(TFSM))]
+[element.name/]_initializeEvent:out none,[/for][for (element : Action| aTimedSystem.eAllContents(Action))]
+[element.name/]_beginClock:out none,[element.name/]_endClock:out none,[/for][for (element : State| aTimedSystem.eAllContents(State))]
+[element.name/]_enteringClock:out none,[element.name/]_leavingClock:out none,[/for][for (element : Transition| aTimedSystem.eAllContents(Transition))]
+[element.name/]_fireClock:out none,[/for][for (element : FSMEvent| aTimedSystem.eAllContents(FSMEvent))]
+[element.name/]_happenedClock:out none,[/for][']'/] is
+	
+	states s0
+[for (element : FSMClock| aTimedSystem.eAllContents(FSMClock))]
+    from s0  [element.name/]_tickClock;  to s0
+
+[/for]
+[for (element : TFSM| aTimedSystem.eAllContents(TFSM))]
+    from s0  [element.name/]_initializeEvent;  to s0
+
+[/for]
+[for (element : Action| aTimedSystem.eAllContents(Action))]
+    from s0  [element.name/]_beginClock;  to s0
+    from s0  [element.name/]_endClock;  to s0
+
+[/for]
+[for (element : State| aTimedSystem.eAllContents(State))]
+    from s0  [element.name/]_enteringClock;  to s0
+    from s0  [element.name/]_leavingClock;  to s0
+
+[/for]
+[for (element : Transition| aTimedSystem.eAllContents(Transition))]
+    from s0  [element.name/]_fireClock;  to s0
+
+[/for]
+[for (element : FSMEvent| aTimedSystem.eAllContents(FSMEvent))]
+    from s0  [element.name/]_happenedClock;  to s0
+
+[/for]
+[/file]
+/******************** Process Parallelization for TimedSystem******************/
+component sys is
+
+var 
+	global : SystemDataRoot,
+    ID: int := 0
+	//global : SystemDataRoot := INITIAL_Configuration
+
+port
+[for (element : FSMClock| aTimedSystem.eAllContents(FSMClock))]
+[element.name/]_tickClock: none,
+[/for][for (element : TFSM| aTimedSystem.eAllContents(TFSM))]
+[element.name/]_initializeEvent: none,
+
+[/for][for (element : Action| aTimedSystem.eAllContents(Action))]
+[element.name/]_beginClock: none,[element.name/]_endClock: none,
+
+[/for][for (element : State| aTimedSystem.eAllContents(State))]
+[element.name/]_enteringClock: none,[element.name/]_leavingClock: none,
+
+[/for][for (element : Transition| aTimedSystem.eAllContents(Transition))]
+[element.name/]_fireClock: none,
+
+[/for][for (element : FSMEvent| aTimedSystem.eAllContents(FSMEvent))]
+[element.name/]_happenedClock: none,
+
+[/for]
+
+par
+
+pUnConstrainedSemantics['['/][for (element : FSMClock| aTimedSystem.eAllContents(FSMClock))]
+[element.name/]_tickClock,[/for][for (element : TFSM| aTimedSystem.eAllContents(TFSM))]
+[element.name/]_initializeEvent,[/for][for (element : Action| aTimedSystem.eAllContents(Action))]
+[element.name/]_beginClock,[element.name/]_endClock,[/for][for (element : State| aTimedSystem.eAllContents(State))]
+[element.name/]_enteringClock,[element.name/]_leavingClock,[/for][for (element : Transition| aTimedSystem.eAllContents(Transition))]
+[element.name/]_fireClock,[/for][for (element : FSMEvent| aTimedSystem.eAllContents(FSMEvent))]
+[element.name/]_happenedClock,[/for][']'/]
+[for (element : FSMClock| aTimedSystem.eAllContents(FSMClock))]
+|| p[element.name/] ['['/][element.name/]_tickClock[']'/] (&global, ID)
+[/for]
+[for (element : TFSM| aTimedSystem.eAllContents(TFSM))]
+|| p[element.name/] ['['/][element.name/]_initializeEvent[']'/] (&global, ID)
+[/for]
+[for (element : Action| aTimedSystem.eAllContents(Action))]
+|| p[element.name/] ['['/][element.name/]_beginClock,[element.name/]_endClock[']'/] (&global, ID)
+[/for]
+[for (element : State| aTimedSystem.eAllContents(State))]
+|| p[element.name/] ['['/][element.name/]_enteringClock,[element.name/]_leavingClock[']'/] (&global, ID)
+[/for]
+[for (element : Transition| aTimedSystem.eAllContents(Transition))]
+|| p[element.name/] ['['/][element.name/]_fireClock[']'/] (&global, ID)
+[/for]
+[for (element : FSMEvent| aTimedSystem.eAllContents(FSMEvent))]
+|| p[element.name/] ['['/][element.name/]_happenedClock[']'/] (&global, ID)
+[/for]
+end par
+sys 
+[/file]
+[/template]

@@ -37,9 +37,9 @@
                     <children xmi:type="notation:Node" xmi:id="_xvgI2rOzEeWBBck9jqN4gQ" type="5003">
                       <layoutConstraint xmi:type="notation:Location" xmi:id="_xvgI27OzEeWBBck9jqN4gQ" y="-21"/>
                     </children>
-                    <children xmi:type="notation:Node" xmi:id="__M8lYLOzEeWBBck9jqN4gQ" type="3005" element="__My0ZbOzEeWBBck9jqN4gQ">
-                      <styles xmi:type="notation:ShapeStyle" xmi:id="__M8lYbOzEeWBBck9jqN4gQ" fontName="Segoe UI"/>
-                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="__M8lYrOzEeWBBck9jqN4gQ"/>
+                    <children xmi:type="notation:Node" xmi:id="_2L3ZgOHhEeWCd6QRIZ9E0g" type="3005" element="_2LTY0OHhEeWCd6QRIZ9E0g">
+                      <styles xmi:type="notation:ShapeStyle" xmi:id="_2L3ZgeHhEeWCd6QRIZ9E0g" fontName="Ubuntu"/>
+                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2L3ZguHhEeWCd6QRIZ9E0g"/>
                     </children>
                     <styles xmi:type="notation:ShapeStyle" xmi:id="_xvgI2LOzEeWBBck9jqN4gQ" fontName="Segoe UI" fontHeight="8" bold="true"/>
                     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xvgI2bOzEeWBBck9jqN4gQ" x="30" y="30" width="50" height="45"/>
@@ -77,7 +77,7 @@
       </ownedAnnotationEntries>
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_-TDwALOzEeWBBck9jqN4gQ" source="DANNOTATION_CUSTOMIZATION_KEY">
         <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_-TDwAbOzEeWBBck9jqN4gQ">
-          <computedStyleDescriptions xmi:type="style:WorkspaceImageDescription" xmi:id="__My0Y7OzEeWBBck9jqN4gQ" labelFormat="bold" showIcon="false" labelExpression="localClock:0" sizeComputationExpression="5" resizeKind="NSEW" roundedCorner="true" workspacePath="/org.gemoc.sample.tfsm.design/icons/clock_local_small.gif">
+          <computedStyleDescriptions xmi:type="style:WorkspaceImageDescription" xmi:id="_2LSKsOHhEeWCd6QRIZ9E0g" labelFormat="bold" showIcon="false" labelExpression="localClock:0" sizeComputationExpression="5" resizeKind="NSEW" roundedCorner="true" workspacePath="/org.gemoc.ardurobotml.design/icons/clock_local_small.gif">
             <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
@@ -86,7 +86,7 @@
             <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="__My0YbOzEeWBBck9jqN4gQ">
               <key xmi:type="ardurobotml:FSMClock" href="Model1.ardurobotml#//@tfsms.0/@localClock"/>
               <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="__My0YrOzEeWBBck9jqN4gQ" key="_xumxB7OzEeWBBck9jqN4gQ">
-                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="__My0ZLOzEeWBBck9jqN4gQ" value="__My0Y7OzEeWBBck9jqN4gQ">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="__My0ZLOzEeWBBck9jqN4gQ" value="_2LSKsOHhEeWCd6QRIZ9E0g">
                   <key xmi:type="ardurobotml:TFSM" href="Model1.ardurobotml#//@tfsms.0"/>
                 </value>
               </value>
@@ -141,15 +141,15 @@
           <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_xumxB7OzEeWBBck9jqN4gQ" name="localClock:0" width="5" height="5" resizeKind="NSEW">
             <target xmi:type="ardurobotml:FSMClock" href="Model1.ardurobotml#//@tfsms.0/@localClock"/>
             <semanticElements xmi:type="ardurobotml:FSMClock" href="Model1.ardurobotml#//@tfsms.0/@localClock"/>
-            <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="__My0ZbOzEeWBBck9jqN4gQ" labelFormat="bold" showIcon="false" description="__My0Y7OzEeWBBck9jqN4gQ" workspacePath="/org.gemoc.sample.tfsm.design/icons/clock_local_small.gif">
-              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__My0ZrOzEeWBBck9jqN4gQ"/>
-              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__My0Z7OzEeWBBck9jqN4gQ"/>
+            <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_2LTY0OHhEeWCd6QRIZ9E0g" labelFormat="bold" showIcon="false" description="_2LSKsOHhEeWCd6QRIZ9E0g" workspacePath="/org.gemoc.ardurobotml.design/icons/clock_local_small.gif">
+              <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_2LTY0eHhEeWCd6QRIZ9E0g"/>
+              <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_2LTY0uHhEeWCd6QRIZ9E0g"/>
             </ownedStyle>
             <actualMapping xmi:type="description_1:NodeMappingImport" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TimedSystem']/@defaultLayer/@containerMappings[name='TimedSystem']/@subContainerMappings[name='TFSM']/@subNodeMappings[name='Clocks']"/>
           </ownedDiagramElements>
         </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xumxC7OzEeWBBck9jqN4gQ" name="if org.gemoc.ardurobotml.impl.AllActionFinishedConditionImpl@74be26&#xA; / &#xA;" sourceNode="_xumw_bOzEeWBBck9jqN4gQ" targetNode="_xumxArOzEeWBBck9jqN4gQ">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xumxC7OzEeWBBck9jqN4gQ" name="if org.gemoc.ardurobotml.impl.AllActionFinishedConditionImpl@2eff4e88&#xA; / &#xA;" sourceNode="_xumw_bOzEeWBBck9jqN4gQ" targetNode="_xumxArOzEeWBBck9jqN4gQ">
         <target xmi:type="ardurobotml:Transition" href="Model1.ardurobotml#//@tfsms.0/@ownedTransitions.0"/>
         <semanticElements xmi:type="ardurobotml:Transition" href="Model1.ardurobotml#//@tfsms.0/@ownedTransitions.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xumxDLOzEeWBBck9jqN4gQ" targetArrow="InputFillClosedArrow" size="2">
@@ -175,9 +175,9 @@
             <children xmi:type="notation:Node" xmi:id="_xwPvy7OzEeWBBck9jqN4gQ" type="5002">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_xwPvzLOzEeWBBck9jqN4gQ" y="-21"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="__5uy4LOzEeWBBck9jqN4gQ" type="3005" element="__5SG97OzEeWBBck9jqN4gQ">
-              <styles xmi:type="notation:ShapeStyle" xmi:id="__5uy4bOzEeWBBck9jqN4gQ" fontName="Segoe UI"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__5uy4rOzEeWBBck9jqN4gQ"/>
+            <children xmi:type="notation:Node" xmi:id="_yQ_fYOHhEeWCd6QRIZ9E0g" type="3005" element="_yOJmwOHhEeWCd6QRIZ9E0g">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_yQ_fYeHhEeWCd6QRIZ9E0g" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yQ_fYuHhEeWCd6QRIZ9E0g"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_xwPvybOzEeWBBck9jqN4gQ" fontName="Segoe UI" fontHeight="8" bold="true"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xwPvyrOzEeWBBck9jqN4gQ" width="50" height="45"/>
@@ -225,7 +225,7 @@
       </ownedAnnotationEntries>
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="__5SG8LOzEeWBBck9jqN4gQ" source="DANNOTATION_CUSTOMIZATION_KEY">
         <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="__5SG8bOzEeWBBck9jqN4gQ">
-          <computedStyleDescriptions xmi:type="style:WorkspaceImageDescription" xmi:id="__5SG9bOzEeWBBck9jqN4gQ" labelFormat="bold" showIcon="false" labelExpression="localClock:0" sizeComputationExpression="5" resizeKind="NSEW" roundedCorner="true" workspacePath="/org.gemoc.sample.tfsm.design/icons/clock_local_small.gif">
+          <computedStyleDescriptions xmi:type="style:WorkspaceImageDescription" xmi:id="_yOF8YOHhEeWCd6QRIZ9E0g" labelFormat="bold" showIcon="false" labelExpression="localClock:0" sizeComputationExpression="5" resizeKind="NSEW" roundedCorner="true" workspacePath="/org.gemoc.ardurobotml.design/icons/clock_local_small.gif">
             <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </computedStyleDescriptions>
@@ -234,7 +234,7 @@
             <value xmi:type="diagram:ModelElement2ViewVariable" xmi:id="__5SG87OzEeWBBck9jqN4gQ">
               <key xmi:type="ardurobotml:FSMClock" href="Model1.ardurobotml#//@tfsms.0/@localClock"/>
               <value xmi:type="diagram:ViewVariable2ContainerVariable" xmi:id="__5SG9LOzEeWBBck9jqN4gQ" key="_xwPvsbOzEeWBBck9jqN4gQ">
-                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="__5SG9rOzEeWBBck9jqN4gQ" value="__5SG9bOzEeWBBck9jqN4gQ">
+                <value xmi:type="diagram:ContainerVariable2StyleDescription" xmi:id="__5SG9rOzEeWBBck9jqN4gQ" value="_yOF8YOHhEeWCd6QRIZ9E0g">
                   <key xmi:type="ardurobotml:TFSM" href="Model1.ardurobotml#//@tfsms.0"/>
                 </value>
               </value>
@@ -245,9 +245,9 @@
       <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_xwPvsbOzEeWBBck9jqN4gQ" name="localClock:0" width="5" height="5" resizeKind="NSEW">
         <target xmi:type="ardurobotml:FSMClock" href="Model1.ardurobotml#//@tfsms.0/@localClock"/>
         <semanticElements xmi:type="ardurobotml:FSMClock" href="Model1.ardurobotml#//@tfsms.0/@localClock"/>
-        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="__5SG97OzEeWBBck9jqN4gQ" labelFormat="bold" showIcon="false" description="__5SG9bOzEeWBBck9jqN4gQ" workspacePath="/org.gemoc.sample.tfsm.design/icons/clock_local_small.gif">
-          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="__5SG-LOzEeWBBck9jqN4gQ"/>
-          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="__5SG-bOzEeWBBck9jqN4gQ"/>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" xmi:id="_yOJmwOHhEeWCd6QRIZ9E0g" labelFormat="bold" showIcon="false" description="_yOF8YOHhEeWCd6QRIZ9E0g" workspacePath="/org.gemoc.ardurobotml.design/icons/clock_local_small.gif">
+          <labelColor xmi:type="viewpoint:RGBValues" xmi:id="_yOJmweHhEeWCd6QRIZ9E0g"/>
+          <borderColor xmi:type="viewpoint:RGBValues" xmi:id="_yOJmwuHhEeWCd6QRIZ9E0g"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@nodeMappings[name='Local%20Clock']"/>
       </ownedDiagramElements>
@@ -276,7 +276,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.gemoc.ardurobotml.design/description/ardurobotml.odesign#//@ownedViewpoints[name='ArduRobotML_ViewPoint']/@ownedRepresentations[name='TFSM']/@defaultLayer/@nodeMappings[name='State']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xwPvv7OzEeWBBck9jqN4gQ" name="if org.gemoc.ardurobotml.impl.AllActionFinishedConditionImpl@11f8fa6&#xA; / &#xA;" sourceNode="_xwPvtbOzEeWBBck9jqN4gQ" targetNode="_xwPvurOzEeWBBck9jqN4gQ">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xwPvv7OzEeWBBck9jqN4gQ" name="if org.gemoc.ardurobotml.impl.AllActionFinishedConditionImpl@5759370a&#xA; / &#xA;" sourceNode="_xwPvtbOzEeWBBck9jqN4gQ" targetNode="_xwPvurOzEeWBBck9jqN4gQ">
         <target xmi:type="ardurobotml:Transition" href="Model1.ardurobotml#//@tfsms.0/@ownedTransitions.0"/>
         <semanticElements xmi:type="ardurobotml:Transition" href="Model1.ardurobotml#//@tfsms.0/@ownedTransitions.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xwPvwLOzEeWBBck9jqN4gQ" targetArrow="InputFillClosedArrow" size="2">

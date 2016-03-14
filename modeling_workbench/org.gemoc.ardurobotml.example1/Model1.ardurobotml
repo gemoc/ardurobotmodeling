@@ -3,7 +3,7 @@
   <tfsms name="Go_safely_to_destination" initialState="//@tfsms.0/@ownedRegions.0/@ownedStates.0" ownedStates="//@tfsms.0/@ownedRegions.0/@ownedStates.0 //@tfsms.0/@ownedRegions.0/@ownedStates.1">
     <ownedRegions>
       <ownedStates name="S1_Initialize" outgoingTransitions="//@tfsms.0/@ownedTransitions.0" owningFSM="//@tfsms.0">
-        <actions xsi:type="ardurobotml:StopAction" name="stop1"/>
+        <actions xsi:type="ardurobotml:MoveForwardAction" name="go" duration="5" speed="20"/>
       </ownedStates>
       <ownedStates name="S2_Execute" incomingTransitions="//@tfsms.0/@ownedTransitions.0" owningFSM="//@tfsms.0">
         <actions xsi:type="ardurobotml:StopAction" name="stop2"/>

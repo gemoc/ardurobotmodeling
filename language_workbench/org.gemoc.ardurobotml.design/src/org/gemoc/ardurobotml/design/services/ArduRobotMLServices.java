@@ -1,5 +1,10 @@
 package org.gemoc.ardurobotml.design.services;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
+import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
+import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
 import org.gemoc.ardurobotml.EvaluateGuard;
 import org.gemoc.ardurobotml.EventGuard;
 import org.gemoc.ardurobotml.FSMEvent;
@@ -38,8 +43,8 @@ public class ArduRobotMLServices {
 					.getOnClock().getName());
 		} else if (transition.getOwnedGuard() instanceof EvaluateGuard) {
 			res.append("if ");
-			res.append(((EvaluateGuard) transition.getOwnedGuard())
-					.getCondition());
+			res.append(getEditLabel(((EvaluateGuard) transition.getOwnedGuard())
+					.getCondition()));
 		}
 		res.append("\n / \n");
 		for (FSMEvent event : transition.getGeneratedEvents()) {
@@ -51,5 +56,26 @@ public class ArduRobotMLServices {
 		return res.toString();
 	}
 
+	/**
+	 * The {@link ComposedAdapterFactory} used to provide image and text for eObject.
+	 * This reuse the ItemProvider offered by the edit plugin
+	 */
+	private static final ComposedAdapterFactory ADAPTER_FACTORY = initLabelProvider();
+	
+	private static ComposedAdapterFactory initLabelProvider() {
+		final ComposedAdapterFactory adapterFactory = new ComposedAdapterFactory(
+				ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
+		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
+		return adapterFactory;
+	}
+	/**
+	 * get the label as computed by the model.edit plugin or reflectively by EMF 
+	 */	
+	public String getEditLabel(EObject o){
+		final IItemLabelProvider provider = (IItemLabelProvider)ADAPTER_FACTORY.adapt(o,
+				IItemLabelProvider.class);
+		return provider.getText(o);
+	}
 
 }

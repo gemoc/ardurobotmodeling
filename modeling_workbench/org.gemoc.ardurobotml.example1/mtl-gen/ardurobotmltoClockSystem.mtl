@@ -1,0 +1,143 @@
+[comment encoding = UTF-8 /]
+
+[module generate('http://fr.inria.aoste.timemodel.ccslmodel.clockexpressionandrelation', 
+	'http://www.eclipse.org/emf/2002/Ecore', 
+	'http://org.gemoc.moccml/1.0', 
+	'http://fr.inria.aoste.timemodel',
+	'http://org.gemoc.moccml.fsmmodel/1.0',
+	'http://org.gemoc/ardurobotml') ]
+
+[template public generate(aTimedSystem : TimedSystem)]
+[comment @main/]
+[file (aTimedSystem.name+'_withMoC-.clocksystem', false, 'UTF-8')]
+
+"Some global constants"
+|system moccmllibs ccsllibs|
+"MoCCML librairies specifications" 
+
+	"CCSL librairies specifications"
+
+
+"Instanciation" 
+
+
+system := ClockSystem named: '[aTimedSystem.name/]_withMoC-'.
+system addLibrary:moccmllibs asDictionary.
+"system addLibs:ccsllibs asDictionary."
+
+[for (element : ardurobotml::FSMClock| aTimedSystem.eAllContents(ardurobotml::FSMClock))]
+"clocks for FSMClock [element.name/]" 
+	system addClocks: #(tickClock[element.name /] ).
+[/for]
+[for (element : ardurobotml::TFSM| aTimedSystem.eAllContents(ardurobotml::TFSM))]
+"clocks for TFSM [element.name/]" 
+	system addClocks: #(initializeEvent[element.name /] ).
+"internal clocks for ardurobotml::TFSM [element.name/]" 
+    system addInternalClocks: #(oneTickOnlyClock[element.name /] ).
+[/for]
+[for (element : ardurobotml::Action| aTimedSystem.eAllContents(ardurobotml::Action))]
+"clocks for Action [element.name/]" 
+	system addClocks: #(beginClock[element.name /] endClock[element.name /] ).
+"internal clocks for ardurobotml::Action [element.name/]" 
+    system addInternalClocks: #(lastEndClock[element.name /] ).
+[/for]
+[for (element : ardurobotml::State| aTimedSystem.eAllContents(ardurobotml::State))]
+"clocks for State [element.name/]" 
+	system addClocks: #(enteringClock[element.name /] leavingClock[element.name /] ).
+"internal clocks for ardurobotml::State [element.name/]" 
+    system addInternalClocks: #(firstBegin[element.name /] allOutgoingTransition[element.name /] allInputTransition[element.name /] ).
+[/for]
+[for (element : ardurobotml::Transition| aTimedSystem.eAllContents(ardurobotml::Transition))]
+"clocks for Transition [element.name/]" 
+	system addClocks: #(fireClock[element.name /] ).
+"internal clocks for ardurobotml::Transition [element.name/]" 
+    system addInternalClocks: #(lastEndClock[element.name /] eventHappenedClock[element.name /] sensitiveEvent[element.name /] leavingClock[element.name /] ).
+[/for]
+[for (element : ardurobotml::FSMEvent| aTimedSystem.eAllContents(ardurobotml::FSMEvent))]
+"clocks for FSMEvent [element.name/]" 
+	system addClocks: #(happenedClock[element.name /] ).
+"internal clocks for ardurobotml::FSMEvent [element.name/]" 
+    system addInternalClocks: #(initClock[element.name /] firstHappenedClock[element.name /] ).
+[/for]
+
+[for (element : ardurobotml::FSMClock| aTimedSystem.eAllContents(ardurobotml::FSMClock))]
+"relations for FSMClock [element.name/]" 
+[/for]
+[for (element : ardurobotml::TFSM| aTimedSystem.eAllContents(ardurobotml::TFSM))]
+"expressions used by  TFSM [element.name/]" 
+	system allOneTickAndNoMore: #(initializeEvent[element.name/]) named: #oneTickOnlyClock[element.name/]. 
+"relations for TFSM [element.name/]" 
+	"initializeOnlyOnceInvariant in TFSM [element.name/]"
+		system library: #Kernel relation: #Coincides clocks: #(initializeEvent[element.name/]  oneTickOnlyClock[element.name/]).
+
+	"initFirstInvariant in TFSM [element.name/]"
+		system library: #Kernel relation: #Precedes clocks: #(initializeEvent[element.name/]  enteringClock[element.initialState.oclAsType(ardurobotml::State).name/]).
+
+	"oneTransitionAtATime in TFSM [element.name/]"
+		system library: #Kernel relation: #Exclusion clocks: #().
+
+[/for]
+[for (element : ardurobotml::Action| aTimedSystem.eAllContents(ardurobotml::Action))]
+"expressions used by  Action [element.name/]" 
+	system all: #() named: #lastEndClock[element.name/]. 
+"relations for Action [element.name/]" 
+	"beginThenEndInvariant in Action [element.name/]"
+		system library: #Kernel relation: #Alternates clocks: #(beginClock[element.name/]  endClock[element.name/]).
+
+	"tickAfterLast in Action [element.name/]"
+		system library: #Kernel relation: #Precedes clocks: #(lastEndClock[element.name/]  beginClock[element.name/]).
+
+[/for]
+[for (element : ardurobotml::State| aTimedSystem.eAllContents(ardurobotml::State))]
+"expressions used by  State [element.name/]" 
+	system all: #() named: #firstBegin[element.name/]. 
+	system allUnion: #() named: #allOutgoingTransition[element.name/]. 
+	system allUnion: #() named: #allInputTransition[element.name/]. 
+"relations for State [element.name/]" 
+	"enterThenLeaveInvariant in State [element.name/]"
+		system library: #Kernel relation: #Alternates clocks: #(enteringClock[element.name/]  leavingClock[element.name/]).
+
+	"oneActionAtATime in State [element.name/]"
+		system library: #Kernel relation: #Exclusion clocks: #().
+
+	"tickWhenEnteringState in State [element.name/]"
+		system library: #Kernel relation: #Precedes clocks: #(enteringClock[element.name/]  firstBegin[element.name/]).
+
+	"leaveWhenOneTransitionFires in State [element.name/]"
+		system library: #Kernel relation: #Coincides clocks: #(allOutgoingTransition[element.name/]  leavingClock[element.name/]).
+
+	"enterWhenOneTransitionFires in State [element.name/]"
+		system library: #Kernel relation: #Precedes clocks: #(allInputTransition[element.name/]  enteringClock[element.name/]).
+
+[/for]
+[for (element : ardurobotml::Transition| aTimedSystem.eAllContents(ardurobotml::Transition))]
+"expressions used by  Transition [element.name/]" 
+	system all: #() named: #lastEndClock[element.name/]. 
+	system all: #() named: #eventHappenedClock[element.name/]. 
+	system allSampledOn: #(enteringClock[element.source.oclAsType(ardurobotml::State).name/]) named: #sensitiveEvent[element.name/]. 
+	system all: #() named: #leavingClock[element.name/]. 
+"relations for Transition [element.name/]" 
+	"fireWhenLasActionEnds in Transition [element.name/]"
+		system library: #Kernel relation: #Precedes clocks: #(lastEndClock[element.name/]  fireClock[element.name/]).
+
+	"fireWhenEventHappens in Transition [element.name/]"
+		system library: #Kernel relation: #Coincides clocks: #(sensitiveEvent[element.name/]  fireClock[element.name/]).
+
+	"fireWhenNoGuard in Transition [element.name/]"
+		system library: #Kernel relation: #Coincides clocks: #(leavingClock[element.name/]  fireClock[element.name/]).
+
+[/for]
+[for (element : ardurobotml::FSMEvent| aTimedSystem.eAllContents(ardurobotml::FSMEvent))]
+"expressions used by  FSMEvent [element.name/]" 
+	system all: #() named: #initClock[element.name/]. 
+	system allOneTickAndNoMore: #(happenedClock[element.name/]) named: #firstHappenedClock[element.name/]. 
+"relations for FSMEvent [element.name/]" 
+	"noTickingUntilFSMInitialized in FSMEvent [element.name/]"
+		system library: #Kernel relation: #Precedes clocks: #(initClock[element.name/]  firstHappenedClock[element.name/]).
+
+[/for]
+[/file]
+[file ('ClkSysFunctionTest.clocksystem', false, 'UTF-8')]
+SimpleSDF example1 system
+[/file]
+[/template]
