@@ -1,5 +1,6 @@
 package org.gemoc.ardurobotml.simulationfacade.addons;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -16,6 +17,8 @@ public class DefineSimulationFacade implements IEngineAddon {
 	@Override
 	public void engineAboutToStart(IBasicExecutionEngine engine) 
 	{
+
+		System.err.println("engineAboutToStart");
 		RobotFacadeRegistry.registerRobotFacade(new ArduRoverSimulationFacade());
 	}
 
@@ -23,21 +26,21 @@ public class DefineSimulationFacade implements IEngineAddon {
 	@Override
 	public void aboutToExecuteLogicalStep(IBasicExecutionEngine arg0,
 			LogicalStep arg1) {
-		// TODO Auto-generated method stub
+//		System.err.println("aboutToExecuteLogicalStep");
 		
 	}
 
 	@Override
 	public void aboutToExecuteMSEOccurrence(IBasicExecutionEngine arg0,
 			MSEOccurrence arg1) {
-		// TODO Auto-generated method stub
+//		System.err.println("aboutToExecuteMSEOccurrence");
 		
 	}
 
 	@Override
 	public void aboutToSelectLogicalStep(IBasicExecutionEngine arg0,
 			Collection<LogicalStep> arg1) {
-		// TODO Auto-generated method stub
+	//	System.err.println("aboutToSelectLogicalStep");
 		
 	}
 
@@ -101,8 +104,7 @@ public class DefineSimulationFacade implements IEngineAddon {
 
 	@Override
 	public List<String> validate(List<IEngineAddon> arg0) {
-		// TODO Auto-generated method stub
-		return null;
+		return new ArrayList<String>();
 	}
 
 }

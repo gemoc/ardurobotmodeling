@@ -2,52 +2,31 @@ package org.gemoc.ardurobotml.k3dsa
 
 import fr.inria.diverse.k3.al.annotationprocessor.Aspect
 import java.io.Closeable
-import fr.inria.diverse.k3.al.annotationprocessor.Aspect
-import org.gemoc.ardurobotml.TimedSystem
-import org.gemoc.ardurobotml.TFSM
-import org.gemoc.ardurobotml.State
-import org.gemoc.ardurobotml.Transition
-import org.gemoc.ardurobotml.NamedElement
-import org.gemoc.ardurobotml.Guard
-import org.gemoc.ardurobotml.TemporalGuard
-import org.gemoc.ardurobotml.EventGuard
-import org.gemoc.ardurobotml.FSMEvent
+import java.util.ArrayList
+import java.util.Collection
+import org.gemoc.ardurobotml.Action
+import org.gemoc.ardurobotml.CollisionSensorCondition
+import org.gemoc.ardurobotml.EmergencyStopAction
 import org.gemoc.ardurobotml.FSMClock
-import org.gemoc.ardurobotml.EvaluateGuard
+import org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction
+import org.gemoc.ardurobotml.MoveBackardAndTurningRightAction
+import org.gemoc.ardurobotml.MoveForwardAction
+import org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction
+import org.gemoc.ardurobotml.MoveForwardAndTurningRightAction
 import org.gemoc.ardurobotml.Region
 import org.gemoc.ardurobotml.RegionContainer
-import org.gemoc.ardurobotml.Condition
+import org.gemoc.ardurobotml.SCANCollisionAction
+import org.gemoc.ardurobotml.State
 import org.gemoc.ardurobotml.StopAction
-import org.gemoc.ardurobotml.MoveForwardAction
-import org.gemoc.ardurobotml.Action
-import org.gemoc.ardurobotml.EmergencyStopAction
-import org.gemoc.ardurobotml.AllActionFinishedCondition
-import org.gemoc.ardurobotml.SystemPropertyCondition
+import org.gemoc.ardurobotml.TFSM
+import org.gemoc.ardurobotml.Transition
+import org.gemoc.ardurobotml.TurningLeftAction
+import org.gemoc.ardurobotml.TurningRightAction
 import org.gemoc.ardurobotml.ActionSequence
-
-//import static extension org.gemoc.ardurobotml.k3dsa.TimedSystemAspect.*
-import static extension org.gemoc.ardurobotml.k3dsa.TFSMAspect.*
-import static extension org.gemoc.ardurobotml.k3dsa.StateAspect.*
-import static extension org.gemoc.ardurobotml.k3dsa.TransitionAspect.*
-//import static extension org.gemoc.ardurobotml.k3dsa.NamedElementAspect.*
-//import static extension org.gemoc.ardurobotml.k3dsa.GuardAspect.*
-//import static extension org.gemoc.ardurobotml.k3dsa.TemporalGuardAspect.*
-//import static extension org.gemoc.ardurobotml.k3dsa.EventGuardAspect.*
-//import static extension org.gemoc.ardurobotml.k3dsa.FSMEventAspect.*
-import static extension org.gemoc.ardurobotml.k3dsa.FSMClockAspect.*
-//import static extension org.gemoc.ardurobotml.k3dsa.EvaluateGuardAspect.*
-//import static extension org.gemoc.ardurobotml.k3dsa.RegionAspect.*
-//import static extension org.gemoc.ardurobotml.k3dsa.RegionContainerAspect.*
-//import static extension org.gemoc.ardurobotml.k3dsa.ConditionAspect.*
-import static extension org.gemoc.ardurobotml.k3dsa.StopActionAspect.*
-import static extension org.gemoc.ardurobotml.k3dsa.MoveForwardActionAspect.*
-import static extension org.gemoc.ardurobotml.k3dsa.ActionAspect.*
-import static extension org.gemoc.ardurobotml.k3dsa.EmergencyStopActionAspect.*
-//import static extension org.gemoc.ardurobotml.k3dsa.AllActionFinishedConditionAspect.*
-//import static extension org.gemoc.ardurobotml.k3dsa.SystemPropertyConditionAspect.*
-//import static extension org.gemoc.ardurobotml.k3dsa.ActionSequenceAspect.*
-import java.util.Collection
-import java.util.ArrayList
+import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
+import org.gemoc.ardurobotml.MoveBackardAction
+import org.gemoc.ardurobotml.AcceleratetAction
+import org.gemoc.ardurobotml.DeceleratetAction
 
 //@Aspect(className=ExecutionContext)
 //class ExecutionContextAspect
@@ -98,19 +77,29 @@ import java.util.ArrayList
 //}
 
 
-//@Aspect(className=ActionSequence)
-//class ActionSequenceAspect extends ActionAspect 
-//{
-//
-//	@OverrideAspectMethod
-//	def public void perform() { 
-//		for(Action a : _self.actions)
-//		{
-//			a.perform()
-//		}
-//	}
-//	
-//}
+@Aspect(className=ActionSequence)
+class ActionSequenceAspect extends ActionAspect 
+{
+
+
+	 def public void begin(){
+		for(Action a : _self.actions)
+		{
+			a.begin()
+		}
+	 	
+	 }
+
+	def public void end()
+	{
+		for(Action a : _self.actions)
+		{
+			a.end()
+		}
+	}	
+
+	
+}
 
 
 
@@ -126,17 +115,20 @@ abstract class ActionAspect
 }
 
 
-//@Aspect(className=CollisionSensorCondition)
-//class CollisionSensorConditionAspect {
-//	def public boolean evaluate() { 
-////		return KerCarFacade.Instance().hasDetectedPossibleCollision();
+@Aspect(className=CollisionSensorCondition)
+class CollisionSensorConditionAspect {
+	def public boolean evaluate() { 
+		return RobotFacadeRegistry.getUniqueFacade().hasDetectedPossibleCollision();
 //		return false;
-//	}
-//}
+	}
+}
 
 @Aspect(className=EmergencyStopAction)
 class EmergencyStopActionAspect extends ActionAspect  
 {
+	
+	
+	
 
 	def public void begin()
 	{
@@ -172,6 +164,114 @@ class MoveForwardActionAspect extends ActionAspect
 
 }
 
+@Aspect(className=MoveBackardAction)
+class MoveForwardBackwardAspect{
+	def public void begin()
+	{
+		val fsm = ModelHelper.getOwningTFSM(_self);		
+		_self.startTick = fsm.localClock.value
+		RobotFacadeRegistry.getUniqueFacade().moveOneStepBackward(_self);		
+	}
+
+}
+
+@Aspect(className=MoveForwardAndTurningRightAction)
+class MoveForwardAndTurningRightAspect{
+	def public void begin()
+	{
+		val fsm = ModelHelper.getOwningTFSM(_self);		
+		_self.startTick = fsm.localClock.value
+		RobotFacadeRegistry.getUniqueFacade().moveOneStepForwardAndTurningRight(_self);		
+	}
+
+}
+
+@Aspect(className=MoveForwardAndTurningLeftAction)
+class MoveForwardAndTurningLeftAspect{
+	def public void begin()
+	{
+		val fsm = ModelHelper.getOwningTFSM(_self);		
+		_self.startTick = fsm.localClock.value
+		RobotFacadeRegistry.getUniqueFacade().moveOneStepForwardAndTurningLeft(_self);		
+	}
+  
+}
+
+@Aspect(className=MoveBackardAndTurningRightAction)
+class MoveBackardAndTurningRightAspect{
+	def public void begin()
+	{
+		val fsm = ModelHelper.getOwningTFSM(_self);		
+		_self.startTick = fsm.localClock.value
+		RobotFacadeRegistry.getUniqueFacade().moveOneStepBackardAndTurningRight(_self);		
+	}
+
+}
+@Aspect(className=MoveBackardAndTurningLeftAction)
+class MoveBackardAndTurningLeftAspect{
+	def public void begin()
+	{
+		val fsm = ModelHelper.getOwningTFSM(_self);		
+		_self.startTick = fsm.localClock.value
+		RobotFacadeRegistry.getUniqueFacade().moveOneStepBackardAndTurningLeft(_self);		
+	}
+
+}
+
+
+@Aspect(className=TurningLeftAction)
+class TurningLeftAspect{
+	def public void begin()
+	{
+		val fsm = ModelHelper.getOwningTFSM(_self);		
+		_self.startTick = fsm.localClock.value
+		RobotFacadeRegistry.getUniqueFacade().turnLeft(_self);		
+	}
+
+}
+
+
+@Aspect(className=TurningRightAction)
+class TurningRightAspect{
+	def public void begin()
+	{
+		val fsm = ModelHelper.getOwningTFSM(_self);		
+		_self.startTick = fsm.localClock.value
+		RobotFacadeRegistry.getUniqueFacade().turnRight(_self);		
+	}
+
+}
+
+@Aspect(className=SCANCollisionAction)
+class SCANCollisionAspect{
+	def public void begin()
+	{
+		RobotFacadeRegistry.getUniqueFacade().scanCollision(_self);		
+	}
+}
+
+
+	
+
+@Aspect(className=AcceleratetAction)
+class AcceleratetAspect{
+	def public void begin()
+	{
+		RobotFacadeRegistry.getUniqueFacade().accelerate(_self);		
+	}
+}
+
+@Aspect(className=DeceleratetAction)
+class DeceleratetAspect{
+	def public void begin()
+	{
+		RobotFacadeRegistry.getUniqueFacade().decelerate(_self);		
+	}
+}
+
+
+
+
 @Aspect(className=State)
 class StateAspect 
 {
@@ -179,7 +279,7 @@ class StateAspect
 	def public String onEnter() 
 	{
 		return "[" + _self.getClass().getSimpleName() + ":" + _self.getName() + ".onEnter()]Entering " + _self.name;	
-	}
+	} 
 
 	def public String onLeave() 
 	{
@@ -231,7 +331,20 @@ public interface IRobotFacade extends Closeable {
 
 	def void initialize(TFSM fsm);
 	
+	def void accelerate(AcceleratetAction action) throws Exception;
+	def void decelerate(DeceleratetAction action) throws Exception;
 	def void moveOneStepForward(MoveForwardAction action) throws Exception;
+	def void moveOneStepBackward(MoveBackardAction action) throws Exception;
+	def void moveOneStepForwardAndTurningRight(MoveForwardAndTurningRightAction action) throws Exception;
+	def void moveOneStepForwardAndTurningLeft(MoveForwardAndTurningLeftAction action) throws Exception;
+	def void moveOneStepBackardAndTurningRight(MoveBackardAndTurningRightAction action) throws Exception;
+	def void moveOneStepBackardAndTurningLeft(MoveBackardAndTurningLeftAction action) throws Exception;
+	def void turnLeft(TurningLeftAction action) throws Exception;
+	def void turnRight(TurningRightAction action) throws Exception;	
+	def void scanCollision(SCANCollisionAction action) throws Exception;
+	
+	
+	
 
 	def int getPosition();
 
@@ -264,7 +377,7 @@ public class ModelHelper {
 
 	def public static Collection<State> getOwnedStates(RegionContainer regionContainer) {
 		val result = new ArrayList<State>();
-		if (regionContainer != null)
+			if (regionContainer != null)
 		{
 			for (Region r : regionContainer.getOwnedRegions())
 			{
@@ -290,7 +403,7 @@ public class ModelHelper {
 		return container as TFSM;
 	}
 
-	def public static TFSM getOwningTFSM(MoveForwardAction action) {
+	def public static TFSM getOwningTFSM(Action action) {
 		var container = action.eContainer();
 		if (container != null)
 		{

@@ -145,6 +145,11 @@ public class EvaluateGuardItemProvider extends GuardItemProvider {
 			(createChildParameter
 				(ArdurobotmlPackage.Literals.EVALUATE_GUARD__CONDITION,
 				 ArdurobotmlFactory.eINSTANCE.createSystemPropertyCondition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArdurobotmlPackage.Literals.EVALUATE_GUARD__CONDITION,
+				 ArdurobotmlFactory.eINSTANCE.createCollisionSensorCondition()));
 	}
 
 }

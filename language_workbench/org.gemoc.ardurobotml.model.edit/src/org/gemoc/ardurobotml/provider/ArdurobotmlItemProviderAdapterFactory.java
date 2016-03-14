@@ -371,6 +371,236 @@ public class ArdurobotmlItemProviderAdapterFactory extends ArdurobotmlAdapterFac
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.gemoc.ardurobotml.MoveBackardAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MoveBackardActionItemProvider moveBackardActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.gemoc.ardurobotml.MoveBackardAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMoveBackardActionAdapter() {
+		if (moveBackardActionItemProvider == null) {
+			moveBackardActionItemProvider = new MoveBackardActionItemProvider(this);
+		}
+
+		return moveBackardActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.gemoc.ardurobotml.MoveForwardAndTurningRightAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MoveForwardAndTurningRightActionItemProvider moveForwardAndTurningRightActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.gemoc.ardurobotml.MoveForwardAndTurningRightAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMoveForwardAndTurningRightActionAdapter() {
+		if (moveForwardAndTurningRightActionItemProvider == null) {
+			moveForwardAndTurningRightActionItemProvider = new MoveForwardAndTurningRightActionItemProvider(this);
+		}
+
+		return moveForwardAndTurningRightActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MoveForwardAndTurningLeftActionItemProvider moveForwardAndTurningLeftActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMoveForwardAndTurningLeftActionAdapter() {
+		if (moveForwardAndTurningLeftActionItemProvider == null) {
+			moveForwardAndTurningLeftActionItemProvider = new MoveForwardAndTurningLeftActionItemProvider(this);
+		}
+
+		return moveForwardAndTurningLeftActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.gemoc.ardurobotml.MoveBackardAndTurningRightAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MoveBackardAndTurningRightActionItemProvider moveBackardAndTurningRightActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.gemoc.ardurobotml.MoveBackardAndTurningRightAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMoveBackardAndTurningRightActionAdapter() {
+		if (moveBackardAndTurningRightActionItemProvider == null) {
+			moveBackardAndTurningRightActionItemProvider = new MoveBackardAndTurningRightActionItemProvider(this);
+		}
+
+		return moveBackardAndTurningRightActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MoveBackardAndTurningLeftActionItemProvider moveBackardAndTurningLeftActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMoveBackardAndTurningLeftActionAdapter() {
+		if (moveBackardAndTurningLeftActionItemProvider == null) {
+			moveBackardAndTurningLeftActionItemProvider = new MoveBackardAndTurningLeftActionItemProvider(this);
+		}
+
+		return moveBackardAndTurningLeftActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.gemoc.ardurobotml.TurningLeftAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TurningLeftActionItemProvider turningLeftActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.gemoc.ardurobotml.TurningLeftAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTurningLeftActionAdapter() {
+		if (turningLeftActionItemProvider == null) {
+			turningLeftActionItemProvider = new TurningLeftActionItemProvider(this);
+		}
+
+		return turningLeftActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.gemoc.ardurobotml.TurningRightAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TurningRightActionItemProvider turningRightActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.gemoc.ardurobotml.TurningRightAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTurningRightActionAdapter() {
+		if (turningRightActionItemProvider == null) {
+			turningRightActionItemProvider = new TurningRightActionItemProvider(this);
+		}
+
+		return turningRightActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.gemoc.ardurobotml.AcceleratetAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AcceleratetActionItemProvider acceleratetActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.gemoc.ardurobotml.AcceleratetAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAcceleratetActionAdapter() {
+		if (acceleratetActionItemProvider == null) {
+			acceleratetActionItemProvider = new AcceleratetActionItemProvider(this);
+		}
+
+		return acceleratetActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.gemoc.ardurobotml.DeceleratetAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DeceleratetActionItemProvider deceleratetActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.gemoc.ardurobotml.DeceleratetAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDeceleratetActionAdapter() {
+		if (deceleratetActionItemProvider == null) {
+			deceleratetActionItemProvider = new DeceleratetActionItemProvider(this);
+		}
+
+		return deceleratetActionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.gemoc.ardurobotml.SCANCollisionAction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SCANCollisionActionItemProvider scanCollisionActionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.gemoc.ardurobotml.SCANCollisionAction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSCANCollisionActionAdapter() {
+		if (scanCollisionActionItemProvider == null) {
+			scanCollisionActionItemProvider = new SCANCollisionActionItemProvider(this);
+		}
+
+		return scanCollisionActionItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link org.gemoc.ardurobotml.EmergencyStopAction} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -437,6 +667,29 @@ public class ArdurobotmlItemProviderAdapterFactory extends ArdurobotmlAdapterFac
 		}
 
 		return systemPropertyConditionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.gemoc.ardurobotml.CollisionSensorCondition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CollisionSensorConditionItemProvider collisionSensorConditionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.gemoc.ardurobotml.CollisionSensorCondition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCollisionSensorConditionAdapter() {
+		if (collisionSensorConditionItemProvider == null) {
+			collisionSensorConditionItemProvider = new CollisionSensorConditionItemProvider(this);
+		}
+
+		return collisionSensorConditionItemProvider;
 	}
 
 	/**
@@ -572,12 +825,23 @@ public class ArdurobotmlItemProviderAdapterFactory extends ArdurobotmlAdapterFac
 		if (fsmClockItemProvider != null) fsmClockItemProvider.dispose();
 		if (evaluateGuardItemProvider != null) evaluateGuardItemProvider.dispose();
 		if (regionItemProvider != null) regionItemProvider.dispose();
-		if (stopActionItemProvider != null) stopActionItemProvider.dispose();
-		if (moveForwardActionItemProvider != null) moveForwardActionItemProvider.dispose();
-		if (emergencyStopActionItemProvider != null) emergencyStopActionItemProvider.dispose();
 		if (allActionFinishedConditionItemProvider != null) allActionFinishedConditionItemProvider.dispose();
 		if (systemPropertyConditionItemProvider != null) systemPropertyConditionItemProvider.dispose();
+		if (collisionSensorConditionItemProvider != null) collisionSensorConditionItemProvider.dispose();
 		if (actionSequenceItemProvider != null) actionSequenceItemProvider.dispose();
+		if (stopActionItemProvider != null) stopActionItemProvider.dispose();
+		if (moveForwardActionItemProvider != null) moveForwardActionItemProvider.dispose();
+		if (moveBackardActionItemProvider != null) moveBackardActionItemProvider.dispose();
+		if (moveForwardAndTurningRightActionItemProvider != null) moveForwardAndTurningRightActionItemProvider.dispose();
+		if (moveForwardAndTurningLeftActionItemProvider != null) moveForwardAndTurningLeftActionItemProvider.dispose();
+		if (moveBackardAndTurningRightActionItemProvider != null) moveBackardAndTurningRightActionItemProvider.dispose();
+		if (moveBackardAndTurningLeftActionItemProvider != null) moveBackardAndTurningLeftActionItemProvider.dispose();
+		if (turningLeftActionItemProvider != null) turningLeftActionItemProvider.dispose();
+		if (turningRightActionItemProvider != null) turningRightActionItemProvider.dispose();
+		if (acceleratetActionItemProvider != null) acceleratetActionItemProvider.dispose();
+		if (deceleratetActionItemProvider != null) deceleratetActionItemProvider.dispose();
+		if (scanCollisionActionItemProvider != null) scanCollisionActionItemProvider.dispose();
+		if (emergencyStopActionItemProvider != null) emergencyStopActionItemProvider.dispose();
 	}
 
 }

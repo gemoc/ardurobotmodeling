@@ -166,34 +166,10 @@ public class ArdurobotmlSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ArdurobotmlPackage.STOP_ACTION: {
-				StopAction stopAction = (StopAction)theEObject;
-				T result = caseStopAction(stopAction);
-				if (result == null) result = caseAction(stopAction);
-				if (result == null) result = caseNamedElement(stopAction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ArdurobotmlPackage.MOVE_FORWARD_ACTION: {
-				MoveForwardAction moveForwardAction = (MoveForwardAction)theEObject;
-				T result = caseMoveForwardAction(moveForwardAction);
-				if (result == null) result = caseAction(moveForwardAction);
-				if (result == null) result = caseNamedElement(moveForwardAction);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ArdurobotmlPackage.ACTION: {
 				Action action = (Action)theEObject;
 				T result = caseAction(action);
 				if (result == null) result = caseNamedElement(action);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ArdurobotmlPackage.EMERGENCY_STOP_ACTION: {
-				EmergencyStopAction emergencyStopAction = (EmergencyStopAction)theEObject;
-				T result = caseEmergencyStopAction(emergencyStopAction);
-				if (result == null) result = caseAction(emergencyStopAction);
-				if (result == null) result = caseNamedElement(emergencyStopAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -211,11 +187,122 @@ public class ArdurobotmlSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ArdurobotmlPackage.COLLISION_SENSOR_CONDITION: {
+				CollisionSensorCondition collisionSensorCondition = (CollisionSensorCondition)theEObject;
+				T result = caseCollisionSensorCondition(collisionSensorCondition);
+				if (result == null) result = caseCondition(collisionSensorCondition);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ArdurobotmlPackage.ACTION_SEQUENCE: {
 				ActionSequence actionSequence = (ActionSequence)theEObject;
 				T result = caseActionSequence(actionSequence);
 				if (result == null) result = caseAction(actionSequence);
 				if (result == null) result = caseNamedElement(actionSequence);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.STOP_ACTION: {
+				StopAction stopAction = (StopAction)theEObject;
+				T result = caseStopAction(stopAction);
+				if (result == null) result = caseAction(stopAction);
+				if (result == null) result = caseNamedElement(stopAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.MOVE_FORWARD_ACTION: {
+				MoveForwardAction moveForwardAction = (MoveForwardAction)theEObject;
+				T result = caseMoveForwardAction(moveForwardAction);
+				if (result == null) result = caseAction(moveForwardAction);
+				if (result == null) result = caseNamedElement(moveForwardAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.MOVE_BACKARD_ACTION: {
+				MoveBackardAction moveBackardAction = (MoveBackardAction)theEObject;
+				T result = caseMoveBackardAction(moveBackardAction);
+				if (result == null) result = caseAction(moveBackardAction);
+				if (result == null) result = caseNamedElement(moveBackardAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.MOVE_FORWARD_AND_TURNING_RIGHT_ACTION: {
+				MoveForwardAndTurningRightAction moveForwardAndTurningRightAction = (MoveForwardAndTurningRightAction)theEObject;
+				T result = caseMoveForwardAndTurningRightAction(moveForwardAndTurningRightAction);
+				if (result == null) result = caseAction(moveForwardAndTurningRightAction);
+				if (result == null) result = caseNamedElement(moveForwardAndTurningRightAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.MOVE_FORWARD_AND_TURNING_LEFT_ACTION: {
+				MoveForwardAndTurningLeftAction moveForwardAndTurningLeftAction = (MoveForwardAndTurningLeftAction)theEObject;
+				T result = caseMoveForwardAndTurningLeftAction(moveForwardAndTurningLeftAction);
+				if (result == null) result = caseAction(moveForwardAndTurningLeftAction);
+				if (result == null) result = caseNamedElement(moveForwardAndTurningLeftAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.MOVE_BACKARD_AND_TURNING_RIGHT_ACTION: {
+				MoveBackardAndTurningRightAction moveBackardAndTurningRightAction = (MoveBackardAndTurningRightAction)theEObject;
+				T result = caseMoveBackardAndTurningRightAction(moveBackardAndTurningRightAction);
+				if (result == null) result = caseAction(moveBackardAndTurningRightAction);
+				if (result == null) result = caseNamedElement(moveBackardAndTurningRightAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.MOVE_BACKARD_AND_TURNING_LEFT_ACTION: {
+				MoveBackardAndTurningLeftAction moveBackardAndTurningLeftAction = (MoveBackardAndTurningLeftAction)theEObject;
+				T result = caseMoveBackardAndTurningLeftAction(moveBackardAndTurningLeftAction);
+				if (result == null) result = caseAction(moveBackardAndTurningLeftAction);
+				if (result == null) result = caseNamedElement(moveBackardAndTurningLeftAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.TURNING_LEFT_ACTION: {
+				TurningLeftAction turningLeftAction = (TurningLeftAction)theEObject;
+				T result = caseTurningLeftAction(turningLeftAction);
+				if (result == null) result = caseAction(turningLeftAction);
+				if (result == null) result = caseNamedElement(turningLeftAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.TURNING_RIGHT_ACTION: {
+				TurningRightAction turningRightAction = (TurningRightAction)theEObject;
+				T result = caseTurningRightAction(turningRightAction);
+				if (result == null) result = caseAction(turningRightAction);
+				if (result == null) result = caseNamedElement(turningRightAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.ACCELERATET_ACTION: {
+				AcceleratetAction acceleratetAction = (AcceleratetAction)theEObject;
+				T result = caseAcceleratetAction(acceleratetAction);
+				if (result == null) result = caseAction(acceleratetAction);
+				if (result == null) result = caseNamedElement(acceleratetAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.DECELERATET_ACTION: {
+				DeceleratetAction deceleratetAction = (DeceleratetAction)theEObject;
+				T result = caseDeceleratetAction(deceleratetAction);
+				if (result == null) result = caseAction(deceleratetAction);
+				if (result == null) result = caseNamedElement(deceleratetAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.SCAN_COLLISION_ACTION: {
+				SCANCollisionAction scanCollisionAction = (SCANCollisionAction)theEObject;
+				T result = caseSCANCollisionAction(scanCollisionAction);
+				if (result == null) result = caseAction(scanCollisionAction);
+				if (result == null) result = caseNamedElement(scanCollisionAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ArdurobotmlPackage.EMERGENCY_STOP_ACTION: {
+				EmergencyStopAction emergencyStopAction = (EmergencyStopAction)theEObject;
+				T result = caseEmergencyStopAction(emergencyStopAction);
+				if (result == null) result = caseAction(emergencyStopAction);
+				if (result == null) result = caseNamedElement(emergencyStopAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -464,6 +551,156 @@ public class ArdurobotmlSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Move Backard Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Move Backard Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMoveBackardAction(MoveBackardAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Move Forward And Turning Right Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Move Forward And Turning Right Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMoveForwardAndTurningRightAction(MoveForwardAndTurningRightAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Move Forward And Turning Left Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Move Forward And Turning Left Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMoveForwardAndTurningLeftAction(MoveForwardAndTurningLeftAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Move Backard And Turning Right Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Move Backard And Turning Right Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMoveBackardAndTurningRightAction(MoveBackardAndTurningRightAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Move Backard And Turning Left Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Move Backard And Turning Left Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMoveBackardAndTurningLeftAction(MoveBackardAndTurningLeftAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Turning Left Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Turning Left Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTurningLeftAction(TurningLeftAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Turning Right Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Turning Right Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTurningRightAction(TurningRightAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Acceleratet Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Acceleratet Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAcceleratetAction(AcceleratetAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Deceleratet Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Deceleratet Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeceleratetAction(DeceleratetAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>SCAN Collision Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>SCAN Collision Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSCANCollisionAction(SCANCollisionAction object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -520,6 +757,21 @@ public class ArdurobotmlSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSystemPropertyCondition(SystemPropertyCondition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Collision Sensor Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Collision Sensor Condition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCollisionSensorCondition(CollisionSensorCondition object) {
 		return null;
 	}
 

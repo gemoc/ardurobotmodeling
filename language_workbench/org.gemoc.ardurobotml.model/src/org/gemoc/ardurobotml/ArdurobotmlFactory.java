@@ -139,6 +139,96 @@ public interface ArdurobotmlFactory extends EFactory {
 	MoveForwardAction createMoveForwardAction();
 
 	/**
+	 * Returns a new object of class '<em>Move Backard Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Move Backard Action</em>'.
+	 * @generated
+	 */
+	MoveBackardAction createMoveBackardAction();
+
+	/**
+	 * Returns a new object of class '<em>Move Forward And Turning Right Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Move Forward And Turning Right Action</em>'.
+	 * @generated
+	 */
+	MoveForwardAndTurningRightAction createMoveForwardAndTurningRightAction();
+
+	/**
+	 * Returns a new object of class '<em>Move Forward And Turning Left Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Move Forward And Turning Left Action</em>'.
+	 * @generated
+	 */
+	MoveForwardAndTurningLeftAction createMoveForwardAndTurningLeftAction();
+
+	/**
+	 * Returns a new object of class '<em>Move Backard And Turning Right Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Move Backard And Turning Right Action</em>'.
+	 * @generated
+	 */
+	MoveBackardAndTurningRightAction createMoveBackardAndTurningRightAction();
+
+	/**
+	 * Returns a new object of class '<em>Move Backard And Turning Left Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Move Backard And Turning Left Action</em>'.
+	 * @generated
+	 */
+	MoveBackardAndTurningLeftAction createMoveBackardAndTurningLeftAction();
+
+	/**
+	 * Returns a new object of class '<em>Turning Left Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Turning Left Action</em>'.
+	 * @generated
+	 */
+	TurningLeftAction createTurningLeftAction();
+
+	/**
+	 * Returns a new object of class '<em>Turning Right Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Turning Right Action</em>'.
+	 * @generated
+	 */
+	TurningRightAction createTurningRightAction();
+
+	/**
+	 * Returns a new object of class '<em>Acceleratet Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Acceleratet Action</em>'.
+	 * @generated
+	 */
+	AcceleratetAction createAcceleratetAction();
+
+	/**
+	 * Returns a new object of class '<em>Deceleratet Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Deceleratet Action</em>'.
+	 * @generated
+	 */
+	DeceleratetAction createDeceleratetAction();
+
+	/**
+	 * Returns a new object of class '<em>SCAN Collision Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>SCAN Collision Action</em>'.
+	 * @generated
+	 */
+	SCANCollisionAction createSCANCollisionAction();
+
+	/**
 	 * Returns a new object of class '<em>Emergency Stop Action</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -164,6 +254,15 @@ public interface ArdurobotmlFactory extends EFactory {
 	 * @generated
 	 */
 	SystemPropertyCondition createSystemPropertyCondition();
+
+	/**
+	 * Returns a new object of class '<em>Collision Sensor Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Collision Sensor Condition</em>'.
+	 * @generated
+	 */
+	CollisionSensorCondition createCollisionSensorCondition();
 
 	/**
 	 * Returns a new object of class '<em>Action Sequence</em>'.

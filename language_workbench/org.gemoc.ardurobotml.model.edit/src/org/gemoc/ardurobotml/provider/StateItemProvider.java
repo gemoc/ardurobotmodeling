@@ -209,6 +209,11 @@ public class StateItemProvider extends RegionContainerItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
+				 ArdurobotmlFactory.eINSTANCE.createActionSequence()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
 				 ArdurobotmlFactory.eINSTANCE.createStopAction()));
 
 		newChildDescriptors.add
@@ -219,12 +224,57 @@ public class StateItemProvider extends RegionContainerItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
-				 ArdurobotmlFactory.eINSTANCE.createEmergencyStopAction()));
+				 ArdurobotmlFactory.eINSTANCE.createMoveBackardAction()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
-				 ArdurobotmlFactory.eINSTANCE.createActionSequence()));
+				 ArdurobotmlFactory.eINSTANCE.createMoveForwardAndTurningRightAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
+				 ArdurobotmlFactory.eINSTANCE.createMoveForwardAndTurningLeftAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
+				 ArdurobotmlFactory.eINSTANCE.createMoveBackardAndTurningRightAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
+				 ArdurobotmlFactory.eINSTANCE.createMoveBackardAndTurningLeftAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
+				 ArdurobotmlFactory.eINSTANCE.createTurningLeftAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
+				 ArdurobotmlFactory.eINSTANCE.createTurningRightAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
+				 ArdurobotmlFactory.eINSTANCE.createAcceleratetAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
+				 ArdurobotmlFactory.eINSTANCE.createDeceleratetAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
+				 ArdurobotmlFactory.eINSTANCE.createSCANCollisionAction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ArdurobotmlPackage.Literals.STATE__ACTIONS,
+				 ArdurobotmlFactory.eINSTANCE.createEmergencyStopAction()));
 	}
 
 }

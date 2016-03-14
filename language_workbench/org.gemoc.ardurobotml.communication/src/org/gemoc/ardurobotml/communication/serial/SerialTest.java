@@ -16,6 +16,7 @@ public class SerialTest implements SerialPortEventListener {
 	private static final String PORT_NAMES[] = { 
 			"/dev/tty.usbserial-A9007UX1", // Mac OS X
 			"/dev/ttyUSB0", // Linux
+			"/dev/ttyUSB01", // Linux
 			"COM3", // Windows
 	};
 	/**
@@ -99,7 +100,7 @@ public class SerialTest implements SerialPortEventListener {
 		// Ignore all the other eventTypes, but you should consider the other ones.
 	}
 
-	/*public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception {
 		SerialTest main = new SerialTest();
 		main.initialize();
 		Thread t=new Thread() {
@@ -111,5 +112,5 @@ public class SerialTest implements SerialPortEventListener {
 		};
 		t.start();
 		System.out.println("Started");
-	}*/
+	}
 }

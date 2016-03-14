@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see org.gemoc.ardurobotml.ArdurobotmlFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore'"
  * @generated
  */
 public interface ArdurobotmlPackage extends EPackage {
@@ -862,7 +863,7 @@ public interface ArdurobotmlPackage extends EPackage {
 	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 16;
+	int ACTION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -917,52 +918,7 @@ public interface ArdurobotmlPackage extends EPackage {
 	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getStopAction()
 	 * @generated
 	 */
-	int STOP_ACTION = 14;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STOP_ACTION__NAME = ACTION__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Stop Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STOP_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Begin</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STOP_ACTION___BEGIN = ACTION___BEGIN;
-
-	/**
-	 * The operation id for the '<em>End</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STOP_ACTION___END = ACTION___END;
-
-	/**
-	 * The number of operations of the '<em>Stop Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STOP_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+	int STOP_ACTION = 19;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.MoveForwardActionImpl <em>Move Forward Action</em>}' class.
@@ -972,70 +928,87 @@ public interface ArdurobotmlPackage extends EPackage {
 	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getMoveForwardAction()
 	 * @generated
 	 */
-	int MOVE_FORWARD_ACTION = 15;
+	int MOVE_FORWARD_ACTION = 20;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.MoveBackardActionImpl <em>Move Backard Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see org.gemoc.ardurobotml.impl.MoveBackardActionImpl
+	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getMoveBackardAction()
 	 * @generated
-	 * @ordered
 	 */
-	int MOVE_FORWARD_ACTION__NAME = ACTION__NAME;
+	int MOVE_BACKARD_ACTION = 21;
 
 	/**
-	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.MoveForwardAndTurningRightActionImpl <em>Move Forward And Turning Right Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see org.gemoc.ardurobotml.impl.MoveForwardAndTurningRightActionImpl
+	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getMoveForwardAndTurningRightAction()
 	 * @generated
-	 * @ordered
 	 */
-	int MOVE_FORWARD_ACTION__DURATION = ACTION_FEATURE_COUNT + 0;
+	int MOVE_FORWARD_AND_TURNING_RIGHT_ACTION = 22;
 
 	/**
-	 * The feature id for the '<em><b>Start Tick</b></em>' attribute.
+	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.MoveForwardAndTurningLeftActionImpl <em>Move Forward And Turning Left Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see org.gemoc.ardurobotml.impl.MoveForwardAndTurningLeftActionImpl
+	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getMoveForwardAndTurningLeftAction()
 	 * @generated
-	 * @ordered
 	 */
-	int MOVE_FORWARD_ACTION__START_TICK = ACTION_FEATURE_COUNT + 1;
+	int MOVE_FORWARD_AND_TURNING_LEFT_ACTION = 23;
 
 	/**
-	 * The number of structural features of the '<em>Move Forward Action</em>' class.
+	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.MoveBackardAndTurningRightActionImpl <em>Move Backard And Turning Right Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see org.gemoc.ardurobotml.impl.MoveBackardAndTurningRightActionImpl
+	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getMoveBackardAndTurningRightAction()
 	 * @generated
-	 * @ordered
 	 */
-	int MOVE_FORWARD_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
+	int MOVE_BACKARD_AND_TURNING_RIGHT_ACTION = 24;
 
 	/**
-	 * The operation id for the '<em>Begin</em>' operation.
+	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.MoveBackardAndTurningLeftActionImpl <em>Move Backard And Turning Left Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see org.gemoc.ardurobotml.impl.MoveBackardAndTurningLeftActionImpl
+	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getMoveBackardAndTurningLeftAction()
 	 * @generated
-	 * @ordered
 	 */
-	int MOVE_FORWARD_ACTION___BEGIN = ACTION___BEGIN;
+	int MOVE_BACKARD_AND_TURNING_LEFT_ACTION = 25;
 
 	/**
-	 * The operation id for the '<em>End</em>' operation.
+	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.TurningLeftActionImpl <em>Turning Left Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see org.gemoc.ardurobotml.impl.TurningLeftActionImpl
+	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getTurningLeftAction()
 	 * @generated
-	 * @ordered
 	 */
-	int MOVE_FORWARD_ACTION___END = ACTION___END;
+	int TURNING_LEFT_ACTION = 26;
 
 	/**
-	 * The number of operations of the '<em>Move Forward Action</em>' class.
+	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.TurningRightActionImpl <em>Turning Right Action</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see org.gemoc.ardurobotml.impl.TurningRightActionImpl
+	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getTurningRightAction()
 	 * @generated
-	 * @ordered
 	 */
-	int MOVE_FORWARD_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+	int TURNING_RIGHT_ACTION = 27;
+
+	/**
+	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.SCANCollisionActionImpl <em>SCAN Collision Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.gemoc.ardurobotml.impl.SCANCollisionActionImpl
+	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getSCANCollisionAction()
+	 * @generated
+	 */
+	int SCAN_COLLISION_ACTION = 30;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.EmergencyStopActionImpl <em>Emergency Stop Action</em>}' class.
@@ -1045,52 +1018,7 @@ public interface ArdurobotmlPackage extends EPackage {
 	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getEmergencyStopAction()
 	 * @generated
 	 */
-	int EMERGENCY_STOP_ACTION = 17;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMERGENCY_STOP_ACTION__NAME = ACTION__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Emergency Stop Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMERGENCY_STOP_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>End</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMERGENCY_STOP_ACTION___END = ACTION___END;
-
-	/**
-	 * The operation id for the '<em>Begin</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMERGENCY_STOP_ACTION___BEGIN = ACTION_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Emergency Stop Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMERGENCY_STOP_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 1;
+	int EMERGENCY_STOP_ACTION = 31;
 
 	/**
 	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.AllActionFinishedConditionImpl <em>All Action Finished Condition</em>}' class.
@@ -1100,7 +1028,7 @@ public interface ArdurobotmlPackage extends EPackage {
 	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getAllActionFinishedCondition()
 	 * @generated
 	 */
-	int ALL_ACTION_FINISHED_CONDITION = 18;
+	int ALL_ACTION_FINISHED_CONDITION = 15;
 
 	/**
 	 * The number of structural features of the '<em>All Action Finished Condition</em>' class.
@@ -1128,7 +1056,7 @@ public interface ArdurobotmlPackage extends EPackage {
 	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getSystemPropertyCondition()
 	 * @generated
 	 */
-	int SYSTEM_PROPERTY_CONDITION = 19;
+	int SYSTEM_PROPERTY_CONDITION = 16;
 
 	/**
 	 * The feature id for the '<em><b>Expected Attribute Value</b></em>' attribute.
@@ -1158,6 +1086,34 @@ public interface ArdurobotmlPackage extends EPackage {
 	int SYSTEM_PROPERTY_CONDITION_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.CollisionSensorConditionImpl <em>Collision Sensor Condition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.gemoc.ardurobotml.impl.CollisionSensorConditionImpl
+	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getCollisionSensorCondition()
+	 * @generated
+	 */
+	int COLLISION_SENSOR_CONDITION = 17;
+
+	/**
+	 * The number of structural features of the '<em>Collision Sensor Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLISION_SENSOR_CONDITION_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Collision Sensor Condition</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COLLISION_SENSOR_CONDITION_OPERATION_COUNT = CONDITION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.ActionSequenceImpl <em>Action Sequence</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1165,7 +1121,7 @@ public interface ArdurobotmlPackage extends EPackage {
 	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getActionSequence()
 	 * @generated
 	 */
-	int ACTION_SEQUENCE = 20;
+	int ACTION_SEQUENCE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1220,6 +1176,899 @@ public interface ArdurobotmlPackage extends EPackage {
 	 * @ordered
 	 */
 	int ACTION_SEQUENCE_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STOP_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Stop Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STOP_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STOP_ACTION___BEGIN = ACTION___BEGIN;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STOP_ACTION___END = ACTION___END;
+
+	/**
+	 * The number of operations of the '<em>Stop Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STOP_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_ACTION__DURATION = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Start Tick</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_ACTION__START_TICK = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Speed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_ACTION__SPEED = ACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Move Forward Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_ACTION___BEGIN = ACTION___BEGIN;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_ACTION___END = ACTION___END;
+
+	/**
+	 * The number of operations of the '<em>Move Forward Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_ACTION__DURATION = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Start Tick</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_ACTION__START_TICK = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Speed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_ACTION__SPEED = ACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Move Backard Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_ACTION___BEGIN = ACTION___BEGIN;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_ACTION___END = ACTION___END;
+
+	/**
+	 * The number of operations of the '<em>Move Backard Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__DURATION = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Start Tick</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__START_TICK = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Diff</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__DIFF = ACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Speed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__SPEED = ACTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Move Forward And Turning Right Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_RIGHT_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_RIGHT_ACTION___BEGIN = ACTION___BEGIN;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_RIGHT_ACTION___END = ACTION___END;
+
+	/**
+	 * The number of operations of the '<em>Move Forward And Turning Right Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_RIGHT_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_LEFT_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_LEFT_ACTION__DURATION = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Start Tick</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_LEFT_ACTION__START_TICK = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Diff</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_LEFT_ACTION__DIFF = ACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Speed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_LEFT_ACTION__SPEED = ACTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Move Forward And Turning Left Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_LEFT_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_LEFT_ACTION___BEGIN = ACTION___BEGIN;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_LEFT_ACTION___END = ACTION___END;
+
+	/**
+	 * The number of operations of the '<em>Move Forward And Turning Left Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_FORWARD_AND_TURNING_LEFT_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__DURATION = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Start Tick</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__START_TICK = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Diff</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__DIFF = ACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Speed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__SPEED = ACTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Move Backard And Turning Right Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_RIGHT_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_RIGHT_ACTION___BEGIN = ACTION___BEGIN;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_RIGHT_ACTION___END = ACTION___END;
+
+	/**
+	 * The number of operations of the '<em>Move Backard And Turning Right Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_RIGHT_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_LEFT_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_LEFT_ACTION__DURATION = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Start Tick</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_LEFT_ACTION__START_TICK = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Diff</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_LEFT_ACTION__DIFF = ACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Speed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_LEFT_ACTION__SPEED = ACTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Move Backard And Turning Left Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_LEFT_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_LEFT_ACTION___BEGIN = ACTION___BEGIN;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_LEFT_ACTION___END = ACTION___END;
+
+	/**
+	 * The number of operations of the '<em>Move Backard And Turning Left Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOVE_BACKARD_AND_TURNING_LEFT_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_LEFT_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_LEFT_ACTION__DURATION = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Start Tick</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_LEFT_ACTION__START_TICK = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Speed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_LEFT_ACTION__SPEED = ACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Turning Left Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_LEFT_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_LEFT_ACTION___BEGIN = ACTION___BEGIN;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_LEFT_ACTION___END = ACTION___END;
+
+	/**
+	 * The number of operations of the '<em>Turning Left Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_LEFT_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_RIGHT_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_RIGHT_ACTION__DURATION = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Start Tick</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_RIGHT_ACTION__START_TICK = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Speed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_RIGHT_ACTION__SPEED = ACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Turning Right Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_RIGHT_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_RIGHT_ACTION___BEGIN = ACTION___BEGIN;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_RIGHT_ACTION___END = ACTION___END;
+
+	/**
+	 * The number of operations of the '<em>Turning Right Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_RIGHT_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.AcceleratetActionImpl <em>Acceleratet Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.gemoc.ardurobotml.impl.AcceleratetActionImpl
+	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getAcceleratetAction()
+	 * @generated
+	 */
+	int ACCELERATET_ACTION = 28;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCELERATET_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Ratio</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCELERATET_ACTION__RATIO = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Start Tick</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCELERATET_ACTION__START_TICK = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Acceleratet Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCELERATET_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCELERATET_ACTION___BEGIN = ACTION___BEGIN;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCELERATET_ACTION___END = ACTION___END;
+
+	/**
+	 * The number of operations of the '<em>Acceleratet Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCELERATET_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.gemoc.ardurobotml.impl.DeceleratetActionImpl <em>Deceleratet Action</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.gemoc.ardurobotml.impl.DeceleratetActionImpl
+	 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getDeceleratetAction()
+	 * @generated
+	 */
+	int DECELERATET_ACTION = 29;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECELERATET_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Ratio</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECELERATET_ACTION__RATIO = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Start Tick</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECELERATET_ACTION__START_TICK = ACTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Deceleratet Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECELERATET_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECELERATET_ACTION___BEGIN = ACTION___BEGIN;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECELERATET_ACTION___END = ACTION___END;
+
+	/**
+	 * The number of operations of the '<em>Deceleratet Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DECELERATET_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCAN_COLLISION_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The number of structural features of the '<em>SCAN Collision Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCAN_COLLISION_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCAN_COLLISION_ACTION___BEGIN = ACTION___BEGIN;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCAN_COLLISION_ACTION___END = ACTION___END;
+
+	/**
+	 * The number of operations of the '<em>SCAN Collision Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCAN_COLLISION_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMERGENCY_STOP_ACTION__NAME = ACTION__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Emergency Stop Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMERGENCY_STOP_ACTION_FEATURE_COUNT = ACTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>End</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMERGENCY_STOP_ACTION___END = ACTION___END;
+
+	/**
+	 * The operation id for the '<em>Begin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMERGENCY_STOP_ACTION___BEGIN = ACTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Emergency Stop Action</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMERGENCY_STOP_ACTION_OPERATION_COUNT = ACTION_OPERATION_COUNT + 1;
 
 
 	/**
@@ -1752,6 +2601,436 @@ public interface ArdurobotmlPackage extends EPackage {
 	EAttribute getMoveForwardAction_StartTick();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveForwardAction#getSpeed <em>Speed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Speed</em>'.
+	 * @see org.gemoc.ardurobotml.MoveForwardAction#getSpeed()
+	 * @see #getMoveForwardAction()
+	 * @generated
+	 */
+	EAttribute getMoveForwardAction_Speed();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.MoveBackardAction <em>Move Backard Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Move Backard Action</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAction
+	 * @generated
+	 */
+	EClass getMoveBackardAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveBackardAction#getDuration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Duration</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAction#getDuration()
+	 * @see #getMoveBackardAction()
+	 * @generated
+	 */
+	EAttribute getMoveBackardAction_Duration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveBackardAction#getStartTick <em>Start Tick</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Tick</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAction#getStartTick()
+	 * @see #getMoveBackardAction()
+	 * @generated
+	 */
+	EAttribute getMoveBackardAction_StartTick();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveBackardAction#getSpeed <em>Speed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Speed</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAction#getSpeed()
+	 * @see #getMoveBackardAction()
+	 * @generated
+	 */
+	EAttribute getMoveBackardAction_Speed();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.MoveForwardAndTurningRightAction <em>Move Forward And Turning Right Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Move Forward And Turning Right Action</em>'.
+	 * @see org.gemoc.ardurobotml.MoveForwardAndTurningRightAction
+	 * @generated
+	 */
+	EClass getMoveForwardAndTurningRightAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveForwardAndTurningRightAction#getDuration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Duration</em>'.
+	 * @see org.gemoc.ardurobotml.MoveForwardAndTurningRightAction#getDuration()
+	 * @see #getMoveForwardAndTurningRightAction()
+	 * @generated
+	 */
+	EAttribute getMoveForwardAndTurningRightAction_Duration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveForwardAndTurningRightAction#getStartTick <em>Start Tick</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Tick</em>'.
+	 * @see org.gemoc.ardurobotml.MoveForwardAndTurningRightAction#getStartTick()
+	 * @see #getMoveForwardAndTurningRightAction()
+	 * @generated
+	 */
+	EAttribute getMoveForwardAndTurningRightAction_StartTick();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveForwardAndTurningRightAction#getDiff <em>Diff</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Diff</em>'.
+	 * @see org.gemoc.ardurobotml.MoveForwardAndTurningRightAction#getDiff()
+	 * @see #getMoveForwardAndTurningRightAction()
+	 * @generated
+	 */
+	EAttribute getMoveForwardAndTurningRightAction_Diff();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveForwardAndTurningRightAction#getSpeed <em>Speed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Speed</em>'.
+	 * @see org.gemoc.ardurobotml.MoveForwardAndTurningRightAction#getSpeed()
+	 * @see #getMoveForwardAndTurningRightAction()
+	 * @generated
+	 */
+	EAttribute getMoveForwardAndTurningRightAction_Speed();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction <em>Move Forward And Turning Left Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Move Forward And Turning Left Action</em>'.
+	 * @see org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction
+	 * @generated
+	 */
+	EClass getMoveForwardAndTurningLeftAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction#getDuration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Duration</em>'.
+	 * @see org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction#getDuration()
+	 * @see #getMoveForwardAndTurningLeftAction()
+	 * @generated
+	 */
+	EAttribute getMoveForwardAndTurningLeftAction_Duration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction#getStartTick <em>Start Tick</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Tick</em>'.
+	 * @see org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction#getStartTick()
+	 * @see #getMoveForwardAndTurningLeftAction()
+	 * @generated
+	 */
+	EAttribute getMoveForwardAndTurningLeftAction_StartTick();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction#getDiff <em>Diff</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Diff</em>'.
+	 * @see org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction#getDiff()
+	 * @see #getMoveForwardAndTurningLeftAction()
+	 * @generated
+	 */
+	EAttribute getMoveForwardAndTurningLeftAction_Diff();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction#getSpeed <em>Speed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Speed</em>'.
+	 * @see org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction#getSpeed()
+	 * @see #getMoveForwardAndTurningLeftAction()
+	 * @generated
+	 */
+	EAttribute getMoveForwardAndTurningLeftAction_Speed();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.MoveBackardAndTurningRightAction <em>Move Backard And Turning Right Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Move Backard And Turning Right Action</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAndTurningRightAction
+	 * @generated
+	 */
+	EClass getMoveBackardAndTurningRightAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveBackardAndTurningRightAction#getDuration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Duration</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAndTurningRightAction#getDuration()
+	 * @see #getMoveBackardAndTurningRightAction()
+	 * @generated
+	 */
+	EAttribute getMoveBackardAndTurningRightAction_Duration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveBackardAndTurningRightAction#getStartTick <em>Start Tick</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Tick</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAndTurningRightAction#getStartTick()
+	 * @see #getMoveBackardAndTurningRightAction()
+	 * @generated
+	 */
+	EAttribute getMoveBackardAndTurningRightAction_StartTick();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveBackardAndTurningRightAction#getDiff <em>Diff</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Diff</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAndTurningRightAction#getDiff()
+	 * @see #getMoveBackardAndTurningRightAction()
+	 * @generated
+	 */
+	EAttribute getMoveBackardAndTurningRightAction_Diff();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveBackardAndTurningRightAction#getSpeed <em>Speed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Speed</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAndTurningRightAction#getSpeed()
+	 * @see #getMoveBackardAndTurningRightAction()
+	 * @generated
+	 */
+	EAttribute getMoveBackardAndTurningRightAction_Speed();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction <em>Move Backard And Turning Left Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Move Backard And Turning Left Action</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction
+	 * @generated
+	 */
+	EClass getMoveBackardAndTurningLeftAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction#getDuration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Duration</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction#getDuration()
+	 * @see #getMoveBackardAndTurningLeftAction()
+	 * @generated
+	 */
+	EAttribute getMoveBackardAndTurningLeftAction_Duration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction#getStartTick <em>Start Tick</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Tick</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction#getStartTick()
+	 * @see #getMoveBackardAndTurningLeftAction()
+	 * @generated
+	 */
+	EAttribute getMoveBackardAndTurningLeftAction_StartTick();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction#getDiff <em>Diff</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Diff</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction#getDiff()
+	 * @see #getMoveBackardAndTurningLeftAction()
+	 * @generated
+	 */
+	EAttribute getMoveBackardAndTurningLeftAction_Diff();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction#getSpeed <em>Speed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Speed</em>'.
+	 * @see org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction#getSpeed()
+	 * @see #getMoveBackardAndTurningLeftAction()
+	 * @generated
+	 */
+	EAttribute getMoveBackardAndTurningLeftAction_Speed();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.TurningLeftAction <em>Turning Left Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Turning Left Action</em>'.
+	 * @see org.gemoc.ardurobotml.TurningLeftAction
+	 * @generated
+	 */
+	EClass getTurningLeftAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.TurningLeftAction#getDuration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Duration</em>'.
+	 * @see org.gemoc.ardurobotml.TurningLeftAction#getDuration()
+	 * @see #getTurningLeftAction()
+	 * @generated
+	 */
+	EAttribute getTurningLeftAction_Duration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.TurningLeftAction#getStartTick <em>Start Tick</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Tick</em>'.
+	 * @see org.gemoc.ardurobotml.TurningLeftAction#getStartTick()
+	 * @see #getTurningLeftAction()
+	 * @generated
+	 */
+	EAttribute getTurningLeftAction_StartTick();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.TurningLeftAction#getSpeed <em>Speed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Speed</em>'.
+	 * @see org.gemoc.ardurobotml.TurningLeftAction#getSpeed()
+	 * @see #getTurningLeftAction()
+	 * @generated
+	 */
+	EAttribute getTurningLeftAction_Speed();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.TurningRightAction <em>Turning Right Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Turning Right Action</em>'.
+	 * @see org.gemoc.ardurobotml.TurningRightAction
+	 * @generated
+	 */
+	EClass getTurningRightAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.TurningRightAction#getDuration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Duration</em>'.
+	 * @see org.gemoc.ardurobotml.TurningRightAction#getDuration()
+	 * @see #getTurningRightAction()
+	 * @generated
+	 */
+	EAttribute getTurningRightAction_Duration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.TurningRightAction#getStartTick <em>Start Tick</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Tick</em>'.
+	 * @see org.gemoc.ardurobotml.TurningRightAction#getStartTick()
+	 * @see #getTurningRightAction()
+	 * @generated
+	 */
+	EAttribute getTurningRightAction_StartTick();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.TurningRightAction#getSpeed <em>Speed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Speed</em>'.
+	 * @see org.gemoc.ardurobotml.TurningRightAction#getSpeed()
+	 * @see #getTurningRightAction()
+	 * @generated
+	 */
+	EAttribute getTurningRightAction_Speed();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.AcceleratetAction <em>Acceleratet Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Acceleratet Action</em>'.
+	 * @see org.gemoc.ardurobotml.AcceleratetAction
+	 * @generated
+	 */
+	EClass getAcceleratetAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.AcceleratetAction#getRatio <em>Ratio</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ratio</em>'.
+	 * @see org.gemoc.ardurobotml.AcceleratetAction#getRatio()
+	 * @see #getAcceleratetAction()
+	 * @generated
+	 */
+	EAttribute getAcceleratetAction_Ratio();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.AcceleratetAction#getStartTick <em>Start Tick</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Tick</em>'.
+	 * @see org.gemoc.ardurobotml.AcceleratetAction#getStartTick()
+	 * @see #getAcceleratetAction()
+	 * @generated
+	 */
+	EAttribute getAcceleratetAction_StartTick();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.DeceleratetAction <em>Deceleratet Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Deceleratet Action</em>'.
+	 * @see org.gemoc.ardurobotml.DeceleratetAction
+	 * @generated
+	 */
+	EClass getDeceleratetAction();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.DeceleratetAction#getRatio <em>Ratio</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ratio</em>'.
+	 * @see org.gemoc.ardurobotml.DeceleratetAction#getRatio()
+	 * @see #getDeceleratetAction()
+	 * @generated
+	 */
+	EAttribute getDeceleratetAction_Ratio();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.gemoc.ardurobotml.DeceleratetAction#getStartTick <em>Start Tick</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Start Tick</em>'.
+	 * @see org.gemoc.ardurobotml.DeceleratetAction#getStartTick()
+	 * @see #getDeceleratetAction()
+	 * @generated
+	 */
+	EAttribute getDeceleratetAction_StartTick();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.SCANCollisionAction <em>SCAN Collision Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>SCAN Collision Action</em>'.
+	 * @see org.gemoc.ardurobotml.SCANCollisionAction
+	 * @generated
+	 */
+	EClass getSCANCollisionAction();
+
+	/**
 	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.Action <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1831,6 +3110,16 @@ public interface ArdurobotmlPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getSystemPropertyCondition_ExpectedAttributeValue();
+
+	/**
+	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.CollisionSensorCondition <em>Collision Sensor Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Collision Sensor Condition</em>'.
+	 * @see org.gemoc.ardurobotml.CollisionSensorCondition
+	 * @generated
+	 */
+	EClass getCollisionSensorCondition();
 
 	/**
 	 * Returns the meta object for class '{@link org.gemoc.ardurobotml.ActionSequence <em>Action Sequence</em>}'.
@@ -2309,6 +3598,346 @@ public interface ArdurobotmlPackage extends EPackage {
 		EAttribute MOVE_FORWARD_ACTION__START_TICK = eINSTANCE.getMoveForwardAction_StartTick();
 
 		/**
+		 * The meta object literal for the '<em><b>Speed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_FORWARD_ACTION__SPEED = eINSTANCE.getMoveForwardAction_Speed();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.MoveBackardActionImpl <em>Move Backard Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.ardurobotml.impl.MoveBackardActionImpl
+		 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getMoveBackardAction()
+		 * @generated
+		 */
+		EClass MOVE_BACKARD_ACTION = eINSTANCE.getMoveBackardAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_BACKARD_ACTION__DURATION = eINSTANCE.getMoveBackardAction_Duration();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Tick</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_BACKARD_ACTION__START_TICK = eINSTANCE.getMoveBackardAction_StartTick();
+
+		/**
+		 * The meta object literal for the '<em><b>Speed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_BACKARD_ACTION__SPEED = eINSTANCE.getMoveBackardAction_Speed();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.MoveForwardAndTurningRightActionImpl <em>Move Forward And Turning Right Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.ardurobotml.impl.MoveForwardAndTurningRightActionImpl
+		 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getMoveForwardAndTurningRightAction()
+		 * @generated
+		 */
+		EClass MOVE_FORWARD_AND_TURNING_RIGHT_ACTION = eINSTANCE.getMoveForwardAndTurningRightAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__DURATION = eINSTANCE.getMoveForwardAndTurningRightAction_Duration();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Tick</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__START_TICK = eINSTANCE.getMoveForwardAndTurningRightAction_StartTick();
+
+		/**
+		 * The meta object literal for the '<em><b>Diff</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__DIFF = eINSTANCE.getMoveForwardAndTurningRightAction_Diff();
+
+		/**
+		 * The meta object literal for the '<em><b>Speed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__SPEED = eINSTANCE.getMoveForwardAndTurningRightAction_Speed();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.MoveForwardAndTurningLeftActionImpl <em>Move Forward And Turning Left Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.ardurobotml.impl.MoveForwardAndTurningLeftActionImpl
+		 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getMoveForwardAndTurningLeftAction()
+		 * @generated
+		 */
+		EClass MOVE_FORWARD_AND_TURNING_LEFT_ACTION = eINSTANCE.getMoveForwardAndTurningLeftAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_FORWARD_AND_TURNING_LEFT_ACTION__DURATION = eINSTANCE.getMoveForwardAndTurningLeftAction_Duration();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Tick</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_FORWARD_AND_TURNING_LEFT_ACTION__START_TICK = eINSTANCE.getMoveForwardAndTurningLeftAction_StartTick();
+
+		/**
+		 * The meta object literal for the '<em><b>Diff</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_FORWARD_AND_TURNING_LEFT_ACTION__DIFF = eINSTANCE.getMoveForwardAndTurningLeftAction_Diff();
+
+		/**
+		 * The meta object literal for the '<em><b>Speed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_FORWARD_AND_TURNING_LEFT_ACTION__SPEED = eINSTANCE.getMoveForwardAndTurningLeftAction_Speed();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.MoveBackardAndTurningRightActionImpl <em>Move Backard And Turning Right Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.ardurobotml.impl.MoveBackardAndTurningRightActionImpl
+		 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getMoveBackardAndTurningRightAction()
+		 * @generated
+		 */
+		EClass MOVE_BACKARD_AND_TURNING_RIGHT_ACTION = eINSTANCE.getMoveBackardAndTurningRightAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__DURATION = eINSTANCE.getMoveBackardAndTurningRightAction_Duration();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Tick</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__START_TICK = eINSTANCE.getMoveBackardAndTurningRightAction_StartTick();
+
+		/**
+		 * The meta object literal for the '<em><b>Diff</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__DIFF = eINSTANCE.getMoveBackardAndTurningRightAction_Diff();
+
+		/**
+		 * The meta object literal for the '<em><b>Speed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__SPEED = eINSTANCE.getMoveBackardAndTurningRightAction_Speed();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.MoveBackardAndTurningLeftActionImpl <em>Move Backard And Turning Left Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.ardurobotml.impl.MoveBackardAndTurningLeftActionImpl
+		 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getMoveBackardAndTurningLeftAction()
+		 * @generated
+		 */
+		EClass MOVE_BACKARD_AND_TURNING_LEFT_ACTION = eINSTANCE.getMoveBackardAndTurningLeftAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_BACKARD_AND_TURNING_LEFT_ACTION__DURATION = eINSTANCE.getMoveBackardAndTurningLeftAction_Duration();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Tick</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_BACKARD_AND_TURNING_LEFT_ACTION__START_TICK = eINSTANCE.getMoveBackardAndTurningLeftAction_StartTick();
+
+		/**
+		 * The meta object literal for the '<em><b>Diff</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_BACKARD_AND_TURNING_LEFT_ACTION__DIFF = eINSTANCE.getMoveBackardAndTurningLeftAction_Diff();
+
+		/**
+		 * The meta object literal for the '<em><b>Speed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MOVE_BACKARD_AND_TURNING_LEFT_ACTION__SPEED = eINSTANCE.getMoveBackardAndTurningLeftAction_Speed();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.TurningLeftActionImpl <em>Turning Left Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.ardurobotml.impl.TurningLeftActionImpl
+		 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getTurningLeftAction()
+		 * @generated
+		 */
+		EClass TURNING_LEFT_ACTION = eINSTANCE.getTurningLeftAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TURNING_LEFT_ACTION__DURATION = eINSTANCE.getTurningLeftAction_Duration();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Tick</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TURNING_LEFT_ACTION__START_TICK = eINSTANCE.getTurningLeftAction_StartTick();
+
+		/**
+		 * The meta object literal for the '<em><b>Speed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TURNING_LEFT_ACTION__SPEED = eINSTANCE.getTurningLeftAction_Speed();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.TurningRightActionImpl <em>Turning Right Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.ardurobotml.impl.TurningRightActionImpl
+		 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getTurningRightAction()
+		 * @generated
+		 */
+		EClass TURNING_RIGHT_ACTION = eINSTANCE.getTurningRightAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TURNING_RIGHT_ACTION__DURATION = eINSTANCE.getTurningRightAction_Duration();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Tick</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TURNING_RIGHT_ACTION__START_TICK = eINSTANCE.getTurningRightAction_StartTick();
+
+		/**
+		 * The meta object literal for the '<em><b>Speed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TURNING_RIGHT_ACTION__SPEED = eINSTANCE.getTurningRightAction_Speed();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.AcceleratetActionImpl <em>Acceleratet Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.ardurobotml.impl.AcceleratetActionImpl
+		 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getAcceleratetAction()
+		 * @generated
+		 */
+		EClass ACCELERATET_ACTION = eINSTANCE.getAcceleratetAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Ratio</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACCELERATET_ACTION__RATIO = eINSTANCE.getAcceleratetAction_Ratio();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Tick</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACCELERATET_ACTION__START_TICK = eINSTANCE.getAcceleratetAction_StartTick();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.DeceleratetActionImpl <em>Deceleratet Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.ardurobotml.impl.DeceleratetActionImpl
+		 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getDeceleratetAction()
+		 * @generated
+		 */
+		EClass DECELERATET_ACTION = eINSTANCE.getDeceleratetAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Ratio</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DECELERATET_ACTION__RATIO = eINSTANCE.getDeceleratetAction_Ratio();
+
+		/**
+		 * The meta object literal for the '<em><b>Start Tick</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DECELERATET_ACTION__START_TICK = eINSTANCE.getDeceleratetAction_StartTick();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.SCANCollisionActionImpl <em>SCAN Collision Action</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.ardurobotml.impl.SCANCollisionActionImpl
+		 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getSCANCollisionAction()
+		 * @generated
+		 */
+		EClass SCAN_COLLISION_ACTION = eINSTANCE.getSCANCollisionAction();
+
+		/**
 		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.ActionImpl <em>Action</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2379,6 +4008,16 @@ public interface ArdurobotmlPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute SYSTEM_PROPERTY_CONDITION__EXPECTED_ATTRIBUTE_VALUE = eINSTANCE.getSystemPropertyCondition_ExpectedAttributeValue();
+
+		/**
+		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.CollisionSensorConditionImpl <em>Collision Sensor Condition</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.gemoc.ardurobotml.impl.CollisionSensorConditionImpl
+		 * @see org.gemoc.ardurobotml.impl.ArdurobotmlPackageImpl#getCollisionSensorCondition()
+		 * @generated
+		 */
+		EClass COLLISION_SENSOR_CONDITION = eINSTANCE.getCollisionSensorCondition();
 
 		/**
 		 * The meta object literal for the '{@link org.gemoc.ardurobotml.impl.ActionSequenceImpl <em>Action Sequence</em>}' class.

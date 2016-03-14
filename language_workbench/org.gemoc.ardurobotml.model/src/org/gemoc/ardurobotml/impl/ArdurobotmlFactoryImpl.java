@@ -67,12 +67,23 @@ public class ArdurobotmlFactoryImpl extends EFactoryImpl implements ArdurobotmlF
 			case ArdurobotmlPackage.FSM_CLOCK: return createFSMClock();
 			case ArdurobotmlPackage.EVALUATE_GUARD: return createEvaluateGuard();
 			case ArdurobotmlPackage.REGION: return createRegion();
-			case ArdurobotmlPackage.STOP_ACTION: return createStopAction();
-			case ArdurobotmlPackage.MOVE_FORWARD_ACTION: return createMoveForwardAction();
-			case ArdurobotmlPackage.EMERGENCY_STOP_ACTION: return createEmergencyStopAction();
 			case ArdurobotmlPackage.ALL_ACTION_FINISHED_CONDITION: return createAllActionFinishedCondition();
 			case ArdurobotmlPackage.SYSTEM_PROPERTY_CONDITION: return createSystemPropertyCondition();
+			case ArdurobotmlPackage.COLLISION_SENSOR_CONDITION: return createCollisionSensorCondition();
 			case ArdurobotmlPackage.ACTION_SEQUENCE: return createActionSequence();
+			case ArdurobotmlPackage.STOP_ACTION: return createStopAction();
+			case ArdurobotmlPackage.MOVE_FORWARD_ACTION: return createMoveForwardAction();
+			case ArdurobotmlPackage.MOVE_BACKARD_ACTION: return createMoveBackardAction();
+			case ArdurobotmlPackage.MOVE_FORWARD_AND_TURNING_RIGHT_ACTION: return createMoveForwardAndTurningRightAction();
+			case ArdurobotmlPackage.MOVE_FORWARD_AND_TURNING_LEFT_ACTION: return createMoveForwardAndTurningLeftAction();
+			case ArdurobotmlPackage.MOVE_BACKARD_AND_TURNING_RIGHT_ACTION: return createMoveBackardAndTurningRightAction();
+			case ArdurobotmlPackage.MOVE_BACKARD_AND_TURNING_LEFT_ACTION: return createMoveBackardAndTurningLeftAction();
+			case ArdurobotmlPackage.TURNING_LEFT_ACTION: return createTurningLeftAction();
+			case ArdurobotmlPackage.TURNING_RIGHT_ACTION: return createTurningRightAction();
+			case ArdurobotmlPackage.ACCELERATET_ACTION: return createAcceleratetAction();
+			case ArdurobotmlPackage.DECELERATET_ACTION: return createDeceleratetAction();
+			case ArdurobotmlPackage.SCAN_COLLISION_ACTION: return createSCANCollisionAction();
+			case ArdurobotmlPackage.EMERGENCY_STOP_ACTION: return createEmergencyStopAction();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -213,6 +224,106 @@ public class ArdurobotmlFactoryImpl extends EFactoryImpl implements ArdurobotmlF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MoveBackardAction createMoveBackardAction() {
+		MoveBackardActionImpl moveBackardAction = new MoveBackardActionImpl();
+		return moveBackardAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MoveForwardAndTurningRightAction createMoveForwardAndTurningRightAction() {
+		MoveForwardAndTurningRightActionImpl moveForwardAndTurningRightAction = new MoveForwardAndTurningRightActionImpl();
+		return moveForwardAndTurningRightAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MoveForwardAndTurningLeftAction createMoveForwardAndTurningLeftAction() {
+		MoveForwardAndTurningLeftActionImpl moveForwardAndTurningLeftAction = new MoveForwardAndTurningLeftActionImpl();
+		return moveForwardAndTurningLeftAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MoveBackardAndTurningRightAction createMoveBackardAndTurningRightAction() {
+		MoveBackardAndTurningRightActionImpl moveBackardAndTurningRightAction = new MoveBackardAndTurningRightActionImpl();
+		return moveBackardAndTurningRightAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MoveBackardAndTurningLeftAction createMoveBackardAndTurningLeftAction() {
+		MoveBackardAndTurningLeftActionImpl moveBackardAndTurningLeftAction = new MoveBackardAndTurningLeftActionImpl();
+		return moveBackardAndTurningLeftAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TurningLeftAction createTurningLeftAction() {
+		TurningLeftActionImpl turningLeftAction = new TurningLeftActionImpl();
+		return turningLeftAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TurningRightAction createTurningRightAction() {
+		TurningRightActionImpl turningRightAction = new TurningRightActionImpl();
+		return turningRightAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AcceleratetAction createAcceleratetAction() {
+		AcceleratetActionImpl acceleratetAction = new AcceleratetActionImpl();
+		return acceleratetAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DeceleratetAction createDeceleratetAction() {
+		DeceleratetActionImpl deceleratetAction = new DeceleratetActionImpl();
+		return deceleratetAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SCANCollisionAction createSCANCollisionAction() {
+		SCANCollisionActionImpl scanCollisionAction = new SCANCollisionActionImpl();
+		return scanCollisionAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EmergencyStopAction createEmergencyStopAction() {
 		EmergencyStopActionImpl emergencyStopAction = new EmergencyStopActionImpl();
 		return emergencyStopAction;
@@ -236,6 +347,16 @@ public class ArdurobotmlFactoryImpl extends EFactoryImpl implements ArdurobotmlF
 	public SystemPropertyCondition createSystemPropertyCondition() {
 		SystemPropertyConditionImpl systemPropertyCondition = new SystemPropertyConditionImpl();
 		return systemPropertyCondition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CollisionSensorCondition createCollisionSensorCondition() {
+		CollisionSensorConditionImpl collisionSensorCondition = new CollisionSensorConditionImpl();
+		return collisionSensorCondition;
 	}
 
 	/**

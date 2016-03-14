@@ -124,20 +124,8 @@ public class ArdurobotmlAdapterFactory extends AdapterFactoryImpl {
 				return createConditionAdapter();
 			}
 			@Override
-			public Adapter caseStopAction(StopAction object) {
-				return createStopActionAdapter();
-			}
-			@Override
-			public Adapter caseMoveForwardAction(MoveForwardAction object) {
-				return createMoveForwardActionAdapter();
-			}
-			@Override
 			public Adapter caseAction(Action object) {
 				return createActionAdapter();
-			}
-			@Override
-			public Adapter caseEmergencyStopAction(EmergencyStopAction object) {
-				return createEmergencyStopActionAdapter();
 			}
 			@Override
 			public Adapter caseAllActionFinishedCondition(AllActionFinishedCondition object) {
@@ -148,8 +136,64 @@ public class ArdurobotmlAdapterFactory extends AdapterFactoryImpl {
 				return createSystemPropertyConditionAdapter();
 			}
 			@Override
+			public Adapter caseCollisionSensorCondition(CollisionSensorCondition object) {
+				return createCollisionSensorConditionAdapter();
+			}
+			@Override
 			public Adapter caseActionSequence(ActionSequence object) {
 				return createActionSequenceAdapter();
+			}
+			@Override
+			public Adapter caseStopAction(StopAction object) {
+				return createStopActionAdapter();
+			}
+			@Override
+			public Adapter caseMoveForwardAction(MoveForwardAction object) {
+				return createMoveForwardActionAdapter();
+			}
+			@Override
+			public Adapter caseMoveBackardAction(MoveBackardAction object) {
+				return createMoveBackardActionAdapter();
+			}
+			@Override
+			public Adapter caseMoveForwardAndTurningRightAction(MoveForwardAndTurningRightAction object) {
+				return createMoveForwardAndTurningRightActionAdapter();
+			}
+			@Override
+			public Adapter caseMoveForwardAndTurningLeftAction(MoveForwardAndTurningLeftAction object) {
+				return createMoveForwardAndTurningLeftActionAdapter();
+			}
+			@Override
+			public Adapter caseMoveBackardAndTurningRightAction(MoveBackardAndTurningRightAction object) {
+				return createMoveBackardAndTurningRightActionAdapter();
+			}
+			@Override
+			public Adapter caseMoveBackardAndTurningLeftAction(MoveBackardAndTurningLeftAction object) {
+				return createMoveBackardAndTurningLeftActionAdapter();
+			}
+			@Override
+			public Adapter caseTurningLeftAction(TurningLeftAction object) {
+				return createTurningLeftActionAdapter();
+			}
+			@Override
+			public Adapter caseTurningRightAction(TurningRightAction object) {
+				return createTurningRightActionAdapter();
+			}
+			@Override
+			public Adapter caseAcceleratetAction(AcceleratetAction object) {
+				return createAcceleratetActionAdapter();
+			}
+			@Override
+			public Adapter caseDeceleratetAction(DeceleratetAction object) {
+				return createDeceleratetActionAdapter();
+			}
+			@Override
+			public Adapter caseSCANCollisionAction(SCANCollisionAction object) {
+				return createSCANCollisionActionAdapter();
+			}
+			@Override
+			public Adapter caseEmergencyStopAction(EmergencyStopAction object) {
+				return createEmergencyStopActionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -396,6 +440,146 @@ public class ArdurobotmlAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.ardurobotml.MoveBackardAction <em>Move Backard Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.ardurobotml.MoveBackardAction
+	 * @generated
+	 */
+	public Adapter createMoveBackardActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.ardurobotml.MoveForwardAndTurningRightAction <em>Move Forward And Turning Right Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.ardurobotml.MoveForwardAndTurningRightAction
+	 * @generated
+	 */
+	public Adapter createMoveForwardAndTurningRightActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction <em>Move Forward And Turning Left Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction
+	 * @generated
+	 */
+	public Adapter createMoveForwardAndTurningLeftActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.ardurobotml.MoveBackardAndTurningRightAction <em>Move Backard And Turning Right Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.ardurobotml.MoveBackardAndTurningRightAction
+	 * @generated
+	 */
+	public Adapter createMoveBackardAndTurningRightActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction <em>Move Backard And Turning Left Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction
+	 * @generated
+	 */
+	public Adapter createMoveBackardAndTurningLeftActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.ardurobotml.TurningLeftAction <em>Turning Left Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.ardurobotml.TurningLeftAction
+	 * @generated
+	 */
+	public Adapter createTurningLeftActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.ardurobotml.TurningRightAction <em>Turning Right Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.ardurobotml.TurningRightAction
+	 * @generated
+	 */
+	public Adapter createTurningRightActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.ardurobotml.AcceleratetAction <em>Acceleratet Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.ardurobotml.AcceleratetAction
+	 * @generated
+	 */
+	public Adapter createAcceleratetActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.ardurobotml.DeceleratetAction <em>Deceleratet Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.ardurobotml.DeceleratetAction
+	 * @generated
+	 */
+	public Adapter createDeceleratetActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.ardurobotml.SCANCollisionAction <em>SCAN Collision Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.ardurobotml.SCANCollisionAction
+	 * @generated
+	 */
+	public Adapter createSCANCollisionActionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link org.gemoc.ardurobotml.Action <em>Action</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -448,6 +632,20 @@ public class ArdurobotmlAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSystemPropertyConditionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.gemoc.ardurobotml.CollisionSensorCondition <em>Collision Sensor Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.gemoc.ardurobotml.CollisionSensorCondition
+	 * @generated
+	 */
+	public Adapter createCollisionSensorConditionAdapter() {
 		return null;
 	}
 

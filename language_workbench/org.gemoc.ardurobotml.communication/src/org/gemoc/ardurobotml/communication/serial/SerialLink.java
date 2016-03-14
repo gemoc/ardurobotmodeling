@@ -5,8 +5,10 @@ import gnu.io.SerialPort;
 import gnu.io.SerialPortEvent;
 import gnu.io.SerialPortEventListener;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.util.Collection;
 import java.util.Enumeration;
@@ -23,6 +25,7 @@ public class SerialLink implements SerialPortEventListener {
 	private static final String PORT_NAMES[] = {
 													// For Raspbian systems
 													"/dev/ttyUSB0",
+													"/dev/ttyUSB01",
 													// For windows systems
 													"COM1",
 													"COM2",
@@ -38,6 +41,7 @@ public class SerialLink implements SerialPortEventListener {
 //	private int _bytesRead = 0;
 	
 	protected InputStream _inputStream;
+	BufferedReader input;
 	protected OutputStream _outputStream;
 	
 	private SerialListener _listener;
@@ -94,6 +98,7 @@ public class SerialLink implements SerialPortEventListener {
 
 	protected void initializeInputStream() throws IOException {
 		_inputStream = _serialPort.getInputStream();
+		input = new BufferedReader(new InputStreamReader(_inputStream));
 	}
 
 	
@@ -112,6 +117,17 @@ public class SerialLink implements SerialPortEventListener {
 	 * Handle an event on the serial port. Read the data and print it.
 	 */
 	public synchronized void serialEvent(SerialPortEvent oEvent) {
+		if (oEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
+			try {
+				String inputLine=input.readLine();
+				System.out.println(inputLine);
+				if(this._listener != null)
+					this._listener.onSerialMessage(inputLine);
+			} catch (Exception e) {
+				System.err.println(e.toString());
+			}
+		
+		}
 //		if (oEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
 //			try {
 //				int tmpRead = _input.read(_tmp);
@@ -147,6 +163,10 @@ public class SerialLink implements SerialPortEventListener {
     		e.printStackTrace();
     	} 
     }
+	
+	
+	
+	
 	
 	public void setListener(SerialListener listener){
 		_listener = listener;

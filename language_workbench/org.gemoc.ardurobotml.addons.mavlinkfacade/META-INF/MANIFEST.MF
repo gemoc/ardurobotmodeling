@@ -7,8 +7,6 @@ Bundle-Activator: org.gemoc.ardurobtml.mavlinkfacade.Activator
 Require-Bundle: org.eclipse.core.runtime,
  org.gemoc.ardurobotml.k3dsa,
  org.gemoc.ardurobotml.communication;bundle-version="1.0.0",
- org.mavlink.library;bundle-version="1.0.0",
- org.mavlink.util;bundle-version="1.0.0",
  org.gemoc.ardurobotml.model,
  org.slf4j.api,
  org.gemoc.xdsmlframework.api;bundle-version="0.1.0",
@@ -18,5 +16,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: org.gemoc.ardurobtml.mavlinkfacade,
  org.gemoc.ardurobtml.mavlinkfacade.addons,
- org.gemoc.ardurobtml.mavlinkfacade.logging,
- org.gemoc.ardurobtml.mavlinkfacade.messages
+ org.gemoc.ardurobtml.mavlinkfacade.logging

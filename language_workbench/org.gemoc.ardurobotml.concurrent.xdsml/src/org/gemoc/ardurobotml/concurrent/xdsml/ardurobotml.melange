@@ -2,15 +2,36 @@ package org.gemoc.ardurobotml.concurrent.xdsml
 
 language ArdurobotMLConcurrent {
 	syntax "platform:/resource/org.gemoc.ardurobotml.model/model/Ardurobotml.ecore"
-	
+with org.gemoc.ardurobotml.k3dsa.MoveForwardBackwardAspect
+	with org.gemoc.ardurobotml.k3dsa.TurningLeftAspect
+	with org.gemoc.ardurobotml.k3dsa.ActionSequenceAspect
+	with org.gemoc.ardurobotml.k3dsa.ActionAspect
+	with org.gemoc.ardurobotml.k3dsa.SCANCollisionAspect
+	with org.gemoc.ardurobotml.k3dsa.MoveBackardAndTurningLeftAspect
+	with org.gemoc.ardurobotml.k3dsa.TurningRightAspect
+	with org.gemoc.ardurobotml.k3dsa.EmergencyStopActionAspect
+	with org.gemoc.ardurobotml.k3dsa.CollisionSensorConditionAspect
+	with org.gemoc.ardurobotml.k3dsa.AcceleratetAspect
+	with org.gemoc.ardurobotml.k3dsa.StopActionAspect
+	with org.gemoc.ardurobotml.k3dsa.MoveForwardActionAspect
 	with org.gemoc.ardurobotml.k3dsa.TransitionAspect
+	with org.gemoc.ardurobotml.k3dsa.StateAspect
+	with org.gemoc.ardurobotml.k3dsa.TFSMAspect
+	with org.gemoc.ardurobotml.k3dsa.MoveForwardAndTurningRightAspect
+	with org.gemoc.ardurobotml.k3dsa.DeceleratetAspect
+	with org.gemoc.ardurobotml.k3dsa.MoveForwardAndTurningLeftAspect
+	with org.gemoc.ardurobotml.k3dsa.MoveBackardAndTurningRightAspect
+	with org.gemoc.ardurobotml.k3dsa.FSMClockAspect
+ 
+
+/*	with org.gemoc.ardurobotml.k3dsa.TransitionAspect
 	with org.gemoc.ardurobotml.k3dsa.StateAspect
 	with org.gemoc.ardurobotml.k3dsa.ActionAspect
 	with org.gemoc.ardurobotml.k3dsa.TFSMAspect
 	with org.gemoc.ardurobotml.k3dsa.EmergencyStopActionAspect
 	with org.gemoc.ardurobotml.k3dsa.StopActionAspect
 	with org.gemoc.ardurobotml.k3dsa.FSMClockAspect
-	with org.gemoc.ardurobotml.k3dsa.MoveForwardActionAspect
+	with org.gemoc.ardurobotml.k3dsa.MoveForwardActionAspect*/
 
 	ecl "/org.gemoc.ardurobotml.dse/ecl/ardurobotml.ecl"
 	

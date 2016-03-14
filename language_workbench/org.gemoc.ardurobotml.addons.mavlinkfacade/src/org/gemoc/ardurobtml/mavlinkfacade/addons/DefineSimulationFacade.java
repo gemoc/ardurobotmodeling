@@ -1,6 +1,5 @@
 package org.gemoc.ardurobtml.mavlinkfacade.addons;
 
-import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
@@ -17,12 +16,8 @@ public class DefineSimulationFacade implements IEngineAddon {
 	@Override
 	public void engineAboutToStart(IBasicExecutionEngine engine) 
 	{
-		try {
 			RobotFacadeRegistry.registerRobotFacade(new ArduRoverFacade());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 	}
 
 	

@@ -20,6 +20,7 @@ import org.gemoc.ardurobotml.MoveForwardAction;
  * <ul>
  *   <li>{@link org.gemoc.ardurobotml.impl.MoveForwardActionImpl#getDuration <em>Duration</em>}</li>
  *   <li>{@link org.gemoc.ardurobotml.impl.MoveForwardActionImpl#getStartTick <em>Start Tick</em>}</li>
+ *   <li>{@link org.gemoc.ardurobotml.impl.MoveForwardActionImpl#getSpeed <em>Speed</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,6 +66,26 @@ public class MoveForwardActionImpl extends ActionImpl implements MoveForwardActi
 	 * @ordered
 	 */
 	protected int startTick = START_TICK_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSpeed() <em>Speed</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpeed()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int SPEED_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getSpeed() <em>Speed</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpeed()
+	 * @generated
+	 * @ordered
+	 */
+	protected int speed = SPEED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -132,6 +153,27 @@ public class MoveForwardActionImpl extends ActionImpl implements MoveForwardActi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getSpeed() {
+		return speed;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSpeed(int newSpeed) {
+		int oldSpeed = speed;
+		speed = newSpeed;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ArdurobotmlPackage.MOVE_FORWARD_ACTION__SPEED, oldSpeed, speed));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -139,6 +181,8 @@ public class MoveForwardActionImpl extends ActionImpl implements MoveForwardActi
 				return getDuration();
 			case ArdurobotmlPackage.MOVE_FORWARD_ACTION__START_TICK:
 				return getStartTick();
+			case ArdurobotmlPackage.MOVE_FORWARD_ACTION__SPEED:
+				return getSpeed();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -156,6 +200,9 @@ public class MoveForwardActionImpl extends ActionImpl implements MoveForwardActi
 				return;
 			case ArdurobotmlPackage.MOVE_FORWARD_ACTION__START_TICK:
 				setStartTick((Integer)newValue);
+				return;
+			case ArdurobotmlPackage.MOVE_FORWARD_ACTION__SPEED:
+				setSpeed((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -175,6 +222,9 @@ public class MoveForwardActionImpl extends ActionImpl implements MoveForwardActi
 			case ArdurobotmlPackage.MOVE_FORWARD_ACTION__START_TICK:
 				setStartTick(START_TICK_EDEFAULT);
 				return;
+			case ArdurobotmlPackage.MOVE_FORWARD_ACTION__SPEED:
+				setSpeed(SPEED_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -191,6 +241,8 @@ public class MoveForwardActionImpl extends ActionImpl implements MoveForwardActi
 				return duration != DURATION_EDEFAULT;
 			case ArdurobotmlPackage.MOVE_FORWARD_ACTION__START_TICK:
 				return startTick != START_TICK_EDEFAULT;
+			case ArdurobotmlPackage.MOVE_FORWARD_ACTION__SPEED:
+				return speed != SPEED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -209,6 +261,8 @@ public class MoveForwardActionImpl extends ActionImpl implements MoveForwardActi
 		result.append(duration);
 		result.append(", startTick: ");
 		result.append(startTick);
+		result.append(", speed: ");
+		result.append(speed);
 		result.append(')');
 		return result.toString();
 	}

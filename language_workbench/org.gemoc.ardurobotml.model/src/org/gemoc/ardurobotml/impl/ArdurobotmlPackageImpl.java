@@ -10,28 +10,39 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.gemoc.ardurobotml.AcceleratetAction;
 import org.gemoc.ardurobotml.Action;
 import org.gemoc.ardurobotml.ActionSequence;
 import org.gemoc.ardurobotml.AllActionFinishedCondition;
 import org.gemoc.ardurobotml.ArdurobotmlFactory;
 import org.gemoc.ardurobotml.ArdurobotmlPackage;
+import org.gemoc.ardurobotml.CollisionSensorCondition;
 import org.gemoc.ardurobotml.Condition;
+import org.gemoc.ardurobotml.DeceleratetAction;
 import org.gemoc.ardurobotml.EmergencyStopAction;
 import org.gemoc.ardurobotml.EvaluateGuard;
 import org.gemoc.ardurobotml.EventGuard;
 import org.gemoc.ardurobotml.FSMClock;
 import org.gemoc.ardurobotml.FSMEvent;
 import org.gemoc.ardurobotml.Guard;
+import org.gemoc.ardurobotml.MoveBackardAction;
+import org.gemoc.ardurobotml.MoveBackardAndTurningLeftAction;
+import org.gemoc.ardurobotml.MoveBackardAndTurningRightAction;
 import org.gemoc.ardurobotml.MoveForwardAction;
+import org.gemoc.ardurobotml.MoveForwardAndTurningLeftAction;
+import org.gemoc.ardurobotml.MoveForwardAndTurningRightAction;
 import org.gemoc.ardurobotml.NamedElement;
 import org.gemoc.ardurobotml.Region;
 import org.gemoc.ardurobotml.RegionContainer;
+import org.gemoc.ardurobotml.SCANCollisionAction;
 import org.gemoc.ardurobotml.State;
 import org.gemoc.ardurobotml.StopAction;
 import org.gemoc.ardurobotml.SystemPropertyCondition;
 import org.gemoc.ardurobotml.TemporalGuard;
 import org.gemoc.ardurobotml.TimedSystem;
 import org.gemoc.ardurobotml.Transition;
+import org.gemoc.ardurobotml.TurningLeftAction;
+import org.gemoc.ardurobotml.TurningRightAction;
 
 /**
  * <!-- begin-user-doc -->
@@ -157,6 +168,76 @@ public class ArdurobotmlPackageImpl extends EPackageImpl implements ArdurobotmlP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass moveBackardActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moveForwardAndTurningRightActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moveForwardAndTurningLeftActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moveBackardAndTurningRightActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moveBackardAndTurningLeftActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass turningLeftActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass turningRightActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass acceleratetActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deceleratetActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass scanCollisionActionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass actionEClass = null;
 
 	/**
@@ -179,6 +260,13 @@ public class ArdurobotmlPackageImpl extends EPackageImpl implements ArdurobotmlP
 	 * @generated
 	 */
 	private EClass systemPropertyConditionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass collisionSensorConditionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -703,6 +791,366 @@ public class ArdurobotmlPackageImpl extends EPackageImpl implements ArdurobotmlP
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMoveForwardAction_Speed() {
+		return (EAttribute)moveForwardActionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMoveBackardAction() {
+		return moveBackardActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveBackardAction_Duration() {
+		return (EAttribute)moveBackardActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveBackardAction_StartTick() {
+		return (EAttribute)moveBackardActionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveBackardAction_Speed() {
+		return (EAttribute)moveBackardActionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMoveForwardAndTurningRightAction() {
+		return moveForwardAndTurningRightActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveForwardAndTurningRightAction_Duration() {
+		return (EAttribute)moveForwardAndTurningRightActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveForwardAndTurningRightAction_StartTick() {
+		return (EAttribute)moveForwardAndTurningRightActionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveForwardAndTurningRightAction_Diff() {
+		return (EAttribute)moveForwardAndTurningRightActionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveForwardAndTurningRightAction_Speed() {
+		return (EAttribute)moveForwardAndTurningRightActionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMoveForwardAndTurningLeftAction() {
+		return moveForwardAndTurningLeftActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveForwardAndTurningLeftAction_Duration() {
+		return (EAttribute)moveForwardAndTurningLeftActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveForwardAndTurningLeftAction_StartTick() {
+		return (EAttribute)moveForwardAndTurningLeftActionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveForwardAndTurningLeftAction_Diff() {
+		return (EAttribute)moveForwardAndTurningLeftActionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveForwardAndTurningLeftAction_Speed() {
+		return (EAttribute)moveForwardAndTurningLeftActionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMoveBackardAndTurningRightAction() {
+		return moveBackardAndTurningRightActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveBackardAndTurningRightAction_Duration() {
+		return (EAttribute)moveBackardAndTurningRightActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveBackardAndTurningRightAction_StartTick() {
+		return (EAttribute)moveBackardAndTurningRightActionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveBackardAndTurningRightAction_Diff() {
+		return (EAttribute)moveBackardAndTurningRightActionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveBackardAndTurningRightAction_Speed() {
+		return (EAttribute)moveBackardAndTurningRightActionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMoveBackardAndTurningLeftAction() {
+		return moveBackardAndTurningLeftActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveBackardAndTurningLeftAction_Duration() {
+		return (EAttribute)moveBackardAndTurningLeftActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveBackardAndTurningLeftAction_StartTick() {
+		return (EAttribute)moveBackardAndTurningLeftActionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveBackardAndTurningLeftAction_Diff() {
+		return (EAttribute)moveBackardAndTurningLeftActionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMoveBackardAndTurningLeftAction_Speed() {
+		return (EAttribute)moveBackardAndTurningLeftActionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTurningLeftAction() {
+		return turningLeftActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTurningLeftAction_Duration() {
+		return (EAttribute)turningLeftActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTurningLeftAction_StartTick() {
+		return (EAttribute)turningLeftActionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTurningLeftAction_Speed() {
+		return (EAttribute)turningLeftActionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTurningRightAction() {
+		return turningRightActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTurningRightAction_Duration() {
+		return (EAttribute)turningRightActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTurningRightAction_StartTick() {
+		return (EAttribute)turningRightActionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTurningRightAction_Speed() {
+		return (EAttribute)turningRightActionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAcceleratetAction() {
+		return acceleratetActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAcceleratetAction_Ratio() {
+		return (EAttribute)acceleratetActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAcceleratetAction_StartTick() {
+		return (EAttribute)acceleratetActionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDeceleratetAction() {
+		return deceleratetActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDeceleratetAction_Ratio() {
+		return (EAttribute)deceleratetActionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDeceleratetAction_StartTick() {
+		return (EAttribute)deceleratetActionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSCANCollisionAction() {
+		return scanCollisionActionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAction() {
 		return actionEClass;
 	}
@@ -768,6 +1216,15 @@ public class ArdurobotmlPackageImpl extends EPackageImpl implements ArdurobotmlP
 	 */
 	public EAttribute getSystemPropertyCondition_ExpectedAttributeValue() {
 		return (EAttribute)systemPropertyConditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCollisionSensorCondition() {
+		return collisionSensorConditionEClass;
 	}
 
 	/**
@@ -876,26 +1333,78 @@ public class ArdurobotmlPackageImpl extends EPackageImpl implements ArdurobotmlP
 
 		conditionEClass = createEClass(CONDITION);
 
-		stopActionEClass = createEClass(STOP_ACTION);
-
-		moveForwardActionEClass = createEClass(MOVE_FORWARD_ACTION);
-		createEAttribute(moveForwardActionEClass, MOVE_FORWARD_ACTION__DURATION);
-		createEAttribute(moveForwardActionEClass, MOVE_FORWARD_ACTION__START_TICK);
-
 		actionEClass = createEClass(ACTION);
 		createEOperation(actionEClass, ACTION___BEGIN);
 		createEOperation(actionEClass, ACTION___END);
-
-		emergencyStopActionEClass = createEClass(EMERGENCY_STOP_ACTION);
-		createEOperation(emergencyStopActionEClass, EMERGENCY_STOP_ACTION___BEGIN);
 
 		allActionFinishedConditionEClass = createEClass(ALL_ACTION_FINISHED_CONDITION);
 
 		systemPropertyConditionEClass = createEClass(SYSTEM_PROPERTY_CONDITION);
 		createEAttribute(systemPropertyConditionEClass, SYSTEM_PROPERTY_CONDITION__EXPECTED_ATTRIBUTE_VALUE);
 
+		collisionSensorConditionEClass = createEClass(COLLISION_SENSOR_CONDITION);
+
 		actionSequenceEClass = createEClass(ACTION_SEQUENCE);
 		createEReference(actionSequenceEClass, ACTION_SEQUENCE__ACTIONS);
+
+		stopActionEClass = createEClass(STOP_ACTION);
+
+		moveForwardActionEClass = createEClass(MOVE_FORWARD_ACTION);
+		createEAttribute(moveForwardActionEClass, MOVE_FORWARD_ACTION__DURATION);
+		createEAttribute(moveForwardActionEClass, MOVE_FORWARD_ACTION__START_TICK);
+		createEAttribute(moveForwardActionEClass, MOVE_FORWARD_ACTION__SPEED);
+
+		moveBackardActionEClass = createEClass(MOVE_BACKARD_ACTION);
+		createEAttribute(moveBackardActionEClass, MOVE_BACKARD_ACTION__DURATION);
+		createEAttribute(moveBackardActionEClass, MOVE_BACKARD_ACTION__START_TICK);
+		createEAttribute(moveBackardActionEClass, MOVE_BACKARD_ACTION__SPEED);
+
+		moveForwardAndTurningRightActionEClass = createEClass(MOVE_FORWARD_AND_TURNING_RIGHT_ACTION);
+		createEAttribute(moveForwardAndTurningRightActionEClass, MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__DURATION);
+		createEAttribute(moveForwardAndTurningRightActionEClass, MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__START_TICK);
+		createEAttribute(moveForwardAndTurningRightActionEClass, MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__DIFF);
+		createEAttribute(moveForwardAndTurningRightActionEClass, MOVE_FORWARD_AND_TURNING_RIGHT_ACTION__SPEED);
+
+		moveForwardAndTurningLeftActionEClass = createEClass(MOVE_FORWARD_AND_TURNING_LEFT_ACTION);
+		createEAttribute(moveForwardAndTurningLeftActionEClass, MOVE_FORWARD_AND_TURNING_LEFT_ACTION__DURATION);
+		createEAttribute(moveForwardAndTurningLeftActionEClass, MOVE_FORWARD_AND_TURNING_LEFT_ACTION__START_TICK);
+		createEAttribute(moveForwardAndTurningLeftActionEClass, MOVE_FORWARD_AND_TURNING_LEFT_ACTION__DIFF);
+		createEAttribute(moveForwardAndTurningLeftActionEClass, MOVE_FORWARD_AND_TURNING_LEFT_ACTION__SPEED);
+
+		moveBackardAndTurningRightActionEClass = createEClass(MOVE_BACKARD_AND_TURNING_RIGHT_ACTION);
+		createEAttribute(moveBackardAndTurningRightActionEClass, MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__DURATION);
+		createEAttribute(moveBackardAndTurningRightActionEClass, MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__START_TICK);
+		createEAttribute(moveBackardAndTurningRightActionEClass, MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__DIFF);
+		createEAttribute(moveBackardAndTurningRightActionEClass, MOVE_BACKARD_AND_TURNING_RIGHT_ACTION__SPEED);
+
+		moveBackardAndTurningLeftActionEClass = createEClass(MOVE_BACKARD_AND_TURNING_LEFT_ACTION);
+		createEAttribute(moveBackardAndTurningLeftActionEClass, MOVE_BACKARD_AND_TURNING_LEFT_ACTION__DURATION);
+		createEAttribute(moveBackardAndTurningLeftActionEClass, MOVE_BACKARD_AND_TURNING_LEFT_ACTION__START_TICK);
+		createEAttribute(moveBackardAndTurningLeftActionEClass, MOVE_BACKARD_AND_TURNING_LEFT_ACTION__DIFF);
+		createEAttribute(moveBackardAndTurningLeftActionEClass, MOVE_BACKARD_AND_TURNING_LEFT_ACTION__SPEED);
+
+		turningLeftActionEClass = createEClass(TURNING_LEFT_ACTION);
+		createEAttribute(turningLeftActionEClass, TURNING_LEFT_ACTION__DURATION);
+		createEAttribute(turningLeftActionEClass, TURNING_LEFT_ACTION__START_TICK);
+		createEAttribute(turningLeftActionEClass, TURNING_LEFT_ACTION__SPEED);
+
+		turningRightActionEClass = createEClass(TURNING_RIGHT_ACTION);
+		createEAttribute(turningRightActionEClass, TURNING_RIGHT_ACTION__DURATION);
+		createEAttribute(turningRightActionEClass, TURNING_RIGHT_ACTION__START_TICK);
+		createEAttribute(turningRightActionEClass, TURNING_RIGHT_ACTION__SPEED);
+
+		acceleratetActionEClass = createEClass(ACCELERATET_ACTION);
+		createEAttribute(acceleratetActionEClass, ACCELERATET_ACTION__RATIO);
+		createEAttribute(acceleratetActionEClass, ACCELERATET_ACTION__START_TICK);
+
+		deceleratetActionEClass = createEClass(DECELERATET_ACTION);
+		createEAttribute(deceleratetActionEClass, DECELERATET_ACTION__RATIO);
+		createEAttribute(deceleratetActionEClass, DECELERATET_ACTION__START_TICK);
+
+		scanCollisionActionEClass = createEClass(SCAN_COLLISION_ACTION);
+
+		emergencyStopActionEClass = createEClass(EMERGENCY_STOP_ACTION);
+		createEOperation(emergencyStopActionEClass, EMERGENCY_STOP_ACTION___BEGIN);
 	}
 
 	/**
@@ -937,13 +1446,24 @@ public class ArdurobotmlPackageImpl extends EPackageImpl implements ArdurobotmlP
 		fsmClockEClass.getESuperTypes().add(this.getNamedElement());
 		evaluateGuardEClass.getESuperTypes().add(this.getGuard());
 		regionContainerEClass.getESuperTypes().add(this.getNamedElement());
-		stopActionEClass.getESuperTypes().add(this.getAction());
-		moveForwardActionEClass.getESuperTypes().add(this.getAction());
 		actionEClass.getESuperTypes().add(this.getNamedElement());
-		emergencyStopActionEClass.getESuperTypes().add(this.getAction());
 		allActionFinishedConditionEClass.getESuperTypes().add(this.getCondition());
 		systemPropertyConditionEClass.getESuperTypes().add(this.getCondition());
+		collisionSensorConditionEClass.getESuperTypes().add(this.getCondition());
 		actionSequenceEClass.getESuperTypes().add(this.getAction());
+		stopActionEClass.getESuperTypes().add(this.getAction());
+		moveForwardActionEClass.getESuperTypes().add(this.getAction());
+		moveBackardActionEClass.getESuperTypes().add(this.getAction());
+		moveForwardAndTurningRightActionEClass.getESuperTypes().add(this.getAction());
+		moveForwardAndTurningLeftActionEClass.getESuperTypes().add(this.getAction());
+		moveBackardAndTurningRightActionEClass.getESuperTypes().add(this.getAction());
+		moveBackardAndTurningLeftActionEClass.getESuperTypes().add(this.getAction());
+		turningLeftActionEClass.getESuperTypes().add(this.getAction());
+		turningRightActionEClass.getESuperTypes().add(this.getAction());
+		acceleratetActionEClass.getESuperTypes().add(this.getAction());
+		deceleratetActionEClass.getESuperTypes().add(this.getAction());
+		scanCollisionActionEClass.getESuperTypes().add(this.getAction());
+		emergencyStopActionEClass.getESuperTypes().add(this.getAction());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(timedSystemEClass, TimedSystem.class, "TimedSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1011,36 +1531,106 @@ public class ArdurobotmlPackageImpl extends EPackageImpl implements ArdurobotmlP
 
 		initEClass(conditionEClass, Condition.class, "Condition", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(stopActionEClass, StopAction.class, "StopAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(moveForwardActionEClass, MoveForwardAction.class, "MoveForwardAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMoveForwardAction_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, MoveForwardAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMoveForwardAction_StartTick(), ecorePackage.getEInt(), "startTick", null, 0, 1, MoveForwardAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(actionEClass, Action.class, "Action", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEOperation(getAction__Begin(), null, "begin", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getAction__End(), null, "end", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(emergencyStopActionEClass, EmergencyStopAction.class, "EmergencyStopAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getEmergencyStopAction__Begin(), null, "begin", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(allActionFinishedConditionEClass, AllActionFinishedCondition.class, "AllActionFinishedCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(systemPropertyConditionEClass, SystemPropertyCondition.class, "SystemPropertyCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSystemPropertyCondition_ExpectedAttributeValue(), ecorePackage.getEBoolean(), "expectedAttributeValue", null, 0, 1, SystemPropertyCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(collisionSensorConditionEClass, CollisionSensorCondition.class, "CollisionSensorCondition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(actionSequenceEClass, ActionSequence.class, "ActionSequence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getActionSequence_Actions(), this.getAction(), null, "actions", null, 0, -1, ActionSequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stopActionEClass, StopAction.class, "StopAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(moveForwardActionEClass, MoveForwardAction.class, "MoveForwardAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMoveForwardAction_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, MoveForwardAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveForwardAction_StartTick(), ecorePackage.getEInt(), "startTick", null, 0, 1, MoveForwardAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveForwardAction_Speed(), ecorePackage.getEInt(), "speed", null, 0, 1, MoveForwardAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(moveBackardActionEClass, MoveBackardAction.class, "MoveBackardAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMoveBackardAction_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, MoveBackardAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveBackardAction_StartTick(), ecorePackage.getEInt(), "startTick", null, 0, 1, MoveBackardAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveBackardAction_Speed(), ecorePackage.getEInt(), "speed", null, 0, 1, MoveBackardAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(moveForwardAndTurningRightActionEClass, MoveForwardAndTurningRightAction.class, "MoveForwardAndTurningRightAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMoveForwardAndTurningRightAction_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, MoveForwardAndTurningRightAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveForwardAndTurningRightAction_StartTick(), ecorePackage.getEInt(), "startTick", null, 0, 1, MoveForwardAndTurningRightAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveForwardAndTurningRightAction_Diff(), ecorePackage.getEInt(), "diff", null, 0, 1, MoveForwardAndTurningRightAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveForwardAndTurningRightAction_Speed(), ecorePackage.getEInt(), "speed", null, 0, 1, MoveForwardAndTurningRightAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(moveForwardAndTurningLeftActionEClass, MoveForwardAndTurningLeftAction.class, "MoveForwardAndTurningLeftAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMoveForwardAndTurningLeftAction_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, MoveForwardAndTurningLeftAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveForwardAndTurningLeftAction_StartTick(), ecorePackage.getEInt(), "startTick", null, 0, 1, MoveForwardAndTurningLeftAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveForwardAndTurningLeftAction_Diff(), ecorePackage.getEInt(), "diff", null, 0, 1, MoveForwardAndTurningLeftAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveForwardAndTurningLeftAction_Speed(), ecorePackage.getEInt(), "speed", null, 0, 1, MoveForwardAndTurningLeftAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(moveBackardAndTurningRightActionEClass, MoveBackardAndTurningRightAction.class, "MoveBackardAndTurningRightAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMoveBackardAndTurningRightAction_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, MoveBackardAndTurningRightAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveBackardAndTurningRightAction_StartTick(), ecorePackage.getEInt(), "startTick", null, 0, 1, MoveBackardAndTurningRightAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveBackardAndTurningRightAction_Diff(), ecorePackage.getEInt(), "diff", null, 0, 1, MoveBackardAndTurningRightAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveBackardAndTurningRightAction_Speed(), ecorePackage.getEInt(), "speed", null, 0, 1, MoveBackardAndTurningRightAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(moveBackardAndTurningLeftActionEClass, MoveBackardAndTurningLeftAction.class, "MoveBackardAndTurningLeftAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMoveBackardAndTurningLeftAction_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, MoveBackardAndTurningLeftAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveBackardAndTurningLeftAction_StartTick(), ecorePackage.getEInt(), "startTick", null, 0, 1, MoveBackardAndTurningLeftAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveBackardAndTurningLeftAction_Diff(), ecorePackage.getEInt(), "diff", null, 0, 1, MoveBackardAndTurningLeftAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMoveBackardAndTurningLeftAction_Speed(), ecorePackage.getEInt(), "speed", null, 0, 1, MoveBackardAndTurningLeftAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(turningLeftActionEClass, TurningLeftAction.class, "TurningLeftAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTurningLeftAction_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, TurningLeftAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTurningLeftAction_StartTick(), ecorePackage.getEInt(), "startTick", null, 0, 1, TurningLeftAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTurningLeftAction_Speed(), ecorePackage.getEInt(), "speed", null, 0, 1, TurningLeftAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(turningRightActionEClass, TurningRightAction.class, "TurningRightAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTurningRightAction_Duration(), ecorePackage.getEInt(), "duration", null, 0, 1, TurningRightAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTurningRightAction_StartTick(), ecorePackage.getEInt(), "startTick", null, 0, 1, TurningRightAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTurningRightAction_Speed(), ecorePackage.getEInt(), "speed", null, 0, 1, TurningRightAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(acceleratetActionEClass, AcceleratetAction.class, "AcceleratetAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAcceleratetAction_Ratio(), ecorePackage.getEInt(), "ratio", null, 0, 1, AcceleratetAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAcceleratetAction_StartTick(), ecorePackage.getEInt(), "startTick", null, 0, 1, AcceleratetAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(deceleratetActionEClass, DeceleratetAction.class, "DeceleratetAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDeceleratetAction_Ratio(), ecorePackage.getEInt(), "ratio", null, 0, 1, DeceleratetAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDeceleratetAction_StartTick(), ecorePackage.getEInt(), "startTick", null, 0, 1, DeceleratetAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(scanCollisionActionEClass, SCANCollisionAction.class, "SCANCollisionAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(emergencyStopActionEClass, EmergencyStopAction.class, "EmergencyStopAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEOperation(getEmergencyStopAction__Begin(), null, "begin", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
 
 		// Create annotations
+		// http://www.eclipse.org/OCL/Import
+		createImportAnnotations();
 		// aspect
 		createAspectAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/OCL/Import</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createImportAnnotations() {
+		String source = "http://www.eclipse.org/OCL/Import";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "ecore", "http://www.eclipse.org/emf/2002/Ecore"
+		   });
 	}
 
 	/**
@@ -1053,6 +1643,11 @@ public class ArdurobotmlPackageImpl extends EPackageImpl implements ArdurobotmlP
 		String source = "aspect";	
 		addAnnotation
 		  (getTFSM__Initialize(), 
+		   source, 
+		   new String[] {
+		   });	
+		addAnnotation
+		  (getTFSM_CurrentState(), 
 		   source, 
 		   new String[] {
 		   });	

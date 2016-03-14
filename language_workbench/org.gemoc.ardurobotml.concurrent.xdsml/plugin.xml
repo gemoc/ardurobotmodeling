@@ -2,23 +2,15 @@
 <?eclipse version="3.4"?>
 <plugin>
   <extension point="org.gemoc.gemoc_language_workbench.concurrent.xdsml">
-    <XDSML_Definition
-          codeExecutor_class="ardurobotmlconcurrent.xdsml.api.impl.ArdurobotMLConcurrentCodeExecutor"
-          modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader"
-          name="org.gemoc.ardurobotml.concurrent.xdsml.ArdurobotMLConcurrent"
-          solver_class="org.gemoc.execution.concurrent.ccsljavaengine.extensions.timesquare.moc.impl.CcslSolver"
-          toCCSLQVTOFilePath="/org.gemoc.ardurobotml.dse/qvto-gen/modeling/ardurobotml.qvto"
-          xdsmlFilePath="/org.gemoc.ardurobotml.concurrent.xdsml/src/org/gemoc/ardurobotml/concurrent/xdsml/ardurobotml.melange">
-       <XDSML_Definition_Customization
-             fileExtensions="ardurobotml">
-       </XDSML_Definition_Customization>
+    <XDSML_Definition codeExecutor_class="ardurobotmlconcurrent.xdsml.api.impl.ArdurobotMLConcurrentCodeExecutor" modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="org.gemoc.ardurobotml.concurrent.xdsml.ArdurobotMLConcurrent" solver_class="org.gemoc.execution.concurrent.ccsljavaengine.extensions.timesquare.moc.impl.CcslSolver" toCCSLQVTOFilePath="/org.gemoc.ardurobotml.dse/qvto-gen/modeling/ardurobotml.qvto" xdsmlFilePath="/org.gemoc.ardurobotml.concurrent.xdsml/src/org/gemoc/ardurobotml/concurrent/xdsml/ardurobotml.melange">
+      <XDSML_Definition_Customization fileExtensions="ardurobotml" />
     </XDSML_Definition>
   </extension>
   <extension point="fr.inria.diverse.melange.modeltype">
     <modeltype id="org.gemoc.ardurobotml.concurrent.xdsml.ArdurobotMLConcurrentMT" uri="http://ardurobotmlconcurrentmt/" />
   </extension>
   <extension point="fr.inria.diverse.melange.language">
-    <language aspects="FSMClock:org.gemoc.ardurobotml.k3dsa.FSMClockAspect;Action:org.gemoc.ardurobotml.k3dsa.ActionAspect;State:org.gemoc.ardurobotml.k3dsa.StateAspect;Transition:org.gemoc.ardurobotml.k3dsa.TransitionAspect;StopAction:org.gemoc.ardurobotml.k3dsa.StopActionAspect;TFSM:org.gemoc.ardurobotml.k3dsa.TFSMAspect;MoveForwardAction:org.gemoc.ardurobotml.k3dsa.MoveForwardActionAspect;EmergencyStopAction:org.gemoc.ardurobotml.k3dsa.EmergencyStopActionAspect" entryPoints="" exactType="org.gemoc.ardurobotml.concurrent.xdsml.ArdurobotMLConcurrentMT" id="org.gemoc.ardurobotml.concurrent.xdsml.ArdurobotMLConcurrent" uri="http://org.gemoc/ardurobotml">
+    <language aspects="AcceleratetAction:org.gemoc.ardurobotml.k3dsa.AcceleratetAspect;DeceleratetAction:org.gemoc.ardurobotml.k3dsa.DeceleratetAspect;Action:org.gemoc.ardurobotml.k3dsa.ActionAspect;MoveForwardAndTurningLeftAction:org.gemoc.ardurobotml.k3dsa.MoveForwardAndTurningLeftAspect;SCANCollisionAction:org.gemoc.ardurobotml.k3dsa.SCANCollisionAspect;ActionSequence:org.gemoc.ardurobotml.k3dsa.ActionSequenceAspect;MoveForwardAndTurningRightAction:org.gemoc.ardurobotml.k3dsa.MoveForwardAndTurningRightAspect;CollisionSensorCondition:org.gemoc.ardurobotml.k3dsa.CollisionSensorConditionAspect;TurningRightAction:org.gemoc.ardurobotml.k3dsa.TurningRightAspect;MoveBackardAndTurningLeftAction:org.gemoc.ardurobotml.k3dsa.MoveBackardAndTurningLeftAspect;MoveBackardAndTurningRightAction:org.gemoc.ardurobotml.k3dsa.MoveBackardAndTurningRightAspect;TFSM:org.gemoc.ardurobotml.k3dsa.TFSMAspect;MoveForwardAction:org.gemoc.ardurobotml.k3dsa.MoveForwardActionAspect;TurningLeftAction:org.gemoc.ardurobotml.k3dsa.TurningLeftAspect;EmergencyStopAction:org.gemoc.ardurobotml.k3dsa.EmergencyStopActionAspect;FSMClock:org.gemoc.ardurobotml.k3dsa.FSMClockAspect;State:org.gemoc.ardurobotml.k3dsa.StateAspect;Transition:org.gemoc.ardurobotml.k3dsa.TransitionAspect;StopAction:org.gemoc.ardurobotml.k3dsa.StopActionAspect;MoveBackardAction:org.gemoc.ardurobotml.k3dsa.MoveForwardBackwardAspect" entryPoints="" exactType="org.gemoc.ardurobotml.concurrent.xdsml.ArdurobotMLConcurrentMT" id="org.gemoc.ardurobotml.concurrent.xdsml.ArdurobotMLConcurrent" uri="http://org.gemoc/ardurobotml">
       <adapter class="org.gemoc.ardurobotml.concurrent.xdsml.ardurobotmlconcurrent.adapters.ardurobotmlconcurrentmt.ArdurobotMLConcurrentAdapter" modeltypeId="org.gemoc.ardurobotml.concurrent.xdsml.ArdurobotMLConcurrentMT" />
     </language>
   </extension>
