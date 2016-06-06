@@ -17,3 +17,4 @@ Bundle-ActivationPolicy: lazy
 Export-Package: org.gemoc.ardurobtml.mavlinkfacade,
  org.gemoc.ardurobtml.mavlinkfacade.addons,
  org.gemoc.ardurobtml.mavlinkfacade.logging
+Import-Package: gnu.io

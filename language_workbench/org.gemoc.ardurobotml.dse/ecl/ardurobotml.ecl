@@ -23,11 +23,15 @@ package ardurobotml
    	
 	    		    	
 	context Action
-		def: beginClock: Event = self.begin()
+		def: beginClock: Event = self.begin() --future (self.endClock)
+		
 		def: endClock: Event = self.end()
+--		def: duration: int = self.duration()
+	--	self.endClock = self.beginClock DelayedFor 10 on GlobalClock
 	    		    		 				 
 			 
 	context State
+	
      	def : enteringClock: Event = self.onEnter()
      	def : leavingClock: Event = self.onLeave()
 
@@ -65,28 +69,66 @@ package ardurobotml
 	context Action
 	
 		-- begin always happens before end.
-		inv beginThenEndInvariant:
+		inv beginThenEndInvariant: 
 			Relation Alternates(self.beginClock, self.endClock) 
 
 		-- begin can only tick when the previous action ended.
-	 	inv tickAfterLast:
-	 		((self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(ardurobotml::State))
-	 		and (self.oclAsType(ecore::EObject).eContainer().oclAsType(ardurobotml::State).actions->first() <> self))
-	 		implies
-				let lastEndClock: Event = self
-											.oclAsType(ecore::EObject)
-											.eContainer()
-											.oclAsType(ardurobotml::State)
-											.actions->at(self
-															.oclAsType(ecore::EObject)
-															.eContainer()
-															.oclAsType(ardurobotml::State)
-															.actions->indexOf(self)-1)
-											.oclAsType(ardurobotml::Action)
-											.endClock in
-				(Relation Precedes(lastEndClock, self.beginClock))
+		--TOCHANGE 
+		
+--	 	inv tickAfterLast:
+--	 		((self.oclAsType(ecore::EObject).eContainer().oclIsKindOf(ardurobotml::State))
+--	 		and (self.oclAsType(ecore::EObject).eContainer().oclAsType(ardurobotml::State).actions->first() <> self))
+--	 		implies
+--				let lastEndClock: Event = self
+--											.oclAsType(ecore::EObject)
+--											.eContainer()
+--											.oclAsType(ardurobotml::State)
+--											.actions->at(self
+--															.oclAsType(ecore::EObject)
+--															.eContainer()
+--															.oclAsType(ardurobotml::State)
+--															.actions->indexOf(self)-1)
+--											.oclAsType(ardurobotml::Action)
+--											.endClock in
+--				(Relation Precedes(lastEndClock, self.beginClock))
+--				
+
 	    	
 	    			
+	    			
+	context MoveForwardAction
+	
+			inv wcet:   
+        let executionTime : Integer = self.duration in
+        let start : Integer = self.startTick in 
+        let r_startDelayedByOne: Event = Expression DelayFor(beginClock, self
+											.oclAsType(ecore::EObject)
+											.eContainer()
+											.oclAsType(ardurobotml::State).oclAsType(ecore::EObject)
+											.eContainer()
+											.oclAsType(ardurobotml::Region).oclAsType(ecore::EObject)
+											.eContainer()
+											.oclAsType(ardurobotml::TFSM).localClock.tickClock									
+											 , executionTime) in
+       Relation Coincides(self.endClock, r_startDelayedByOne)
+
+	context MoveBackardAction
+	
+			inv wcet:   
+        let executionTime : Integer = self.duration in
+        let start : Integer = self.startTick in 
+        let r_startDelayedByOne: Event = Expression DelayFor(beginClock, self
+											.oclAsType(ecore::EObject)
+											.eContainer()
+											.oclAsType(ardurobotml::State).oclAsType(ecore::EObject)
+											.eContainer()
+											.oclAsType(ardurobotml::Region).oclAsType(ecore::EObject)
+											.eContainer()
+											.oclAsType(ardurobotml::TFSM).localClock.tickClock									
+											 , executionTime) in
+       Relation Coincides(self.endClock, r_startDelayedByOne)
+
+	  
 	context TFSM
 	
 		-- The initialize clock SHOULD tick only ONCE.
@@ -109,8 +151,14 @@ package ardurobotml
 			Relation Alternates(self.enteringClock, self.leavingClock) 
 	
 		-- Only one action can execute at a single time.
-		inv oneActionAtATime:
-			Relation Exclusion(self.actions->selectByType(ardurobotml::Action).beginClock)
+		inv ShuffleActionTime:
+			--Relation Exclusion(self.actions->selectByType(ardurobotml::Action).beginClock)
+			Relation Coincides(self.actions->select(e | (e).oclIsKindOf( ardurobotml::Action)).beginClock)
+			--Relation Precedes(self.actions->select(e | (e).oclIsKindOf( ardurobotml::Action)).beginClock)
+--		inv oneActionAtATime:
+--			--Relation Exclusion(self.actions->selectByType(ardurobotml::Action).beginClock)
+--			--Relation Coincides(self.actions->select(e | (e).oclIsKindOf( ardurobotml::Action)).beginClock)
+--			Relation Precedes(self.actions->select(e | (e).oclIsKindOf( ardurobotml::Action)).beginClock)
 
 		-- entering always happens before the first action begins.
 	 	inv tickWhenEnteringState:
@@ -139,7 +187,7 @@ package ardurobotml
 			and self.ownedGuard.oclIsKindOf(ardurobotml::EvaluateGuard)
 			and self.ownedGuard.oclAsType(ardurobotml::EvaluateGuard).condition.oclIsKindOf(ardurobotml::AllActionFinishedCondition))
 			implies
-				let lastEndClock: Event = self.source.actions->last().oclAsType(ardurobotml::Action).endClock in
+				let lastEndClock: Event = Expression Sup(self.source.actions.endClock) in
 				(Relation Precedes(lastEndClock, self.fireClock))
 
 		inv fireWhenEventHappens:

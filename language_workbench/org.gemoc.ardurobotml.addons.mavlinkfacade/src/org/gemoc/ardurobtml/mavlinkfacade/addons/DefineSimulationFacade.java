@@ -3,7 +3,7 @@ package org.gemoc.ardurobtml.mavlinkfacade.addons;
 import java.util.Collection;
 import java.util.List;
 
-import org.gemoc.ardurobotml.k3dsa.RobotFacadeRegistry;
+import org.gemoc.ardurobotml.facade.RobotFacadeRegistry;
 import org.gemoc.ardurobtml.mavlinkfacade.ArduRoverFacade;
 import org.gemoc.executionframework.engine.mse.LogicalStep;
 import org.gemoc.executionframework.engine.mse.MSEOccurrence;

@@ -10,12 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.util.Collection;
 import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.concurrent.Semaphore;
 
 public class SerialLink implements SerialPortEventListener {
 	
@@ -24,15 +19,21 @@ public class SerialLink implements SerialPortEventListener {
 	/** The port we're normally going to use. */
 	private static final String PORT_NAMES[] = {
 													// For Raspbian systems
-													"/dev/ttyUSB0",
-													"/dev/ttyUSB01",
+													"/dev/rfcomm0", 
+													"/dev/ttyACM0",
+													"/dev/ttyACM1",
+													"/dev/ttyACM2",
+													"/dev/ttyACM3",
+													"/dev/ttyACM4",
+													"/dev/ttyUSB02",
+													"/dev/ttyUSB04",
 													// For windows systems
 													"COM1",
 													"COM2",
 													"COM3",
 													"COM4",
 													"COM5",
-													"COM6"
+													"COM6"	
 												};
 
 	
@@ -52,6 +53,8 @@ public class SerialLink implements SerialPortEventListener {
 		@SuppressWarnings("rawtypes")
 		Enumeration portEnum = CommPortIdentifier.getPortIdentifiers();
 
+		
+		
 		//First, Find an instance of serial port as set in PORT_NAMES.
 		while (portEnum.hasMoreElements()) {
 			CommPortIdentifier currPortId = (CommPortIdentifier) portEnum.nextElement();
@@ -120,7 +123,7 @@ public class SerialLink implements SerialPortEventListener {
 		if (oEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
 			try {
 				String inputLine=input.readLine();
-				System.out.println(inputLine);
+				//System.out.println(inputLine);
 				if(this._listener != null)
 					this._listener.onSerialMessage(inputLine);
 			} catch (Exception e) {
@@ -156,6 +159,7 @@ public class SerialLink implements SerialPortEventListener {
 	{
     	try 
     	{    		
+    		System.err.println(new String(b));
     		_outputStream.write(b, 0, b.length);
     	} 
     	catch(Exception e)
@@ -165,12 +169,24 @@ public class SerialLink implements SerialPortEventListener {
     }
 	
 	
+	public static void main(String[] args) throws InterruptedException {
+		SerialLink l = new SerialLink();
+		l.initialize();
+		Thread.sleep(1000);
+		l.write("BALAYER\r\n".getBytes());
+		Thread.sleep(100);
+		l.write("RECULER 100\r\n".getBytes());
+		Thread.sleep(4500);
+		l.write("STOP 100\r\n".getBytes());
+		Thread.sleep(1000);
+		l.close();
+
+	}
 	
 	
 	
 	public void setListener(SerialListener listener){
 		_listener = listener;
-//		_listener.onMessageNotify(this);
 	}
 
 	

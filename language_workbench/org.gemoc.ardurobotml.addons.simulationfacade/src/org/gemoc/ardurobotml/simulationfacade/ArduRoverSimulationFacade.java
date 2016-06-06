@@ -16,7 +16,8 @@ import org.gemoc.ardurobotml.SCANCollisionAction;
 import org.gemoc.ardurobotml.TFSM;
 import org.gemoc.ardurobotml.TurningLeftAction;
 import org.gemoc.ardurobotml.TurningRightAction;
-import org.gemoc.ardurobotml.k3dsa.IRobotFacade;
+import org.gemoc.ardurobotml.facade.IRobotFacade;
+import org.gemoc.ardurobotml.k3dsa.ActionAspect;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +31,6 @@ public class ArduRoverSimulationFacade implements IRobotFacade
 	@Override
 	public void initialize(TFSM fsm) {
 		
-		System.err.println("init");
 		
 		_fsm = fsm;
 //		for (State s : fsm.getOwnedStates())
@@ -102,7 +102,20 @@ public class ArduRoverSimulationFacade implements IRobotFacade
 	public void moveOneStepForward(MoveForwardAction action) throws Exception {
 	
 		System.err.println("moveOneStepForward");
+		
+/*		FutureTask f = new FutureTask<>(new Callable<Void>() {
 
+			@Override
+			public Void call() throws Exception {
+				
+				Thread.sleep(100000);
+				return null;
+			}
+		});
+		 ExecutorService executor = Executors.newFixedThreadPool(1);
+		 executor.execute(f);
+		 f.get();*/
+		return;
 		
 	}
 
@@ -183,6 +196,12 @@ public class ArduRoverSimulationFacade implements IRobotFacade
 	public void decelerate(DeceleratetAction action) throws Exception {
 		System.err.println("decelerate");
 
+	}
+
+	@Override
+	public void beginAction(Action action) {
+		ActionAspect.begin(action);
+		
 	}
 
 }

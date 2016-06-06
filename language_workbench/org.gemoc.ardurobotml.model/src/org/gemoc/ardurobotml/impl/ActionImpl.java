@@ -3,11 +3,12 @@
 package org.gemoc.ardurobotml.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
 import org.gemoc.ardurobotml.Action;
 import org.gemoc.ardurobotml.ArdurobotmlPackage;
+import org.gemoc.ardurobotml.facade.RobotFacadeRegistry;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +47,7 @@ public abstract class ActionImpl extends NamedElementImpl implements Action {
 	public void begin() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		RobotFacadeRegistry.getUniqueFacade().beginAction(this);		
 	}
 
 	/**
@@ -57,7 +58,8 @@ public abstract class ActionImpl extends NamedElementImpl implements Action {
 	public void end() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		RobotFacadeRegistry.getUniqueFacade().endAction(this);		
+
 	}
 
 	/**

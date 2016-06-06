@@ -27,6 +27,8 @@ import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
 import org.gemoc.ardurobotml.MoveBackardAction
 import org.gemoc.ardurobotml.AcceleratetAction
 import org.gemoc.ardurobotml.DeceleratetAction
+import fr.inria.diverse.k3.al.annotationprocessor.ReplaceAspectMethod
+import org.gemoc.ardurobotml.facade.RobotFacadeRegistry
 
 //@Aspect(className=ExecutionContext)
 //class ExecutionContextAspect
@@ -116,7 +118,7 @@ abstract class ActionAspect
 
 
 @Aspect(className=CollisionSensorCondition)
-class CollisionSensorConditionAspect {
+class CollisionSensorConditionAspect  {
 	def public boolean evaluate() { 
 		return RobotFacadeRegistry.getUniqueFacade().hasDetectedPossibleCollision();
 //		return false;
@@ -125,9 +127,7 @@ class CollisionSensorConditionAspect {
 
 @Aspect(className=EmergencyStopAction)
 class EmergencyStopActionAspect extends ActionAspect  
-{
-	
-	
+{	
 	
 
 	def public void begin()
@@ -160,12 +160,13 @@ class MoveForwardActionAspect extends ActionAspect
 		val fsm = ModelHelper.getOwningTFSM(_self);		
 		_self.startTick = fsm.localClock.value
 		RobotFacadeRegistry.getUniqueFacade().moveOneStepForward(_self);		
+//		Thread.sleep(10000);
 	}
 
 }
 
 @Aspect(className=MoveBackardAction)
-class MoveForwardBackwardAspect{
+class MoveForwardBackwardAspect  extends ActionAspect {
 	def public void begin()
 	{
 		val fsm = ModelHelper.getOwningTFSM(_self);		
@@ -176,7 +177,7 @@ class MoveForwardBackwardAspect{
 }
 
 @Aspect(className=MoveForwardAndTurningRightAction)
-class MoveForwardAndTurningRightAspect{
+class MoveForwardAndTurningRightAspect  extends ActionAspect {
 	def public void begin()
 	{
 		val fsm = ModelHelper.getOwningTFSM(_self);		
@@ -187,7 +188,7 @@ class MoveForwardAndTurningRightAspect{
 }
 
 @Aspect(className=MoveForwardAndTurningLeftAction)
-class MoveForwardAndTurningLeftAspect{
+class MoveForwardAndTurningLeftAspect extends ActionAspect  {
 	def public void begin()
 	{
 		val fsm = ModelHelper.getOwningTFSM(_self);		
@@ -198,7 +199,7 @@ class MoveForwardAndTurningLeftAspect{
 }
 
 @Aspect(className=MoveBackardAndTurningRightAction)
-class MoveBackardAndTurningRightAspect{
+class MoveBackardAndTurningRightAspect extends ActionAspect{
 	def public void begin()
 	{
 		val fsm = ModelHelper.getOwningTFSM(_self);		
@@ -208,7 +209,7 @@ class MoveBackardAndTurningRightAspect{
 
 }
 @Aspect(className=MoveBackardAndTurningLeftAction)
-class MoveBackardAndTurningLeftAspect{
+class MoveBackardAndTurningLeftAspect extends ActionAspect{
 	def public void begin()
 	{
 		val fsm = ModelHelper.getOwningTFSM(_self);		
@@ -220,7 +221,7 @@ class MoveBackardAndTurningLeftAspect{
 
 
 @Aspect(className=TurningLeftAction)
-class TurningLeftAspect{
+class TurningLeftAspect extends ActionAspect{
 	def public void begin()
 	{
 		val fsm = ModelHelper.getOwningTFSM(_self);		
@@ -232,7 +233,7 @@ class TurningLeftAspect{
 
 
 @Aspect(className=TurningRightAction)
-class TurningRightAspect{
+class TurningRightAspect extends ActionAspect{
 	def public void begin()
 	{
 		val fsm = ModelHelper.getOwningTFSM(_self);		
@@ -243,7 +244,7 @@ class TurningRightAspect{
 }
 
 @Aspect(className=SCANCollisionAction)
-class SCANCollisionAspect{
+class SCANCollisionAspect extends ActionAspect{
 	def public void begin()
 	{
 		RobotFacadeRegistry.getUniqueFacade().scanCollision(_self);		
@@ -326,7 +327,7 @@ class TransitionAspect
 	}
 
 }
-
+/*
 public interface IRobotFacade extends Closeable {
 
 	def void initialize(TFSM fsm);
@@ -357,21 +358,8 @@ public interface IRobotFacade extends Closeable {
 	def void globalTick(FSMClock clock);
 	
 }
+ */
 
-public class RobotFacadeRegistry {
-
-	def public static IRobotFacade getUniqueFacade()
-	{
-		return _uniqueFacade;
-	}
-	
-	static IRobotFacade _uniqueFacade;
-	def public static void registerRobotFacade(IRobotFacade facade)
-	{
-		_uniqueFacade = facade;
-	}
-	
-}
 
 public class ModelHelper {
 
